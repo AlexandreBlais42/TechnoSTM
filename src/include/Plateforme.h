@@ -4,7 +4,6 @@
 #include <iostream>
 #include <string>
 #include <cstdint>
-#include <cassert>
 
 #include "Vector3D.h"
 #include "Serial.h"
@@ -41,7 +40,7 @@ public:
    */
   inline void goToAbsolute(const Vector3D<uint16_t> &coordinates);
 
-  /** @brief Bouges physiquement la plateforme à la coordonnée dans la variable membre position en l'envoyant sur le port sériel
+  /** @brief Bouges physiquement la plateforme à la coordonnée dans la variable membre position en envoyant des commandes sur le port sériel
    */
   void goToPosition() const ;
 };

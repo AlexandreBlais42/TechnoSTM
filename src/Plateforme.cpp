@@ -25,6 +25,7 @@ inline void Plateforme::goToAbsolute(const Vector3D<uint16_t> &coordinates){
 void Plateforme::goToPosition() const {
   std::vector<std::string> stringsToSend(0);
 
-  std::cout << getHexString(32565) << std::endl;
-
+  ser.write("A" + getHexString(position.x));
+  ser.write("B" + getHexString(position.y));
+  ser.write("C" + getHexString(position.z));
 }
