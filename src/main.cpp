@@ -1,11 +1,11 @@
 #include <iostream>
 #include <cstdint>
 
-#include "Piezo.h"
+#include "Plateforme.h"
+#include "Vector3D.h"
 
 int main(){
-  std::cout << "allo" << std::endl;
-  
-  Piezo piezo;
-  piezo.setValue(54);
+  Plateforme plateforme("/dev/ttyUSB0");
+
+  plateforme.goToPosition();
 }
