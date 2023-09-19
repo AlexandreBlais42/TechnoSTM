@@ -5,6 +5,10 @@
 #include <cstdint>
 #include <cassert>
 
+#ifdef __arm__
+#include <wiringPi.h>
+#endif // __arm__
+
 class GPIO{
 public:
   GPIO();
