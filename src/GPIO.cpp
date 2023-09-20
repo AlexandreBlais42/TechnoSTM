@@ -8,5 +8,5 @@ void GPIO::setPin(const uint8_t pinNumber, const bool state){
   // À implémenter pour interfacer avec le raspberry pi
 #else
   std::cout << "GPIO::setPin appellé avec pinNumber = " << pinNumber << " state = " << state << std::endl;
-#endif __arm__
+#endif // __arm__
 }
