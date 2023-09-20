@@ -11,7 +11,7 @@
  *  @param val La valeur plus petite que 16 à convertir
  *  @return Le charactère converti
  */
-char map4BitToHexChar(const uint8_t val);
+char getHexCharacter(const uint8_t val);
 
 /** @brief Obtiens la représentation hexadécimal du de la donnée passée
  *  @param data La donnée à convertir
