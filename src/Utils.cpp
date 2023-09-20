@@ -1,6 +1,6 @@
 #include "Utils.h"
 
-char map4BitToHexChar(const uint8_t val){
+char getHexCharacter(const uint8_t val){
   assert(val < (1 << 4));
   if (val <= 9){
     return '0' + val;
@@ -12,7 +12,7 @@ std::string getHexString(uint16_t data){
   std::string str = "";
   char chars[3];
   for (uint8_t i = 0 ; i < 3 ; i++){
-    chars[i] = map4BitToHexChar(data & 0x0F);
+    chars[i] = getHexCharacter(data & 0x0F);
     data >>= 4;
   }
   str += map4BitToHexChar(data & 0x0F);
