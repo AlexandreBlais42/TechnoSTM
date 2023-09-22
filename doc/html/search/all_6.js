@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['plateforme_0',['plateforme',['../classPlateforme.xhtml',1,'Plateforme'],['../classPlateforme.xhtml#a135704fcb674444622c09a78040111f2',1,'Plateforme::Plateforme()']]],
-  ['plateforme_2ecpp_1',['Plateforme.cpp',['../Plateforme_8cpp.xhtml',1,'']]],
-  ['plateforme_2eh_2',['Plateforme.h',['../Plateforme_8h.xhtml',1,'']]],
-  ['position_3',['position',['../classPlateforme.xhtml#a92764326284638f62319d8592b285755',1,'Plateforme::position'],['../classStepMotor.xhtml#a5d3b6e20ec55fad44836fef89b07a086',1,'StepMotor::position']]]
+  ['i2c_0',['i2c',['../classI2C.xhtml',1,'I2C'],['../classI2C.xhtml#a7a9a84fccdacb3346ff97d6f3e158850',1,'I2C::I2C()'],['../classI2C.xhtml#a56648ccb9d05c90d8076931a636b9e03',1,'I2C::I2C(const uint8_t deviceAddr)']]],
+  ['i2c_2ecpp_1',['I2C.cpp',['../I2C_8cpp.xhtml',1,'']]],
+  ['i2c_2eh_2',['I2C.h',['../I2C_8h.xhtml',1,'']]]
 ];

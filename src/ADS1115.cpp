@@ -22,5 +22,3 @@ uint16_t ADS1115::read(){
   return 0;
 #endif // __arm__
 }
-
-

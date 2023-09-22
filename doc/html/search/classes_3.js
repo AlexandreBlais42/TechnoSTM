@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['serial_0',['Serial',['../classSerial.xhtml',1,'']]],
-  ['stepmotor_1',['StepMotor',['../classStepMotor.xhtml',1,'']]]
+  ['plateforme_0',['Plateforme',['../classPlateforme.xhtml',1,'']]]
 ];

@@ -9,6 +9,8 @@
 #include <wiringPi.h>
 #endif // __arm__
 
+/** @brief Classe qui gère le GPIO du raspberry pi
+ */
 class GPIO{
 public:
   GPIO();

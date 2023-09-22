@@ -3,6 +3,8 @@
 
 #include <cstdint>
 
+/** @brief Classe qui gère l'aiguille
+ */
 class Aiguille{
 public:
   

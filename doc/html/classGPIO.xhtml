@@ -78,13 +78,16 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Classe qui gère le <a class="el" href="classGPIO.xhtml" title="Classe qui gère le GPIO du raspberry pi.">GPIO</a> du raspberry pi.  
+ <a href="classGPIO.xhtml#details">Plus de détails...</a></p>
+
 <p><code>#include &lt;<a class="el" href="GPIO_8h_source.xhtml">GPIO.h</a>&gt;</code></p>
 <div class="dynheader">
 Graphe de collaboration de GPIO:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGPIO__coll__graph.png" border="0" usemap="#aGPIO_coll__map" alt="Collaboration graph"/></div>
 <map name="aGPIO_coll__map" id="aGPIO_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,73,96"/>
+<area shape="rect" title="Classe qui gère le GPIO du raspberry pi." alt="" coords="5,5,73,96"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -95,13 +98,14 @@ Fonctions membres publiques</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Fonctions membres publiques statiques</h2></td></tr>
-<tr class="memitem:a60ac204e399c56d031c0cd4d95acddf8" id="r_a60ac204e399c56d031c0cd4d95acddf8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3D.xhtml">static</a> <a class="el" href="classVector3D.xhtml">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGPIO.xhtml#a60ac204e399c56d031c0cd4d95acddf8">setPin</a> (<a class="el" href="classVector3D.xhtml">const</a> <a class="el" href="classVector3D.xhtml">uint8_t</a> <a class="el" href="classVector3D.xhtml">pinNumber</a>, <a class="el" href="classVector3D.xhtml">const</a> <a class="el" href="classVector3D.xhtml">bool</a> <a class="el" href="classVector3D.xhtml">state</a>)</td></tr>
-<tr class="memdesc:a60ac204e399c56d031c0cd4d95acddf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set une pin du <a class="el" href="classGPIO.xhtml">GPIO</a> du raspberry pi à state.  <br /></td></tr>
+<tr class="memitem:a60ac204e399c56d031c0cd4d95acddf8" id="r_a60ac204e399c56d031c0cd4d95acddf8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGPIO.xhtml#a60ac204e399c56d031c0cd4d95acddf8">setPin</a> (const uint8_t pinNumber, const bool state)</td></tr>
+<tr class="memdesc:a60ac204e399c56d031c0cd4d95acddf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set une pin du <a class="el" href="classGPIO.xhtml" title="Classe qui gère le GPIO du raspberry pi.">GPIO</a> du raspberry pi à state.  <br /></td></tr>
 <tr class="separator:a60ac204e399c56d031c0cd4d95acddf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
-<div class="textblock">
-<p class="definition">Définition à la ligne <a class="el" href="GPIO_8h_source.xhtml#l00012">12</a> du fichier <a class="el" href="GPIO_8h_source.xhtml">GPIO.h</a>.</p>
+<div class="textblock"><p>Classe qui gère le <a class="el" href="classGPIO.xhtml" title="Classe qui gère le GPIO du raspberry pi.">GPIO</a> du raspberry pi. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="GPIO_8h_source.xhtml#l00014">14</a> du fichier <a class="el" href="GPIO_8h_source.xhtml">GPIO.h</a>.</p>
 </div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a id="ab443a641cef81b1a9ec0211c5aa9c1ac" name="ab443a641cef81b1a9ec0211c5aa9c1ac"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab443a641cef81b1a9ec0211c5aa9c1ac">&#9670;&#160;</a></span>GPIO()</h2>
@@ -133,15 +137,15 @@ Fonctions membres publiques statiques</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classVector3D.xhtml">void</a> GPIO::setPin </td>
+          <td class="memname">void GPIO::setPin </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classVector3D.xhtml">const</a> <a class="el" href="classVector3D.xhtml">uint8_t</a>&#160;</td>
+          <td class="paramtype">const uint8_t&#160;</td>
           <td class="paramname"><em>pinNumber</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classVector3D.xhtml">const</a> <a class="el" href="classVector3D.xhtml">bool</a>&#160;</td>
+          <td class="paramtype">const bool&#160;</td>
           <td class="paramname"><em>state</em>&#160;</td>
         </tr>
         <tr>
@@ -157,10 +161,10 @@ Fonctions membres publiques statiques</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set une pin du <a class="el" href="classGPIO.xhtml">GPIO</a> du raspberry pi à state. </p>
+<p>Set une pin du <a class="el" href="classGPIO.xhtml" title="Classe qui gère le GPIO du raspberry pi.">GPIO</a> du raspberry pi à state. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pinNumber</td><td>Le numéro de pin de <a class="el" href="classGPIO.xhtml">GPIO</a> </td></tr>
+    <tr><td class="paramname">pinNumber</td><td>Le numéro de pin de <a class="el" href="classGPIO.xhtml" title="Classe qui gère le GPIO du raspberry pi.">GPIO</a> </td></tr>
     <tr><td class="paramname">state</td><td>État booléen de la pin à mettre </td></tr>
   </table>
   </dd>

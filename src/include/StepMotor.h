@@ -6,6 +6,8 @@
 #include "Utils.h"
 #include "GPIO.h"
 
+/** @brief Classe qui gère les mouvements du step moteur
+ */
 class StepMotor{
 public:
   int32_t position;
