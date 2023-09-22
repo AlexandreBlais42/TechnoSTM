@@ -11,7 +11,7 @@ set(SOURCE_DIR src/)
 set(INCLUDE_DIR src/include/)
 
 # Tous les fichiers sources
-file(GLOB SOURCES ${SOURCE_DIR}/*.cpp)
+file(GLOB_RECURSE SOURCES ${SOURCE_DIR}/*.cpp)
 
 # Répertoire des headers
 include_directories(${INCLUDE_DIR})
