@@ -14,11 +14,11 @@ public:
   StepMotor(const int32_t position);
 
   /** @brief Mets la position de la plateforme relativement à sa position actuelle 
-   *  @param position La quantité à bouger
+   *  @param pos La quantité à bouger
    */
   void goToRelative(const int32_t pos);
   /** @brief Mets la position de la plateforme à la position spécifiée
-   *  @param position La position à aller
+   *  @param pos La position à aller
    */
   inline void goToAbsolute(const int32_t pos);
 };

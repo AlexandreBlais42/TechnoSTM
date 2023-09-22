@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TechnoSTM: Référence du fichier src/include/Vector3D.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TechnoSTM
+   </div>
+   <div id="projectbrief">Un microscope atomique à effet tunnel</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.xhtml');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.xhtml">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.xhtml">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier Vector3D.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="Vector3D_8h__dep__incl.png" border="0" usemap="#asrc_2include_2Vector3D_8hdep" alt=""/></div>
+<map name="asrc_2include_2Vector3D_8hdep" id="asrc_2include_2Vector3D_8hdep">
+<area shape="rect" title=" " alt="" coords="114,5,267,32"/>
+<area shape="rect" href="Vector3D_8cpp.xhtml" title=" " alt="" coords="5,80,128,107"/>
+<area shape="poly" title=" " alt="" coords="158,42,90,82,87,77,155,38"/>
+<area shape="rect" href="Plateforme_8h.xhtml" title=" " alt="" coords="203,155,365,181"/>
+<area shape="poly" title=" " alt="" coords="207,44,243,105,277,152,272,156,239,108,202,47"/>
+<area shape="rect" href="main_8cpp.xhtml" title=" " alt="" coords="117,229,213,256"/>
+<area shape="poly" title=" " alt="" coords="190,48,169,229,164,229,185,47"/>
+<area shape="rect" href="Serial_8h.xhtml" title=" " alt="" coords="254,80,386,107"/>
+<area shape="poly" title=" " alt="" coords="228,38,298,77,296,82,225,42"/>
+<area shape="rect" href="Plateforme_8cpp.xhtml" title=" " alt="" coords="237,229,368,256"/>
+<area shape="poly" title=" " alt="" coords="293,196,302,228,297,230,288,197"/>
+<area shape="poly" title=" " alt="" coords="252,192,187,231,185,226,249,187"/>
+<area shape="poly" title=" " alt="" coords="309,122,292,155,288,153,305,119"/>
+<area shape="rect" href="Serial_8cpp.xhtml" title=" " alt="" coords="389,155,491,181"/>
+<area shape="poly" title=" " alt="" coords="355,113,420,152,417,156,352,117"/>
+</map>
+</div>
+</div>
+<p><a href="Vector3D_8h_source.xhtml">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVector3D.xhtml">Vector3D&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Une structure template qui contient x, y, z et qui permet de les additionner facilement.  <a href="classVector3D.xhtml#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a55c727bd7c091dde908d5ebc1d2ed5ac" id="r_a55c727bd7c091dde908d5ebc1d2ed5ac"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="classVector3D.xhtml">typename</a> <a class="el" href="classVector3D.xhtml">T</a> &gt; </td></tr>
+<tr class="memitem:a55c727bd7c091dde908d5ebc1d2ed5ac"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classVector3D.xhtml">Vector3D</a>&lt; <a class="el" href="classVector3D.xhtml">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="Vector3D_8h.xhtml#a55c727bd7c091dde908d5ebc1d2ed5ac">operator+</a> (<a class="el" href="classVector3D.xhtml">const</a> <a class="el" href="classVector3D.xhtml">Vector3D</a>&lt; <a class="el" href="classVector3D.xhtml">T</a> &gt; &amp;<a class="el" href="classVector3D.xhtml">a</a>, <a class="el" href="classVector3D.xhtml">const</a> <a class="el" href="classVector3D.xhtml">Vector3D</a>&lt; <a class="el" href="classVector3D.xhtml">T</a> &gt; &amp;<a class="el" href="classVector3D.xhtml">b</a>)</td></tr>
+<tr class="memdesc:a55c727bd7c091dde908d5ebc1d2ed5ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Additionne deux objets <a class="el" href="classVector3D.xhtml" title="Une structure template qui contient x, y, z et qui permet de les additionner facilement.">Vector3D</a>.  <br /></td></tr>
+<tr class="separator:a55c727bd7c091dde908d5ebc1d2ed5ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5346303d9d1b44906e9a4ff73f8a097c" id="r_a5346303d9d1b44906e9a4ff73f8a097c"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="classVector3D.xhtml">typename</a> <a class="el" href="classVector3D.xhtml">T</a> &gt; </td></tr>
+<tr class="memitem:a5346303d9d1b44906e9a4ff73f8a097c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classVector3D.xhtml">Vector3D</a>&lt; <a class="el" href="classVector3D.xhtml">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="Vector3D_8h.xhtml#a5346303d9d1b44906e9a4ff73f8a097c">operator-</a> (<a class="el" href="classVector3D.xhtml">const</a> <a class="el" href="classVector3D.xhtml">Vector3D</a>&lt; <a class="el" href="classVector3D.xhtml">T</a> &gt; &amp;<a class="el" href="classVector3D.xhtml">a</a>, <a class="el" href="classVector3D.xhtml">const</a> <a class="el" href="classVector3D.xhtml">Vector3D</a>&lt; <a class="el" href="classVector3D.xhtml">T</a> &gt; &amp;<a class="el" href="classVector3D.xhtml">b</a>)</td></tr>
+<tr class="memdesc:a5346303d9d1b44906e9a4ff73f8a097c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Soustrait deux objets <a class="el" href="classVector3D.xhtml" title="Une structure template qui contient x, y, z et qui permet de les additionner facilement.">Vector3D</a>.  <br /></td></tr>
+<tr class="separator:a5346303d9d1b44906e9a4ff73f8a097c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a55c727bd7c091dde908d5ebc1d2ed5ac" name="a55c727bd7c091dde908d5ebc1d2ed5ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55c727bd7c091dde908d5ebc1d2ed5ac">&#9670;&#160;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classVector3D.xhtml">typename</a> <a class="el" href="classVector3D.xhtml">T</a> &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector3D.xhtml">Vector3D</a>&lt; <a class="el" href="classVector3D.xhtml">T</a> &gt; <a class="el" href="classVector3D.xhtml">operator</a>+ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector3D.xhtml">const</a> <a class="el" href="classVector3D.xhtml">Vector3D</a>&lt; <a class="el" href="classVector3D.xhtml">T</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classVector3D.xhtml">const</a> <a class="el" href="classVector3D.xhtml">Vector3D</a>&lt; <a class="el" href="classVector3D.xhtml">T</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Additionne deux objets <a class="el" href="classVector3D.xhtml" title="Une structure template qui contient x, y, z et qui permet de les additionner facilement.">Vector3D</a>. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Le premier objet </td></tr>
+    <tr><td class="paramname">b</td><td>Le deuxième objet </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>La somme des deux objets </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="Vector3D_8h_source.xhtml#l00040">40</a> du fichier <a class="el" href="Vector3D_8h_source.xhtml">Vector3D.h</a>.</p>
+
+</div>
+</div>
+<a id="a5346303d9d1b44906e9a4ff73f8a097c" name="a5346303d9d1b44906e9a4ff73f8a097c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5346303d9d1b44906e9a4ff73f8a097c">&#9670;&#160;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classVector3D.xhtml">typename</a> <a class="el" href="classVector3D.xhtml">T</a> &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVector3D.xhtml">Vector3D</a>&lt; <a class="el" href="classVector3D.xhtml">T</a> &gt; <a class="el" href="classVector3D.xhtml">operator</a>- </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector3D.xhtml">const</a> <a class="el" href="classVector3D.xhtml">Vector3D</a>&lt; <a class="el" href="classVector3D.xhtml">T</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classVector3D.xhtml">const</a> <a class="el" href="classVector3D.xhtml">Vector3D</a>&lt; <a class="el" href="classVector3D.xhtml">T</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Soustrait deux objets <a class="el" href="classVector3D.xhtml" title="Une structure template qui contient x, y, z et qui permet de les additionner facilement.">Vector3D</a>. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Le premier objet </td></tr>
+    <tr><td class="paramname">b</td><td>Le deuxième objet </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>La différence des deux objets </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="Vector3D_8h_source.xhtml#l00050">50</a> du fichier <a class="el" href="Vector3D_8h_source.xhtml">Vector3D.h</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

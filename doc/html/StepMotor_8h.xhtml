@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TechnoSTM: Référence du fichier src/include/StepMotor.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TechnoSTM
+   </div>
+   <div id="projectbrief">Un microscope atomique à effet tunnel</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.xhtml');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.xhtml">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.xhtml">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier StepMotor.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
+<code>#include &quot;<a class="el" href="Utils_8h_source.xhtml">Utils.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="GPIO_8h_source.xhtml">GPIO.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de StepMotor.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="StepMotor_8h__incl.png" border="0" usemap="#asrc_2include_2StepMotor_8h" alt=""/></div>
+<map name="asrc_2include_2StepMotor_8h" id="asrc_2include_2StepMotor_8h">
+<area shape="rect" title=" " alt="" coords="45,5,205,32"/>
+<area shape="rect" title=" " alt="" coords="5,155,66,181"/>
+<area shape="poly" title=" " alt="" coords="117,34,82,81,49,142,45,140,77,79,112,31"/>
+<area shape="rect" href="Utils_8h.xhtml" title=" " alt="" coords="229,80,288,107"/>
+<area shape="poly" title=" " alt="" coords="149,30,223,70,221,75,147,35"/>
+<area shape="rect" href="GPIO_8h.xhtml" title=" " alt="" coords="92,80,158,107"/>
+<area shape="poly" title=" " alt="" coords="128,33,128,64,122,64,122,33"/>
+<area shape="rect" title=" " alt="" coords="273,155,326,181"/>
+<area shape="poly" title=" " alt="" coords="268,106,287,140,283,143,263,109"/>
+<area shape="rect" title=" " alt="" coords="89,155,161,181"/>
+<area shape="poly" title=" " alt="" coords="236,110,162,149,160,145,234,105"/>
+<area shape="rect" title=" " alt="" coords="351,155,411,181"/>
+<area shape="poly" title=" " alt="" coords="281,105,347,144,345,149,278,110"/>
+<area shape="rect" title=" " alt="" coords="435,155,492,181"/>
+<area shape="poly" title=" " alt="" coords="289,103,421,149,419,154,288,108"/>
+<area shape="rect" title=" " alt="" coords="185,155,249,181"/>
+<area shape="poly" title=" " alt="" coords="253,109,234,143,229,140,249,106"/>
+<area shape="poly" title=" " alt="" coords="111,109,64,147,61,143,108,105"/>
+<area shape="poly" title=" " alt="" coords="128,107,128,139,122,139,122,107"/>
+<area shape="poly" title=" " alt="" coords="143,105,191,143,188,147,139,109"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="StepMotor_8h__dep__incl.png" border="0" usemap="#asrc_2include_2StepMotor_8hdep" alt=""/></div>
+<map name="asrc_2include_2StepMotor_8hdep" id="asrc_2include_2StepMotor_8hdep">
+<area shape="rect" title=" " alt="" coords="5,5,165,32"/>
+<area shape="rect" href="StepMotor_8cpp.xhtml" title=" " alt="" coords="21,80,149,107"/>
+<area shape="poly" title=" " alt="" coords="88,48,88,80,82,80,82,48"/>
+</map>
+</div>
+</div>
+<p><a href="StepMotor_8h_source.xhtml">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.xhtml">StepMotor</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

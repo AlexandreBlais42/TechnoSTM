@@ -3,11 +3,6 @@ build/
 build/*
 /build/*
 
-/doc/
-doc/
-doc/*
-/doc/*
-
 *.d
 *.slo
 *.lo
