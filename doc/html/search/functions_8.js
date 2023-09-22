@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['read_0',['read',['../classADS1115.xhtml#a78f909ddc4b4efd888515fbe939db589',1,'ADS1115::read()'],['../classI2C.xhtml#a10415f0eb4b6eced8628a173fbbd7a4a',1,'I2C::read()'],['../classSerial.xhtml#af10648b801138712457976e00462c77a',1,'Serial::read()']]]
+  ['vector3d_0',['vector3d',['../classVector3D.xhtml#abce4fda8bdc463b11d37c9ee2b30bd70',1,'Vector3D::Vector3D()'],['../classVector3D.xhtml#ad75dfced4bee76cd097e34354c83e379',1,'Vector3D::Vector3D(const T x, const T y, const T z)']]]
 ];

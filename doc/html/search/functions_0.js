@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ads1115_0',['ADS1115',['../classADS1115.xhtml#afad2e8ed7cb29484f931150db15fe582',1,'ADS1115']]]
+  ['begin_0',['begin',['../classSerial.xhtml#a2eec06a1d2643449f3db523c669183b6',1,'Serial']]]
 ];

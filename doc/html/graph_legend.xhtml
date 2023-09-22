@@ -75,39 +75,41 @@ $(function() {
 <div class="contents">
 <p>Cette page explique comment interpréter les graphes générés par doxygen.</p>
 <p>Considérez l'exemple suivant : </p><div class="fragment"><div class="line"><span class="comment">/*! Classe invisible à cause d&#39;une troncature */</span></div>
-<div class="line"><span class="keyword">class </span>Invisible { };</div>
+<div class="line"><span class="keyword">class </span><a class="code hl_class" href="classVector3D.xhtml">Invisible</a> { };</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">/*! Classe tronquée, la relation d&#39;héritage est masquée */</span></div>
-<div class="line"><span class="keyword">class </span>Truncated : <span class="keyword">public</span> Invisible { };</div>
+<div class="line"><span class="keyword">class </span><a class="code hl_class" href="classVector3D.xhtml">Truncated</a> : <span class="keyword">public</span> <a class="code hl_class" href="classVector3D.xhtml">Invisible</a> { };</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">/*! Classe non documentée avec des commentaires Doxygen */</span></div>
-<div class="line"><span class="keyword">class </span>Undocumented { };</div>
+<div class="line"><span class="keyword">class </span><a class="code hl_class" href="classVector3D.xhtml">Undocumented</a> { };</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">/*! Classe dérivée par héritage public */</span></div>
-<div class="line"><span class="keyword">class </span>PublicBase : <span class="keyword">public</span> Truncated { };</div>
+<div class="line"><span class="keyword">class </span><a class="code hl_class" href="classVector3D.xhtml">PublicBase</a> : <span class="keyword">public</span> <a class="code hl_class" href="classVector3D.xhtml">Truncated</a> { };</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">/*! Un modèle de classe */</span></div>
-<div class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <span class="keyword">class </span>Templ { };</div>
+<div class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <span class="keyword">class </span><a class="code hl_class" href="classVector3D.xhtml">Templ</a> { };</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">/*! Classe dérivée par héritage protégé */</span></div>
-<div class="line"><span class="keyword">class </span>ProtectedBase { };</div>
+<div class="line"><span class="keyword">class </span><a class="code hl_class" href="classVector3D.xhtml">ProtectedBase</a> { };</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">/*! Classe dérivée par héritage privé */</span></div>
-<div class="line"><span class="keyword">class </span>PrivateBase { };</div>
+<div class="line"><span class="keyword">class </span><a class="code hl_class" href="classVector3D.xhtml">PrivateBase</a> { };</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">/*! Classe utilisée par la classe dérivée */</span></div>
-<div class="line"><span class="keyword">class </span>Used { };</div>
+<div class="line"><span class="keyword">class </span><a class="code hl_class" href="classVector3D.xhtml">Used</a> { };</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">/*! Super-classe qui hérite de plusieurs autres classes */</span></div>
-<div class="line"><span class="keyword">class </span>Inherited : <span class="keyword">public</span> PublicBase,</div>
-<div class="line">                  <span class="keyword">protected</span> ProtectedBase,</div>
-<div class="line">                  <span class="keyword">private</span> PrivateBase,</div>
-<div class="line">                  <span class="keyword">public</span> Undocumented,</div>
-<div class="line">                  <span class="keyword">public</span> Templ&lt;int&gt;</div>
+<div class="line"><span class="keyword">class </span><a class="code hl_class" href="classVector3D.xhtml">Inherited</a> : <span class="keyword">public</span> <a class="code hl_class" href="classVector3D.xhtml">PublicBase</a>,</div>
+<div class="line">                  <span class="keyword">protected</span> <a class="code hl_class" href="classVector3D.xhtml">ProtectedBase</a>,</div>
+<div class="line">                  <span class="keyword">private</span> <a class="code hl_class" href="classVector3D.xhtml">PrivateBase</a>,</div>
+<div class="line">                  <span class="keyword">public</span> <a class="code hl_class" href="classVector3D.xhtml">Undocumented</a>,</div>
+<div class="line">                  <span class="keyword">public</span> <a class="code hl_class" href="classVector3D.xhtml">Templ</a>&lt;int&gt;</div>
 <div class="line">{</div>
 <div class="line">  <span class="keyword">private</span>:</div>
-<div class="line">    Used *m_usedClass;</div>
+<div class="line">    <a class="code hl_class" href="classVector3D.xhtml">Used</a> *<a class="code hl_function" href="classVector3D.xhtml#abce4fda8bdc463b11d37c9ee2b30bd70">m_usedClass</a>;</div>
 <div class="line">};</div>
+<div class="ttc" id="aclassVector3D_xhtml"><div class="ttname"><a href="classVector3D.xhtml">Vector3D</a></div><div class="ttdoc">Une structure template qui contient x, y, z et qui permet de les additionner facilement.</div><div class="ttdef"><b>Definition</b> <a href="Vector3D_8h_source.xhtml#l00008">Vector3D.h:8</a></div></div>
+<div class="ttc" id="aclassVector3D_xhtml_abce4fda8bdc463b11d37c9ee2b30bd70"><div class="ttname"><a href="classVector3D.xhtml#abce4fda8bdc463b11d37c9ee2b30bd70">Vector3D::Vector3D</a></div><div class="ttdeci">Vector3D()</div><div class="ttdef"><b>Definition</b> <a href="Vector3D_8h_source.xhtml#l00011">Vector3D.h:11</a></div></div>
 </div><!-- fragment --><p> Cela aboutira au graphe suivant :</p>
 <center><img src="graph_legend.png" alt="" class="inline"/></center><p>Les rectangles du graphe ci-dessus ont la signification suivante : </p>
 <ul>
