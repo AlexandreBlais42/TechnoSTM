@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TechnoSTM:  Fichier source de src/include/I2C.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TechnoSTM
+   </div>
+   <div id="projectbrief">Un microscope atomique à effet tunnel</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.xhtml');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.xhtml">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.xhtml">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">I2C.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="I2C_8h.xhtml">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef I2C_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define I2C_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;linux/i2c-dev.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">/*  @todo Utiliser &lt;wiringPi.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classI2C.xhtml">   14</a></span><span class="keyword">class </span><a class="code hl_class" href="classI2C.xhtml">I2C</a>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classI2C.xhtml#a66df04ab2075b61983ad32c2544bcf42">   16</a></span>  std::fstream <a class="code hl_variable" href="classI2C.xhtml#a66df04ab2075b61983ad32c2544bcf42">file</a>; </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <a class="code hl_function" href="classI2C.xhtml#a7a9a84fccdacb3346ff97d6f3e158850">I2C</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <a class="code hl_function" href="classI2C.xhtml#a7a9a84fccdacb3346ff97d6f3e158850">I2C</a>(<span class="keyword">const</span> <a class="code hl_function" href="classI2C.xhtml#a10415f0eb4b6eced8628a173fbbd7a4a">uint8_t</a> <a class="code hl_function" href="classI2C.xhtml#a10415f0eb4b6eced8628a173fbbd7a4a">deviceAddr</a>);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <a class="code hl_function" href="classI2C.xhtml#afaad09fa9bdd23623bddbdcd7585a9fe">~I2C</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classI2C.xhtml#a40f6b3f4f181a4b7ca908ce24531f7ca">   25</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classI2C.xhtml#a40f6b3f4f181a4b7ca908ce24531f7ca">write</a>(<span class="keyword">const</span> <a class="code hl_function" href="classI2C.xhtml#a10415f0eb4b6eced8628a173fbbd7a4a">T</a> &amp;<a class="code hl_function" href="classI2C.xhtml#a10415f0eb4b6eced8628a173fbbd7a4a">data</a>){</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_variable" href="classI2C.xhtml#a66df04ab2075b61983ad32c2544bcf42">file</a>.write((<span class="keywordtype">char</span> *) &amp;<a class="code hl_function" href="classI2C.xhtml#a10415f0eb4b6eced8628a173fbbd7a4a">data</a>, <span class="keyword">sizeof</span>(<a class="code hl_function" href="classI2C.xhtml#a10415f0eb4b6eced8628a173fbbd7a4a">T</a>));</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  }</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classI2C.xhtml#a10415f0eb4b6eced8628a173fbbd7a4a">   32</a></span>  <a class="code hl_function" href="classI2C.xhtml#a10415f0eb4b6eced8628a173fbbd7a4a">T</a> <a class="code hl_function" href="classI2C.xhtml#a10415f0eb4b6eced8628a173fbbd7a4a">read</a>(){</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_function" href="classI2C.xhtml#a10415f0eb4b6eced8628a173fbbd7a4a">T</a> <a class="code hl_function" href="classI2C.xhtml#a10415f0eb4b6eced8628a173fbbd7a4a">data</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_variable" href="classI2C.xhtml#a66df04ab2075b61983ad32c2544bcf42">file</a>.read((<span class="keywordtype">char</span> *) &amp;<a class="code hl_function" href="classI2C.xhtml#a10415f0eb4b6eced8628a173fbbd7a4a">data</a>, <span class="keyword">sizeof</span>(<a class="code hl_function" href="classI2C.xhtml#a10415f0eb4b6eced8628a173fbbd7a4a">T</a>));</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classI2C.xhtml#a10415f0eb4b6eced8628a173fbbd7a4a">data</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  }</div>
+</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>};</div>
+</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#endif </span><span class="comment">// I2C_H</span></div>
+<div class="ttc" id="aclassI2C_xhtml"><div class="ttname"><a href="classI2C.xhtml">I2C</a></div><div class="ttdoc">Classe qui s'occupe de la communication I2C.</div><div class="ttdef"><b>Definition</b> <a href="I2C_8h_source.xhtml#l00014">I2C.h:14</a></div></div>
+<div class="ttc" id="aclassI2C_xhtml_a10415f0eb4b6eced8628a173fbbd7a4a"><div class="ttname"><a href="classI2C.xhtml#a10415f0eb4b6eced8628a173fbbd7a4a">I2C::read</a></div><div class="ttdeci">T read()</div><div class="ttdoc">Lits une donnée sur la communication I2C.</div><div class="ttdef"><b>Definition</b> <a href="I2C_8h_source.xhtml#l00032">I2C.h:32</a></div></div>
+<div class="ttc" id="aclassI2C_xhtml_a40f6b3f4f181a4b7ca908ce24531f7ca"><div class="ttname"><a href="classI2C.xhtml#a40f6b3f4f181a4b7ca908ce24531f7ca">I2C::write</a></div><div class="ttdeci">void write(const T &amp;data)</div><div class="ttdoc">Écrits une donnée sur la communication I2C.</div><div class="ttdef"><b>Definition</b> <a href="I2C_8h_source.xhtml#l00025">I2C.h:25</a></div></div>
+<div class="ttc" id="aclassI2C_xhtml_a66df04ab2075b61983ad32c2544bcf42"><div class="ttname"><a href="classI2C.xhtml#a66df04ab2075b61983ad32c2544bcf42">I2C::file</a></div><div class="ttdeci">std::fstream file</div><div class="ttdef"><b>Definition</b> <a href="I2C_8h_source.xhtml#l00016">I2C.h:16</a></div></div>
+<div class="ttc" id="aclassI2C_xhtml_a7a9a84fccdacb3346ff97d6f3e158850"><div class="ttname"><a href="classI2C.xhtml#a7a9a84fccdacb3346ff97d6f3e158850">I2C::I2C</a></div><div class="ttdeci">I2C()</div><div class="ttdef"><b>Definition</b> <a href="I2C_8cpp_source.xhtml#l00004">I2C.cpp:4</a></div></div>
+<div class="ttc" id="aclassI2C_xhtml_afaad09fa9bdd23623bddbdcd7585a9fe"><div class="ttname"><a href="classI2C.xhtml#afaad09fa9bdd23623bddbdcd7585a9fe">I2C::~I2C</a></div><div class="ttdeci">~I2C()</div><div class="ttdef"><b>Definition</b> <a href="I2C_8cpp_source.xhtml#l00020">I2C.cpp:20</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

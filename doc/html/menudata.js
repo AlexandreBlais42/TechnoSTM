@@ -27,8 +27,27 @@ var menudata={children:[
 {text:"Classes",url:"annotated.xhtml",children:[
 {text:"Liste des classes",url:"annotated.xhtml"},
 {text:"Index des classes",url:"classes.xhtml"},
+{text:"Hiérarchie des classes",url:"inherits.xhtml"},
 {text:"Membres de classe",url:"functions.xhtml",children:[
-{text:"Tout",url:"functions.xhtml"},
+{text:"Tout",url:"functions.xhtml",children:[
+{text:"a",url:"functions.xhtml#index_a"},
+{text:"b",url:"functions.xhtml#index_b"},
+{text:"c",url:"functions.xhtml#index_c"},
+{text:"d",url:"functions.xhtml#index_d"},
+{text:"f",url:"functions.xhtml#index_f"},
+{text:"g",url:"functions.xhtml#index_g"},
+{text:"i",url:"functions.xhtml#index_i"},
+{text:"m",url:"functions.xhtml#index_m"},
+{text:"o",url:"functions.xhtml#index_o"},
+{text:"p",url:"functions.xhtml#index_p"},
+{text:"r",url:"functions.xhtml#index_r"},
+{text:"s",url:"functions.xhtml#index_s"},
+{text:"v",url:"functions.xhtml#index_v"},
+{text:"w",url:"functions.xhtml#index_w"},
+{text:"x",url:"functions.xhtml#index_x"},
+{text:"y",url:"functions.xhtml#index_y"},
+{text:"z",url:"functions.xhtml#index_z"},
+{text:"~",url:"functions.xhtml#index__7E"}]},
 {text:"Fonctions",url:"functions_func.xhtml"},
 {text:"Variables",url:"functions_vars.xhtml"}]}]},
 {text:"Fichiers",url:"files.xhtml",children:[

@@ -85,24 +85,24 @@ $(document).ready(function() { init_codefold(0); });
 <a href="StepMotor_8cpp.xhtml">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="StepMotor_8h.xhtml">StepMotor.h</a>&quot;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="foldopen" id="foldopen00003" data-start="{" data-end="}">
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classStepMotor.xhtml#a31ba33d855d9b1078c0ae331524ea4dc">    3</a></span><a class="code hl_function" href="classStepMotor.xhtml#a31ba33d855d9b1078c0ae331524ea4dc">StepMotor::StepMotor</a>(<span class="keyword">const</span> <a class="code hl_class" href="classVector3D.xhtml">int32_t</a> position) : position(position), steps(0){</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classStepMotor.xhtml#a31ba33d855d9b1078c0ae331524ea4dc">    3</a></span><a class="code hl_function" href="classStepMotor.xhtml#a31ba33d855d9b1078c0ae331524ea4dc">StepMotor::StepMotor</a>(<span class="keyword">const</span> int32_t position) : position(position), steps(0){</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>}</div>
 </div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="foldopen" id="foldopen00008" data-start="{" data-end="}">
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="classStepMotor.xhtml#a635c9b369bb9fa8b6722d485300c144b">    8</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classStepMotor.xhtml#a635c9b369bb9fa8b6722d485300c144b">StepMotor::goToRelative</a>(<span class="keyword">const</span> <a class="code hl_class" href="classVector3D.xhtml">int32_t</a> <a class="code hl_class" href="classVector3D.xhtml">pos</a>){</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  <a class="code hl_variable" href="classStepMotor.xhtml#a5d3b6e20ec55fad44836fef89b07a086">position</a> += <a class="code hl_class" href="classVector3D.xhtml">pos</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="classStepMotor.xhtml#a635c9b369bb9fa8b6722d485300c144b">    8</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classStepMotor.xhtml#a635c9b369bb9fa8b6722d485300c144b">StepMotor::goToRelative</a>(<span class="keyword">const</span> int32_t pos){</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  <a class="code hl_variable" href="classStepMotor.xhtml#a5d3b6e20ec55fad44836fef89b07a086">position</a> += pos;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  <a class="code hl_class" href="classVector3D.xhtml">int8_t</a> <a class="code hl_class" href="classVector3D.xhtml">direction</a> = 1;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  <span class="keywordflow">if</span> (<a class="code hl_class" href="classVector3D.xhtml">pos</a> &lt; 0){</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_class" href="classVector3D.xhtml">direction</a> *= -1;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  int8_t direction = 1;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  <span class="keywordflow">if</span> (pos &lt; 0){</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    direction *= -1;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  }</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <span class="keywordflow">for</span> (<a class="code hl_class" href="classVector3D.xhtml">uint8_t</a> <a class="code hl_class" href="classVector3D.xhtml">_</a> = 0 ; <a class="code hl_class" href="classVector3D.xhtml">_</a> &lt; <a class="code hl_class" href="classVector3D.xhtml">abs</a>(<a class="code hl_class" href="classVector3D.xhtml">pos</a>) ; <a class="code hl_class" href="classVector3D.xhtml">_</a>++){</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <span class="keywordflow">for</span> (uint8_t _ = 0 ; _ &lt; abs(pos) ; _++){</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_function" href="classGPIO.xhtml#a60ac204e399c56d031c0cd4d95acddf8">GPIO::setPin</a>(<a class="code hl_variable" href="classStepMotor.xhtml#a61afaf5bcdbf748851d5051ebffa3e84">steps</a>, <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_variable" href="classStepMotor.xhtml#a61afaf5bcdbf748851d5051ebffa3e84">steps</a> += <a class="code hl_class" href="classVector3D.xhtml">direction</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_variable" href="classStepMotor.xhtml#a61afaf5bcdbf748851d5051ebffa3e84">steps</a> += direction;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_variable" href="classStepMotor.xhtml#a61afaf5bcdbf748851d5051ebffa3e84">steps</a> %= 4;</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_function" href="classGPIO.xhtml#a60ac204e399c56d031c0cd4d95acddf8">GPIO::setPin</a>(<a class="code hl_variable" href="classStepMotor.xhtml#a61afaf5bcdbf748851d5051ebffa3e84">steps</a>, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
@@ -112,8 +112,8 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classStepMotor.xhtml#a03b2aff524cad41785738142e3b7c635">   26</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classStepMotor.xhtml#a03b2aff524cad41785738142e3b7c635">StepMotor::goToAbsolute</a>(<span class="keyword">const</span> <a class="code hl_class" href="classVector3D.xhtml">int32_t</a> <a class="code hl_class" href="classVector3D.xhtml">pos</a>){</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <a class="code hl_function" href="classStepMotor.xhtml#a635c9b369bb9fa8b6722d485300c144b">goToRelative</a>(<a class="code hl_class" href="classVector3D.xhtml">pos</a> - <a class="code hl_variable" href="classStepMotor.xhtml#a5d3b6e20ec55fad44836fef89b07a086">position</a>);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classStepMotor.xhtml#a03b2aff524cad41785738142e3b7c635">   26</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classStepMotor.xhtml#a03b2aff524cad41785738142e3b7c635">StepMotor::goToAbsolute</a>(<span class="keyword">const</span> int32_t pos){</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <a class="code hl_function" href="classStepMotor.xhtml#a635c9b369bb9fa8b6722d485300c144b">goToRelative</a>(pos - <a class="code hl_variable" href="classStepMotor.xhtml#a5d3b6e20ec55fad44836fef89b07a086">position</a>);</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}</div>
 </div>
 <div class="ttc" id="aStepMotor_8h_xhtml"><div class="ttname"><a href="StepMotor_8h.xhtml">StepMotor.h</a></div></div>
@@ -124,7 +124,6 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassStepMotor_xhtml_a5d3b6e20ec55fad44836fef89b07a086"><div class="ttname"><a href="classStepMotor.xhtml#a5d3b6e20ec55fad44836fef89b07a086">StepMotor::position</a></div><div class="ttdeci">int32_t position</div><div class="ttdef"><b>Definition</b> <a href="StepMotor_8h_source.xhtml#l00011">StepMotor.h:11</a></div></div>
 <div class="ttc" id="aclassStepMotor_xhtml_a61afaf5bcdbf748851d5051ebffa3e84"><div class="ttname"><a href="classStepMotor.xhtml#a61afaf5bcdbf748851d5051ebffa3e84">StepMotor::steps</a></div><div class="ttdeci">int8_t steps</div><div class="ttdef"><b>Definition</b> <a href="StepMotor_8h_source.xhtml#l00012">StepMotor.h:12</a></div></div>
 <div class="ttc" id="aclassStepMotor_xhtml_a635c9b369bb9fa8b6722d485300c144b"><div class="ttname"><a href="classStepMotor.xhtml#a635c9b369bb9fa8b6722d485300c144b">StepMotor::goToRelative</a></div><div class="ttdeci">void goToRelative(const int32_t pos)</div><div class="ttdoc">Mets la position de la plateforme relativement à sa position actuelle.</div><div class="ttdef"><b>Definition</b> <a href="StepMotor_8cpp_source.xhtml#l00008">StepMotor.cpp:8</a></div></div>
-<div class="ttc" id="aclassVector3D_xhtml"><div class="ttname"><a href="classVector3D.xhtml">Vector3D</a></div><div class="ttdoc">Une structure template qui contient x, y, z et qui permet de les additionner facilement.</div><div class="ttdef"><b>Definition</b> <a href="Vector3D_8h_source.xhtml#l00008">Vector3D.h:8</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
