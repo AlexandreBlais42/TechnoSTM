@@ -1,6 +1,11 @@
 #include "I2C.h"
+#define __arm__
 
-I2C::I2C(const uint8_t deviceAddr) : deviceAddr(deviceAddr) {
+I2C::I2C(){
+
+}
+
+I2C::I2C(const uint8_t deviceAddr){
 #ifdef __arm__
   file = std::fstream("/dev/i2c-" + std::to_string(deviceAddr), file.binary | file.trunc | file.in | file.out);
   if (!file.is_open()){

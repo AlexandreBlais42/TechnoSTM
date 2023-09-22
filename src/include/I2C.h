@@ -6,14 +6,16 @@
 #include <cstdint>
 
 #include <linux/i2c-dev.h>
+/*  @todo Utiliser <wiringPi.h>
+ */
 
 /** @brief Classe qui s'occupe de la communication I2C
  */
 class I2C{
 public:
   std::fstream file; 
-  uint8_t deviceAddr;
 
+  I2C();
   I2C(const uint8_t deviceAddr);
   ~I2C();
 
