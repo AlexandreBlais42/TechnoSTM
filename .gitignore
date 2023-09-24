@@ -3,6 +3,8 @@ build/
 build/*
 /build/*
 
+compile_flags.txt
+
 *.d
 *.slo
 *.lo
