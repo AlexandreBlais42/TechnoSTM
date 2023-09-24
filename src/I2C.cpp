@@ -45,12 +45,10 @@ I2C::~I2C() { std::cout << "I2C::~I2C appellé " << std::endl; }
 void I2C::writeReg8(int reg, uint8_t data) {
   std::cout << "I2C::" << __FUNCTION__ << "appellé avec reg = " << reg
             << " et data = " << data << std::endl;
-  return true;
 }
 void I2C::writeReg16(int reg, uint16_t data) {
   std::cout << "I2C::" << __FUNCTION__ << "appellé avec reg = " << reg
             << " et data = " << data << std::endl;
-  return true;
 }
 
 uint8_t I2C::readReg8(int reg) {
