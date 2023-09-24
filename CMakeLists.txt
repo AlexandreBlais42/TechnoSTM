@@ -4,7 +4,9 @@ project(TechnoSTM)
 # Version standard C++
 set(CMAKE_CXX_STANDARD 17)
 
-add_compile_options(-Wall)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+add_compile_options(-Wall -O2)
 
 # Définition de variables
 set(SOURCE_DIR src/)
