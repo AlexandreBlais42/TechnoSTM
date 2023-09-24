@@ -3,7 +3,6 @@
 
 template <typename T>
 /** @brief Une structure template qui contient x, y, z et qui permet de les additionner facilement
- *
  */
 class Vector3D{
 public:

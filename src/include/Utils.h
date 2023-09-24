@@ -1,11 +1,11 @@
 #ifndef UTILS_H
 #define UTILS_H
 
-#include <string>
-#include <iostream>
-#include <chrono>
-#include <thread>
 #include <cassert>
+#include <chrono>
+#include <iostream>
+#include <string>
+#include <thread>
 
 /** @brief Retourne l'équivalent hexadécimal de l'argument
  *  @param val La valeur plus petite que 16 à convertir
@@ -21,4 +21,4 @@ std::string getHexString(uint16_t data);
 
 void delay_ms(const uint32_t time);
 
-#endif //UTILS_H
+#endif // UTILS_H

@@ -1,19 +1,16 @@
 #include "StepMotor.h"
 
-StepMotor::StepMotor(const int32_t position) : position(position), steps(0){
+StepMotor::StepMotor(const int32_t position) : position(position), steps(0) {}
 
-}
-
-
-void StepMotor::goToRelative(const int32_t pos){
+void StepMotor::goToRelative(const int32_t pos) {
   position += pos;
 
   int8_t direction = 1;
-  if (pos < 0){
+  if (pos < 0) {
     direction *= -1;
   }
 
-  for (uint8_t _ = 0 ; _ < abs(pos) ; _++){
+  for (uint8_t _ = 0; _ < abs(pos); _++) {
     GPIO::setPin(steps, false);
     steps += direction;
     steps %= 4;
@@ -23,6 +20,6 @@ void StepMotor::goToRelative(const int32_t pos){
   }
 }
 
-inline void StepMotor::goToAbsolute(const int32_t pos){
+inline void StepMotor::goToAbsolute(const int32_t pos) {
   goToRelative(pos - position);
 }

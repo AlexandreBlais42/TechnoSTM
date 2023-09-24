@@ -1,9 +1,9 @@
 #ifndef ADS1115_H
 #define ADS1115_H
 
-#include <iostream>
-#include <cstdint>
 #include <cassert>
+#include <cstdint>
+#include <iostream>
 
 #include "I2C.h"
 

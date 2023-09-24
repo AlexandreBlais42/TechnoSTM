@@ -1,9 +1,9 @@
 #ifndef GPIO_H
 #define GPIO_H
 
-#include <iostream>
-#include <cstdint>
 #include <cassert>
+#include <cstdint>
+#include <iostream>
 
 #ifdef __arm__
 #include <wiringPi.h>
@@ -11,7 +11,7 @@
 
 /** @brief Classe qui gère le GPIO du raspberry pi
  */
-class GPIO{
+class GPIO {
 public:
   GPIO();
 
@@ -22,4 +22,4 @@ public:
   static void setPin(const uint8_t pinNumber, const bool state);
 };
 
-#endif //GPIO_H
+#endif // GPIO_H

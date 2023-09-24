@@ -1,12 +1,13 @@
 #include "Serial.h"
 
-Serial::Serial(){}
+Serial::Serial() {}
 
-void Serial::begin(const std::string devicePath, const uint32_t baudrate){
+void Serial::begin(const std::string devicePath, const uint32_t baudrate) {
 #ifdef __arm__
   // À implémenter
 #else
-  std::cout << "Serial::begin, device : " << devicePath << " baudrate : " << baudrate << std::endl;
+  std::cout << "Serial::begin, device : " << devicePath
+            << " baudrate : " << baudrate << std::endl;
 #endif // __arm__
 }
 
@@ -20,7 +21,7 @@ void Serial::write(const std::string s) const {
 
 std::vector<char> Serial::read(const uint32_t amount) const {
 #ifdef __arm__
-  //À implémenter
+  // À implémenter
   return std::vector<char>(0);
 #else
   std::cout << "Serial::read : " << amount << std::endl;

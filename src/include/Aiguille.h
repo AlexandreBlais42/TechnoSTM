@@ -5,9 +5,8 @@
 
 /** @brief Classe qui gère l'aiguille
  */
-class Aiguille{
+class Aiguille {
 public:
-  
 };
 
 #endif // AIGUILLE_H
