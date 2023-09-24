@@ -10,6 +10,7 @@ void ADS1115::setChannel(const uint8_t channel) {
 #else
   std::cout << "ADS1115::setChannel() appellé avec channel = "
             << (uint16_t)channel << std::endl;
+
 #endif // __arm__
 }
 
