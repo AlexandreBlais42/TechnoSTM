@@ -30,7 +30,7 @@ uint8_t I2C::readReg8(int reg) {
   return wiringPiI2CReadReg8(fileDescriptor, reg);
 }
 uint16_t I2C::readReg16(int reg) {
-  return wiringPiI2CReadReg8(fileDescriptor, reg);
+  return wiringPiI2CReadReg16(fileDescriptor, reg);
 }
 
 #else // Pas sur le raspberry pi

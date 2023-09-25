@@ -4,7 +4,13 @@
 #include <cstdint>
 #include <iostream>
 
+extern "C" {
+#include <unistd.h>
+}
+
 #ifdef __arm__
+/** @note À changer pour <linux-i2c-dev.h> si ça marche pas bien
+ */
 #include <wiringPiI2C.h>
 #endif // __arm__
 
@@ -37,6 +43,32 @@ public:
    *   @return La valeur 16 bit lu
    */
   uint16_t readReg16(int reg);
+
+  template <typename T>
+  /** @brief Écrits une donnée sur la communication I2C
+   */
+  void writeData(const T &data) {
+    write(fileDescriptor, (char *)&data, sizeof(T));
+#ifdef __arm__
+    write(fileDescriptor, (char *)&data, sizeof(T));
+#else
+    std::cout << "I2C::write appellé avec data (" << sizeof(data) << " octets)"
+              << std::endl;
+#endif // __arm__
+  }
+
+  template <typename T>
+  /** @brief Lits une donnée sur la communication I2C
+   */
+  T readData() {
+#ifdef __arm__
+    T data;
+    read(fileDescriptor, (char *)&data, sizeof(T));
+    return data;
+#else
+    std::cout << "I2C::read appellé" << std::endl;
+#endif // __arm__
+  }
 };
 
 #endif // I2C_H
