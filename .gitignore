@@ -9,7 +9,7 @@ compile_flags.txt
 .vscode/*
 
 .clangd/
-.clangd*
+.clangd/*
 
 *.d
 *.slo
