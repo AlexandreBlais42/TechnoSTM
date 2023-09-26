@@ -8,6 +8,9 @@ compile_flags.txt
 .vscode/
 .vscode/*
 
+.clangd/
+.clangd*
+
 *.d
 *.slo
 *.lo
