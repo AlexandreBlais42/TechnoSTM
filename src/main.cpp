@@ -8,6 +8,5 @@
 
 int main() {
   Plateforme plateforme("/dev/ttyUSB0");
-  I2C conn(10)
-  ;
+  I2C conn(10);
 }

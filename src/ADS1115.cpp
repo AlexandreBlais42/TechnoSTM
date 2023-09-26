@@ -54,11 +54,15 @@ void ADS1115::setComparatorQueue(const uint8_t mode){
   configs |= ((uint16_t) mode) << COMPARATOR_QUEUE_OFFSET;
 }
 
+void ADS1115::writeConfigs(){
+  writeReg16(Config, configs); 
+  addressPointer = Config;
+}
+
 uint16_t ADS1115::read() {
-#ifdef __arm__
-  return I2C::read<uint16_t>();
-#else
-  std::cout << "ADS1115::read() appellé" << std::endl;
-  return 0;
-#endif // __arm__
+  if (addressPointer != Conversion){
+    writeData<uint8_t>(Conversion);
+    addressPointer = Conversion;
+  }
+  return readData<uint16_t>();
 }

@@ -48,9 +48,10 @@ public:
   /** @brief Écrits une donnée sur la communication I2C
    */
   void writeData(const T &data) {
-    write(fileDescriptor, (char *)&data, sizeof(T));
 #ifdef __arm__
-    write(fileDescriptor, (char *)&data, sizeof(T));
+    if (!write(fileDescriptor, (char *)&data, sizeof(T))){
+      std::cout << "Une erreur est survenue lors de l'écriture dans la communication I2C"
+    }
 #else
     std::cout << "I2C::write appellé avec data (" << sizeof(data) << " octets)"
               << std::endl;
@@ -67,6 +68,7 @@ public:
     return data;
 #else
     std::cout << "I2C::read appellé" << std::endl;
+    return 0;
 #endif // __arm__
   }
 };

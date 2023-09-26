@@ -36,10 +36,10 @@ private:
   /** @brief gère l'addressPointer
    */
   typedef enum AddressPointer_t {
-    Conversion,
-    Config,
-    Lo_thresh,
-    Hi_thresh,
+    Conversion = 0b00,
+    Config = 0b01,
+    Lo_thresh = 0b10,
+    Hi_thresh = 0b11,
   } AddressPointer_t;
 
 public:
@@ -92,6 +92,10 @@ public:
    *  @param mode Le mode à mettre, voir la datasheet
    */
   void setComparatorQueue(const uint8_t mode);
+
+  /** @brief Écris les configs sur l'ADS1115
+   */
+  void writeConfigs();
 
   /** @brief Lis une valeur sur un channel de l'ADC
    *  @return La valeur 16 bits lu
