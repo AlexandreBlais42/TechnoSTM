@@ -1,6 +1,5 @@
 #include "I2C.h"
 #include <iostream>
-
 /*  Ce fichier ce décompose en deux parties: le code pour le raspberry pi
  * (#ifdef __arm__) et le code pour les autres ordi. Le code doit être séparé
  * car les ordinateurs n'ont pas accès au GPIO comme le raspberry pi et il

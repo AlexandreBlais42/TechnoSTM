@@ -5,13 +5,9 @@ ADS1115::ADS1115(const uint8_t deviceAddr)
       addressPointer(Conversion) {}
 
 void ADS1115::setChannel(const uint8_t channel) {
-#ifdef __arm__
-  // I2C::write();
-#else
-  std::cout << "ADS1115::setChannel() appellé avec channel = "
-            << std::to_string(channel) << std::endl;
-
-#endif // __arm__
+  assert(channel <= 3);
+  configs &= CHANNEL_MASK;
+  configs |= ((uint16_t) channel + 0b100) << 12;
 }
 
 uint16_t ADS1115::read() {
