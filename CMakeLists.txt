@@ -3,25 +3,9 @@ project(TechnoSTM)
 
 # Version standard C++
 set(CMAKE_CXX_STANDARD 17)
-
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_compile_options(-Wall -O2)
 
-# Définition de variables
-set(SOURCE_DIR src/)
-set(INCLUDE_DIR src/include/)
-
-# Tous les fichiers sources
-file(GLOB_RECURSE SOURCES ${SOURCE_DIR}/*.cpp)
-file(GLOB PROGRAMS programs/*.cpp)
-
-# Répertoire des headers
-include_directories(${INCLUDE_DIR})
-
-# Compilation
-add_library(${PROJECT_NAME}LIB SHARED ${SOURCES})
-
-add_executable(${PROJECT_NAME} programs/main.cpp)
-target_link_libraries(${PROJECT_NAME} LINK_PUBLIC ${PROJECT_NAME}LIB)
-
+add_subdirectory(programs)
+add_subdirectory(src)

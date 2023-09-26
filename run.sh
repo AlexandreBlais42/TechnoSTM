@@ -1,1 +1,1 @@
-./build/TechnoSTM
+./build/programs/TechnoSTM
