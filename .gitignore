@@ -4,6 +4,8 @@ build/*
 /build/*
 
 compile_flags.txt
+.vscode/
+.vscode/*
 
 *.d
 *.slo
