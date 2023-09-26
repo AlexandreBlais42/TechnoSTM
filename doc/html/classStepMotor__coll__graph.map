@@ -1,3 +1,3 @@
 <map id="StepMotor" name="StepMotor">
-<area shape="rect" id="Node000001" title="Classe qui gère les mouvements du step moteur." alt="" coords="5,5,116,139"/>
+<area shape="rect" id="node1" title="Classe qui gère les mouvements du step moteur." alt="" coords="5,5,140,127"/>
 </map>

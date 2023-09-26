@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['file_0',['file',['../classI2C.xhtml#a66df04ab2075b61983ad32c2544bcf42',1,'I2C']]]
+  ['devicepath_143',['devicePath',['../classSerial.xhtml#adace273fec553f5df81ae2ec1ba162fd',1,'Serial']]]
 ];

@@ -1,5 +1,4 @@
 <map id="I2C" name="I2C">
-<area shape="rect" id="Node000001" title="Classe qui s&#39;occupe de la communication I2C." alt="" coords="24,5,84,160"/>
-<area shape="rect" id="Node000002" href="$classADS1115.xhtml" title="Gère l&#39;interfaçage avec l&#39;ADC externe en I2C." alt="" coords="5,208,103,320"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="57,175,57,208,51,208,51,175"/>
+<area shape="rect" id="node1" title="Classe qui s&#39;occupe de la communication I2C." alt="" coords="51,5,175,185"/>
+<area shape="rect" id="node2" href="$classADS1115.xhtml" title="Gère l&#39;interfaçage avec l&#39;ADC externe en I2C." alt="" coords="5,233,221,487"/>
 </map>

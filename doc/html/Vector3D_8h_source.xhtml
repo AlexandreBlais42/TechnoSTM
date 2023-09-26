@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>TechnoSTM:  Fichier source de src/include/Vector3D.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,8 +19,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">TechnoSTM
    </div>
    <div id="projectbrief">Un microscope atomique à effet tunnel</div>
@@ -30,28 +30,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.9.8 -->
+<!-- Généré par Doxygen 1.8.17 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.xhtml');
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','Recherche');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -61,16 +55,9 @@ $(document).ready(function() { init_codefold(0); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Chargement...</div>
-<div class="SRStatus" id="Searching">Recherche...</div>
-<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -79,68 +66,61 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">Vector3D.h</div></div>
+  <div class="headertitle">
+<div class="title">Vector3D.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="Vector3D_8h.xhtml">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef VECTOR3D_H</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define VECTOR3D_H</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="classVector3D.xhtml">    8</a></span><span class="keyword">class </span><a class="code hl_class" href="classVector3D.xhtml">Vector3D</a>{</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">   10</a></span>  T <a class="code hl_variable" href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">x</a>, <a class="code hl_variable" href="classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df">y</a>, <a class="code hl_variable" href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">z</a>; </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classVector3D.xhtml#abce4fda8bdc463b11d37c9ee2b30bd70">   11</a></span>  <a class="code hl_function" href="classVector3D.xhtml#abce4fda8bdc463b11d37c9ee2b30bd70">Vector3D</a>() : <a class="code hl_variable" href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">x</a>(0), <a class="code hl_variable" href="classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df">y</a>(0), <a class="code hl_variable" href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">z</a>(0){}</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classVector3D.xhtml#ad75dfced4bee76cd097e34354c83e379">   12</a></span>  <a class="code hl_function" href="classVector3D.xhtml#ad75dfced4bee76cd097e34354c83e379">Vector3D</a>(<span class="keyword">const</span> T <a class="code hl_variable" href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">x</a>, <span class="keyword">const</span> T <a class="code hl_variable" href="classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df">y</a>, <span class="keyword">const</span> T <a class="code hl_variable" href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">z</a>) : <a class="code hl_variable" href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">x</a>(<a class="code hl_variable" href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">x</a>), <a class="code hl_variable" href="classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df">y</a>(<a class="code hl_variable" href="classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df">y</a>), <a class="code hl_variable" href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">z</a>(<a class="code hl_variable" href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">z</a>){}</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classVector3D.xhtml#a4a849acd4e9c0984137cc92ac38f449f">   17</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classVector3D.xhtml#a4a849acd4e9c0984137cc92ac38f449f">operator+=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classVector3D.xhtml">Vector3D&lt;T&gt;</a> &amp;other){</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_variable" href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">x</a> += other.<a class="code hl_variable" href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">x</a>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_variable" href="classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df">y</a> += other.<a class="code hl_variable" href="classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df">y</a>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_variable" href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">z</a> += other.<a class="code hl_variable" href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">z</a>;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  }</div>
-</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classVector3D.xhtml#a49e949a58eb95ea8aaca119a65f3db06">   26</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classVector3D.xhtml#a49e949a58eb95ea8aaca119a65f3db06">operator-=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classVector3D.xhtml">Vector3D&lt;T&gt;</a> &amp;other){</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_variable" href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">x</a> -= other.<a class="code hl_variable" href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">x</a>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_variable" href="classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df">y</a> -= other.<a class="code hl_variable" href="classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df">y</a>;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_variable" href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">z</a> -= other.<a class="code hl_variable" href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">z</a>;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  }</div>
-</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>};</div>
-</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="Vector3D_8h.xhtml#a55c727bd7c091dde908d5ebc1d2ed5ac">   40</a></span><a class="code hl_class" href="classVector3D.xhtml">Vector3D&lt;T&gt;</a> <a class="code hl_function" href="Vector3D_8h.xhtml#a55c727bd7c091dde908d5ebc1d2ed5ac">operator+</a>(<span class="keyword">const</span> <a class="code hl_class" href="classVector3D.xhtml">Vector3D&lt;T&gt;</a> &amp;a, <span class="keyword">const</span> <a class="code hl_class" href="classVector3D.xhtml">Vector3D&lt;T&gt;</a> &amp;b){</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classVector3D.xhtml">Vector3D&lt;T&gt;</a>(a.<a class="code hl_variable" href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">x</a> + b.<a class="code hl_variable" href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">x</a>, a.<a class="code hl_variable" href="classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df">y</a> + b.<a class="code hl_variable" href="classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df">y</a>, a.<a class="code hl_variable" href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">z</a> + b.<a class="code hl_variable" href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">z</a>);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>}</div>
-</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="Vector3D_8h.xhtml#a5346303d9d1b44906e9a4ff73f8a097c">   50</a></span><a class="code hl_class" href="classVector3D.xhtml">Vector3D&lt;T&gt;</a> <a class="code hl_function" href="Vector3D_8h.xhtml#a5346303d9d1b44906e9a4ff73f8a097c">operator-</a>(<span class="keyword">const</span> <a class="code hl_class" href="classVector3D.xhtml">Vector3D&lt;T&gt;</a> &amp;a, <span class="keyword">const</span> <a class="code hl_class" href="classVector3D.xhtml">Vector3D&lt;T&gt;</a> &amp;b){</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classVector3D.xhtml">Vector3D&lt;T&gt;</a>(a.<a class="code hl_variable" href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">x</a> - b.<a class="code hl_variable" href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">x</a>, a.<a class="code hl_variable" href="classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df">y</a> - b.<a class="code hl_variable" href="classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df">y</a>, a.<a class="code hl_variable" href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">z</a> - b.<a class="code hl_variable" href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">z</a>);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
-</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#endif </span><span class="comment">//VECTOR3D_H</span></div>
-<div class="ttc" id="aVector3D_8h_xhtml_a5346303d9d1b44906e9a4ff73f8a097c"><div class="ttname"><a href="Vector3D_8h.xhtml#a5346303d9d1b44906e9a4ff73f8a097c">operator-</a></div><div class="ttdeci">Vector3D&lt; T &gt; operator-(const Vector3D&lt; T &gt; &amp;a, const Vector3D&lt; T &gt; &amp;b)</div><div class="ttdoc">Soustrait deux objets Vector3D.</div><div class="ttdef"><b>Definition</b> <a href="Vector3D_8h_source.xhtml#l00050">Vector3D.h:50</a></div></div>
-<div class="ttc" id="aVector3D_8h_xhtml_a55c727bd7c091dde908d5ebc1d2ed5ac"><div class="ttname"><a href="Vector3D_8h.xhtml#a55c727bd7c091dde908d5ebc1d2ed5ac">operator+</a></div><div class="ttdeci">Vector3D&lt; T &gt; operator+(const Vector3D&lt; T &gt; &amp;a, const Vector3D&lt; T &gt; &amp;b)</div><div class="ttdoc">Additionne deux objets Vector3D.</div><div class="ttdef"><b>Definition</b> <a href="Vector3D_8h_source.xhtml#l00040">Vector3D.h:40</a></div></div>
-<div class="ttc" id="aclassVector3D_xhtml"><div class="ttname"><a href="classVector3D.xhtml">Vector3D</a></div><div class="ttdoc">Une structure template qui contient x, y, z et qui permet de les additionner facilement.</div><div class="ttdef"><b>Definition</b> <a href="Vector3D_8h_source.xhtml#l00008">Vector3D.h:8</a></div></div>
-<div class="ttc" id="aclassVector3D_xhtml_a1953bc3e5f343dcc592c57fa700ad5df"><div class="ttname"><a href="classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df">Vector3D::y</a></div><div class="ttdeci">T y</div><div class="ttdef"><b>Definition</b> <a href="Vector3D_8h_source.xhtml#l00010">Vector3D.h:10</a></div></div>
-<div class="ttc" id="aclassVector3D_xhtml_a49e949a58eb95ea8aaca119a65f3db06"><div class="ttname"><a href="classVector3D.xhtml#a49e949a58eb95ea8aaca119a65f3db06">Vector3D::operator-=</a></div><div class="ttdeci">void operator-=(const Vector3D&lt; T &gt; &amp;other)</div><div class="ttdoc">Soustrait un Vector3D à l'objet.</div><div class="ttdef"><b>Definition</b> <a href="Vector3D_8h_source.xhtml#l00026">Vector3D.h:26</a></div></div>
-<div class="ttc" id="aclassVector3D_xhtml_a4a849acd4e9c0984137cc92ac38f449f"><div class="ttname"><a href="classVector3D.xhtml#a4a849acd4e9c0984137cc92ac38f449f">Vector3D::operator+=</a></div><div class="ttdeci">void operator+=(const Vector3D&lt; T &gt; &amp;other)</div><div class="ttdoc">Additione un Vector3D à l'objet.</div><div class="ttdef"><b>Definition</b> <a href="Vector3D_8h_source.xhtml#l00017">Vector3D.h:17</a></div></div>
-<div class="ttc" id="aclassVector3D_xhtml_a8649bbba44f375d9e797ec676864624f"><div class="ttname"><a href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">Vector3D::x</a></div><div class="ttdeci">T x</div><div class="ttdef"><b>Definition</b> <a href="Vector3D_8h_source.xhtml#l00010">Vector3D.h:10</a></div></div>
-<div class="ttc" id="aclassVector3D_xhtml_a9c9eee941c3ea33687de920c3315e0da"><div class="ttname"><a href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">Vector3D::z</a></div><div class="ttdeci">T z</div><div class="ttdef"><b>Definition</b> <a href="Vector3D_8h_source.xhtml#l00010">Vector3D.h:10</a></div></div>
-<div class="ttc" id="aclassVector3D_xhtml_abce4fda8bdc463b11d37c9ee2b30bd70"><div class="ttname"><a href="classVector3D.xhtml#abce4fda8bdc463b11d37c9ee2b30bd70">Vector3D::Vector3D</a></div><div class="ttdeci">Vector3D()</div><div class="ttdef"><b>Definition</b> <a href="Vector3D_8h_source.xhtml#l00011">Vector3D.h:11</a></div></div>
-<div class="ttc" id="aclassVector3D_xhtml_ad75dfced4bee76cd097e34354c83e379"><div class="ttname"><a href="classVector3D.xhtml#ad75dfced4bee76cd097e34354c83e379">Vector3D::Vector3D</a></div><div class="ttdeci">Vector3D(const T x, const T y, const T z)</div><div class="ttdef"><b>Definition</b> <a href="Vector3D_8h_source.xhtml#l00012">Vector3D.h:12</a></div></div>
+<a href="Vector3D_8h.xhtml">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef VECTOR3D_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define VECTOR3D_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classVector3D.xhtml">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="classVector3D.xhtml">Vector3D</a>{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">    9</a></span>&#160;  T <a class="code" href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">x</a>, <a class="code" href="classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df">y</a>, <a class="code" href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">z</a>; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classVector3D.xhtml#abce4fda8bdc463b11d37c9ee2b30bd70">   10</a></span>&#160;  <a class="code" href="classVector3D.xhtml#abce4fda8bdc463b11d37c9ee2b30bd70">Vector3D</a>() : <a class="code" href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">x</a>(0), <a class="code" href="classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df">y</a>(0), <a class="code" href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">z</a>(0){}</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classVector3D.xhtml#ad75dfced4bee76cd097e34354c83e379">   11</a></span>&#160;  <a class="code" href="classVector3D.xhtml#ad75dfced4bee76cd097e34354c83e379">Vector3D</a>(<span class="keyword">const</span> T <a class="code" href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">x</a>, <span class="keyword">const</span> T <a class="code" href="classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df">y</a>, <span class="keyword">const</span> T <a class="code" href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">z</a>) : <a class="code" href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">x</a>(<a class="code" href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">x</a>), <a class="code" href="classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df">y</a>(<a class="code" href="classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df">y</a>), <a class="code" href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">z</a>(<a class="code" href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">z</a>){}</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classVector3D.xhtml#a4a849acd4e9c0984137cc92ac38f449f">   16</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classVector3D.xhtml#a4a849acd4e9c0984137cc92ac38f449f">operator+=</a>(<span class="keyword">const</span> <a class="code" href="classVector3D.xhtml">Vector3D&lt;T&gt;</a> &amp;other){</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">x</a> += other.<a class="code" href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">x</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df">y</a> += other.<a class="code" href="classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df">y</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">z</a> += other.<a class="code" href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">z</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classVector3D.xhtml#a49e949a58eb95ea8aaca119a65f3db06">   25</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classVector3D.xhtml#a49e949a58eb95ea8aaca119a65f3db06">operator-=</a>(<span class="keyword">const</span> <a class="code" href="classVector3D.xhtml">Vector3D&lt;T&gt;</a> &amp;other){</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">x</a> -= other.<a class="code" href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">x</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df">y</a> -= other.<a class="code" href="classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df">y</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">z</a> -= other.<a class="code" href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">z</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="Vector3D_8h.xhtml#a4155e98441c8cb114333f0ff1e6c5b3c">   39</a></span>&#160;<a class="code" href="classVector3D.xhtml">Vector3D&lt;T&gt;</a> <a class="code" href="Vector3D_8h.xhtml#a4155e98441c8cb114333f0ff1e6c5b3c">operator+</a>(<span class="keyword">const</span> <a class="code" href="classVector3D.xhtml">Vector3D&lt;T&gt;</a> &amp;a, <span class="keyword">const</span> <a class="code" href="classVector3D.xhtml">Vector3D&lt;T&gt;</a> &amp;b){</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classVector3D.xhtml">Vector3D&lt;T&gt;</a>(a.<a class="code" href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">x</a> + b.<a class="code" href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">x</a>, a.<a class="code" href="classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df">y</a> + b.<a class="code" href="classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df">y</a>, a.<a class="code" href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">z</a> + b.<a class="code" href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">z</a>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="Vector3D_8h.xhtml#af9093e7750cb72e26d0b5c2775b09811">   49</a></span>&#160;<a class="code" href="classVector3D.xhtml">Vector3D&lt;T&gt;</a> <a class="code" href="Vector3D_8h.xhtml#af9093e7750cb72e26d0b5c2775b09811">operator-</a>(<span class="keyword">const</span> <a class="code" href="classVector3D.xhtml">Vector3D&lt;T&gt;</a> &amp;a, <span class="keyword">const</span> <a class="code" href="classVector3D.xhtml">Vector3D&lt;T&gt;</a> &amp;b){</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classVector3D.xhtml">Vector3D&lt;T&gt;</a>(a.<a class="code" href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">x</a> - b.<a class="code" href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">x</a>, a.<a class="code" href="classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df">y</a> - b.<a class="code" href="classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df">y</a>, a.<a class="code" href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">z</a> - b.<a class="code" href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">z</a>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#endif //VECTOR3D_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassVector3D_xhtml_a1953bc3e5f343dcc592c57fa700ad5df"><div class="ttname"><a href="classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df">Vector3D::y</a></div><div class="ttdeci">T y</div><div class="ttdef"><b>Definition:</b> <a href="Vector3D_8h_source.xhtml#l00009">Vector3D.h:9</a></div></div>
+<div class="ttc" id="aclassVector3D_xhtml_ad75dfced4bee76cd097e34354c83e379"><div class="ttname"><a href="classVector3D.xhtml#ad75dfced4bee76cd097e34354c83e379">Vector3D::Vector3D</a></div><div class="ttdeci">Vector3D(const T x, const T y, const T z)</div><div class="ttdef"><b>Definition:</b> <a href="Vector3D_8h_source.xhtml#l00011">Vector3D.h:11</a></div></div>
+<div class="ttc" id="aVector3D_8h_xhtml_a4155e98441c8cb114333f0ff1e6c5b3c"><div class="ttname"><a href="Vector3D_8h.xhtml#a4155e98441c8cb114333f0ff1e6c5b3c">operator+</a></div><div class="ttdeci">Vector3D&lt; T &gt; operator+(const Vector3D&lt; T &gt; &amp;a, const Vector3D&lt; T &gt; &amp;b)</div><div class="ttdoc">Additionne deux objets Vector3D.</div><div class="ttdef"><b>Definition:</b> <a href="Vector3D_8h_source.xhtml#l00039">Vector3D.h:39</a></div></div>
+<div class="ttc" id="aclassVector3D_xhtml_abce4fda8bdc463b11d37c9ee2b30bd70"><div class="ttname"><a href="classVector3D.xhtml#abce4fda8bdc463b11d37c9ee2b30bd70">Vector3D::Vector3D</a></div><div class="ttdeci">Vector3D()</div><div class="ttdef"><b>Definition:</b> <a href="Vector3D_8h_source.xhtml#l00010">Vector3D.h:10</a></div></div>
+<div class="ttc" id="aVector3D_8h_xhtml_af9093e7750cb72e26d0b5c2775b09811"><div class="ttname"><a href="Vector3D_8h.xhtml#af9093e7750cb72e26d0b5c2775b09811">operator-</a></div><div class="ttdeci">Vector3D&lt; T &gt; operator-(const Vector3D&lt; T &gt; &amp;a, const Vector3D&lt; T &gt; &amp;b)</div><div class="ttdoc">Soustrait deux objets Vector3D.</div><div class="ttdef"><b>Definition:</b> <a href="Vector3D_8h_source.xhtml#l00049">Vector3D.h:49</a></div></div>
+<div class="ttc" id="aclassVector3D_xhtml"><div class="ttname"><a href="classVector3D.xhtml">Vector3D</a></div><div class="ttdoc">Une structure template qui contient x, y, z et qui permet de les additionner facilement.</div><div class="ttdef"><b>Definition:</b> <a href="Vector3D_8h_source.xhtml#l00007">Vector3D.h:7</a></div></div>
+<div class="ttc" id="aclassVector3D_xhtml_a8649bbba44f375d9e797ec676864624f"><div class="ttname"><a href="classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f">Vector3D::x</a></div><div class="ttdeci">T x</div><div class="ttdef"><b>Definition:</b> <a href="Vector3D_8h_source.xhtml#l00009">Vector3D.h:9</a></div></div>
+<div class="ttc" id="aclassVector3D_xhtml_a49e949a58eb95ea8aaca119a65f3db06"><div class="ttname"><a href="classVector3D.xhtml#a49e949a58eb95ea8aaca119a65f3db06">Vector3D::operator-=</a></div><div class="ttdeci">void operator-=(const Vector3D&lt; T &gt; &amp;other)</div><div class="ttdoc">Soustrait un Vector3D à l'objet.</div><div class="ttdef"><b>Definition:</b> <a href="Vector3D_8h_source.xhtml#l00025">Vector3D.h:25</a></div></div>
+<div class="ttc" id="aclassVector3D_xhtml_a4a849acd4e9c0984137cc92ac38f449f"><div class="ttname"><a href="classVector3D.xhtml#a4a849acd4e9c0984137cc92ac38f449f">Vector3D::operator+=</a></div><div class="ttdeci">void operator+=(const Vector3D&lt; T &gt; &amp;other)</div><div class="ttdoc">Additione un Vector3D à l'objet.</div><div class="ttdef"><b>Definition:</b> <a href="Vector3D_8h_source.xhtml#l00016">Vector3D.h:16</a></div></div>
+<div class="ttc" id="aclassVector3D_xhtml_a9c9eee941c3ea33687de920c3315e0da"><div class="ttname"><a href="classVector3D.xhtml#a9c9eee941c3ea33687de920c3315e0da">Vector3D::z</a></div><div class="ttdeci">T z</div><div class="ttdef"><b>Definition:</b> <a href="Vector3D_8h_source.xhtml#l00009">Vector3D.h:9</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
 </small></address>
 </body>
 </html>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['configs_0',['configs',['../classADS1115.xhtml#a34feceb4ccc51a0aad024ec5eb5601e0',1,'ADS1115']]]
+  ['addresspointer_141',['addressPointer',['../classADS1115.xhtml#a1f475f2622a04cedc7364f7256d55377',1,'ADS1115']]]
 ];

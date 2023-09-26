@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>TechnoSTM:  Fichier source de src/include/ADS1115.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,8 +19,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">TechnoSTM
    </div>
    <div id="projectbrief">Un microscope atomique à effet tunnel</div>
@@ -30,28 +30,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.9.8 -->
+<!-- Généré par Doxygen 1.8.17 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.xhtml');
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','Recherche');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -61,16 +55,9 @@ $(document).ready(function() { init_codefold(0); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Chargement...</div>
-<div class="SRStatus" id="Searching">Recherche...</div>
-<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -79,44 +66,102 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">ADS1115.h</div></div>
+  <div class="headertitle">
+<div class="title">ADS1115.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="ADS1115_8h.xhtml">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef ADS1115_H</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define ADS1115_H</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;cassert&gt;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="I2C_8h.xhtml">I2C.h</a>&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define DEFAULT_ADS1115_CONFIGS 0b0000&#39;0100&#39;1000&#39;0011</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classADS1115.xhtml">   14</a></span><span class="keyword">class </span><a class="code hl_class" href="classADS1115.xhtml">ADS1115</a> : <span class="keyword">private</span> <a class="code hl_class" href="classI2C.xhtml">I2C</a> {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classADS1115.xhtml#a34feceb4ccc51a0aad024ec5eb5601e0">   16</a></span>  <a class="code hl_function" href="classADS1115.xhtml#a78f909ddc4b4efd888515fbe939db589">uint16_t</a> <a class="code hl_variable" href="classADS1115.xhtml#a34feceb4ccc51a0aad024ec5eb5601e0">configs</a>;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <a class="code hl_class" href="classADS1115.xhtml">ADS1115</a>(<span class="keyword">const</span> <a class="code hl_function" href="classADS1115.xhtml#a78f909ddc4b4efd888515fbe939db589">uint8_t</a> <a class="code hl_function" href="classADS1115.xhtml#a78f909ddc4b4efd888515fbe939db589">deviceAddr</a>);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classADS1115.xhtml#ad59ca1407380028c79e07fc250cb2b6e">setChannel</a>(<span class="keyword">const</span> <a class="code hl_function" href="classADS1115.xhtml#a78f909ddc4b4efd888515fbe939db589">uint8_t</a> <a class="code hl_function" href="classADS1115.xhtml#a78f909ddc4b4efd888515fbe939db589">channel</a>);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <a class="code hl_function" href="classADS1115.xhtml#a78f909ddc4b4efd888515fbe939db589">uint16_t</a> <a class="code hl_function" href="classADS1115.xhtml#a78f909ddc4b4efd888515fbe939db589">read</a>();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
-</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#endif </span><span class="comment">// ADS_1115_H</span></div>
-<div class="ttc" id="aI2C_8h_xhtml"><div class="ttname"><a href="I2C_8h.xhtml">I2C.h</a></div></div>
-<div class="ttc" id="aclassADS1115_xhtml"><div class="ttname"><a href="classADS1115.xhtml">ADS1115</a></div><div class="ttdoc">Gère l'interfaçage avec l'ADC externe en I2C.</div><div class="ttdef"><b>Definition</b> <a href="ADS1115_8h_source.xhtml#l00014">ADS1115.h:14</a></div></div>
-<div class="ttc" id="aclassADS1115_xhtml_a34feceb4ccc51a0aad024ec5eb5601e0"><div class="ttname"><a href="classADS1115.xhtml#a34feceb4ccc51a0aad024ec5eb5601e0">ADS1115::configs</a></div><div class="ttdeci">uint16_t configs</div><div class="ttdef"><b>Definition</b> <a href="ADS1115_8h_source.xhtml#l00016">ADS1115.h:16</a></div></div>
-<div class="ttc" id="aclassADS1115_xhtml_a78f909ddc4b4efd888515fbe939db589"><div class="ttname"><a href="classADS1115.xhtml#a78f909ddc4b4efd888515fbe939db589">ADS1115::read</a></div><div class="ttdeci">uint16_t read()</div><div class="ttdoc">Lis une valeur sur un channel de l'ADC.</div><div class="ttdef"><b>Definition</b> <a href="ADS1115_8cpp_source.xhtml#l00017">ADS1115.cpp:17</a></div></div>
-<div class="ttc" id="aclassADS1115_xhtml_ad59ca1407380028c79e07fc250cb2b6e"><div class="ttname"><a href="classADS1115.xhtml#ad59ca1407380028c79e07fc250cb2b6e">ADS1115::setChannel</a></div><div class="ttdeci">void setChannel(const uint8_t channel)</div><div class="ttdoc">Assigne le bon channel sur l'ADC.</div><div class="ttdef"><b>Definition</b> <a href="ADS1115_8cpp_source.xhtml#l00008">ADS1115.cpp:8</a></div></div>
-<div class="ttc" id="aclassI2C_xhtml"><div class="ttname"><a href="classI2C.xhtml">I2C</a></div><div class="ttdoc">Classe qui s'occupe de la communication I2C.</div><div class="ttdef"><b>Definition</b> <a href="I2C_8h_source.xhtml#l00014">I2C.h:14</a></div></div>
+<a href="ADS1115_8h.xhtml">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef ADS1115_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define ADS1115_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="I2C_8h.xhtml">I2C.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define DEFAULT_ADS1115_CONFIGS 0b0000&#39;0100&#39;1000&#39;0011</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define OPERATIONAL_STATUS_MASK 0b0111&#39;1111&#39;1111&#39;1111</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define OPERATIONAL_STATUS_OFFSET 15</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define CHANNEL_MASK 0b1000&#39;1111&#39;1111&#39;1111</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define CHANNEL_OFFSET 12</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define PROGRAMMABLE_GAIN_MASK 0b1111&#39;0001&#39;1111&#39;1111</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#define PROGRAMMABLE_GAIN_OFFSET 9</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define SINGLE_CONVERSION_MASK 0b1111&#39;1110&#39;1111&#39;1111</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define SINGLE_CONVERSION_OFFSET 8</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define DATA_RATE_MASK 0b1111&#39;1111&#39;0001&#39;1111</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define DATA_RATE_OFFSET 5</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define COMPARE_MODE_MASK 0b1111&#39;1111&#39;1110&#39;1111</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#define COMPARE_MODE_OFFSET 4</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#define COMPARATOR_POLARITY_MASK 0b1111&#39;1111&#39;1111&#39;0111</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#define COMPARATOR_POLARITY_OFFSET 3</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define LATCHING_COMPARATOR_MASK 0b1111&#39;1111&#39;1111&#39;1011</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#define LATCHING_COMPARATOR_OFFSET 2</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#define COMPARATOR_QUEUE_MASK 0b1111&#39;1111&#39;1111&#39;1100</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define COMPARATOR_QUEUE_OFFSET 0</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classADS1115.xhtml">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="classADS1115.xhtml">ADS1115</a> : <span class="keyword">private</span> <a class="code" href="classI2C.xhtml">I2C</a> {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keyword">typedef</span> <span class="keyword">enum</span> AddressPointer_t {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    Conversion = 0b00,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    Config = 0b01,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    Lo_thresh = 0b10,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    Hi_thresh = 0b11,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  } AddressPointer_t;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classADS1115.xhtml#a34feceb4ccc51a0aad024ec5eb5601e0">   46</a></span>&#160;  uint16_t <a class="code" href="classADS1115.xhtml#a34feceb4ccc51a0aad024ec5eb5601e0">configs</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classADS1115.xhtml#a1f475f2622a04cedc7364f7256d55377">   47</a></span>&#160;  AddressPointer_t <a class="code" href="classADS1115.xhtml#a1f475f2622a04cedc7364f7256d55377">addressPointer</a>; <span class="comment">// Page 27 dans la documentation</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <a class="code" href="classADS1115.xhtml#afad2e8ed7cb29484f931150db15fe582">ADS1115</a>(<span class="keyword">const</span> uint8_t deviceAddr);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classADS1115.xhtml#ad8c554dd4605e425f8740cbcb8a1086f">setOperationalStatus</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> status);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classADS1115.xhtml#ad59ca1407380028c79e07fc250cb2b6e">setChannel</a>(<span class="keyword">const</span> uint8_t channel);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classADS1115.xhtml#a5d78829ad1797a9c62beafc28c3d8c75">setProgrammableGain</a>(<span class="keyword">const</span> uint8_t gain);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classADS1115.xhtml#ab69ceeacac8e5d859342ca6db445f5bc">setSingleConversionMode</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> mode);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classADS1115.xhtml#a060d4e9f4032bc758a1ab84259b7ffc3">setDataRate</a>(<span class="keyword">const</span> uint8_t rate);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classADS1115.xhtml#a743358bd138e7150caca85a660c18f61">setCompareMode</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> mode);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classADS1115.xhtml#a542d6a601e81e53c6e0c093a4b2806a1">setComparatorPolarity</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> mode);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classADS1115.xhtml#a298a37734c72abc13bd3c39c51677050">setLatchingComparator</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> mode);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classADS1115.xhtml#a1bc61a61705f47b502defa35038c6ae0">setComparatorQueue</a>(<span class="keyword">const</span> uint8_t mode);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classADS1115.xhtml#ae9f44334d0b165405a5860435391a94a">writeConfigs</a>();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  uint16_t <a class="code" href="classADS1115.xhtml#a78f909ddc4b4efd888515fbe939db589">read</a>();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;};</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#endif // ADS_1115_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassI2C_xhtml"><div class="ttname"><a href="classI2C.xhtml">I2C</a></div><div class="ttdoc">Classe qui s'occupe de la communication I2C.</div><div class="ttdef"><b>Definition:</b> <a href="I2C_8h_source.xhtml#l00019">I2C.h:19</a></div></div>
+<div class="ttc" id="aclassADS1115_xhtml_a298a37734c72abc13bd3c39c51677050"><div class="ttname"><a href="classADS1115.xhtml#a298a37734c72abc13bd3c39c51677050">ADS1115::setLatchingComparator</a></div><div class="ttdeci">void setLatchingComparator(const bool mode)</div><div class="ttdoc">Assigne le latch de la pin ALERT/RDY.</div><div class="ttdef"><b>Definition:</b> <a href="ADS1115_8cpp_source.xhtml#l00046">ADS1115.cpp:46</a></div></div>
+<div class="ttc" id="aclassADS1115_xhtml_a743358bd138e7150caca85a660c18f61"><div class="ttname"><a href="classADS1115.xhtml#a743358bd138e7150caca85a660c18f61">ADS1115::setCompareMode</a></div><div class="ttdeci">void setCompareMode(const bool mode)</div><div class="ttdoc">Assigne le mode de comparaison.</div><div class="ttdef"><b>Definition:</b> <a href="ADS1115_8cpp_source.xhtml#l00036">ADS1115.cpp:36</a></div></div>
+<div class="ttc" id="aclassADS1115_xhtml_a1f475f2622a04cedc7364f7256d55377"><div class="ttname"><a href="classADS1115.xhtml#a1f475f2622a04cedc7364f7256d55377">ADS1115::addressPointer</a></div><div class="ttdeci">AddressPointer_t addressPointer</div><div class="ttdef"><b>Definition:</b> <a href="ADS1115_8h_source.xhtml#l00047">ADS1115.h:47</a></div></div>
+<div class="ttc" id="aclassADS1115_xhtml_ad8c554dd4605e425f8740cbcb8a1086f"><div class="ttname"><a href="classADS1115.xhtml#ad8c554dd4605e425f8740cbcb8a1086f">ADS1115::setOperationalStatus</a></div><div class="ttdeci">void setOperationalStatus(const bool status)</div><div class="ttdoc">Assigne le bit operational status.</div><div class="ttdef"><b>Definition:</b> <a href="ADS1115_8cpp_source.xhtml#l00008">ADS1115.cpp:8</a></div></div>
+<div class="ttc" id="aclassADS1115_xhtml_a34feceb4ccc51a0aad024ec5eb5601e0"><div class="ttname"><a href="classADS1115.xhtml#a34feceb4ccc51a0aad024ec5eb5601e0">ADS1115::configs</a></div><div class="ttdeci">uint16_t configs</div><div class="ttdef"><b>Definition:</b> <a href="ADS1115_8h_source.xhtml#l00046">ADS1115.h:46</a></div></div>
+<div class="ttc" id="aclassADS1115_xhtml_a1bc61a61705f47b502defa35038c6ae0"><div class="ttname"><a href="classADS1115.xhtml#a1bc61a61705f47b502defa35038c6ae0">ADS1115::setComparatorQueue</a></div><div class="ttdeci">void setComparatorQueue(const uint8_t mode)</div><div class="ttdoc">Assigne le mode de fifo du comparateur.</div><div class="ttdef"><b>Definition:</b> <a href="ADS1115_8cpp_source.xhtml#l00051">ADS1115.cpp:51</a></div></div>
+<div class="ttc" id="aclassADS1115_xhtml_ad59ca1407380028c79e07fc250cb2b6e"><div class="ttname"><a href="classADS1115.xhtml#ad59ca1407380028c79e07fc250cb2b6e">ADS1115::setChannel</a></div><div class="ttdeci">void setChannel(const uint8_t channel)</div><div class="ttdoc">Assigne le bon channel sur l'ADC.</div><div class="ttdef"><b>Definition:</b> <a href="ADS1115_8cpp_source.xhtml#l00013">ADS1115.cpp:13</a></div></div>
+<div class="ttc" id="aclassADS1115_xhtml_a542d6a601e81e53c6e0c093a4b2806a1"><div class="ttname"><a href="classADS1115.xhtml#a542d6a601e81e53c6e0c093a4b2806a1">ADS1115::setComparatorPolarity</a></div><div class="ttdeci">void setComparatorPolarity(const bool mode)</div><div class="ttdoc">Assigne la polarité du comparateur.</div><div class="ttdef"><b>Definition:</b> <a href="ADS1115_8cpp_source.xhtml#l00041">ADS1115.cpp:41</a></div></div>
+<div class="ttc" id="aclassADS1115_xhtml_a5d78829ad1797a9c62beafc28c3d8c75"><div class="ttname"><a href="classADS1115.xhtml#a5d78829ad1797a9c62beafc28c3d8c75">ADS1115::setProgrammableGain</a></div><div class="ttdeci">void setProgrammableGain(const uint8_t gain)</div><div class="ttdoc">Assigne le gain conformément à la datasheet.</div><div class="ttdef"><b>Definition:</b> <a href="ADS1115_8cpp_source.xhtml#l00019">ADS1115.cpp:19</a></div></div>
+<div class="ttc" id="aclassADS1115_xhtml_ab69ceeacac8e5d859342ca6db445f5bc"><div class="ttname"><a href="classADS1115.xhtml#ab69ceeacac8e5d859342ca6db445f5bc">ADS1115::setSingleConversionMode</a></div><div class="ttdeci">void setSingleConversionMode(const bool mode)</div><div class="ttdoc">Assigne le bit de single conversion.</div><div class="ttdef"><b>Definition:</b> <a href="ADS1115_8cpp_source.xhtml#l00025">ADS1115.cpp:25</a></div></div>
+<div class="ttc" id="aclassADS1115_xhtml"><div class="ttname"><a href="classADS1115.xhtml">ADS1115</a></div><div class="ttdoc">Gère l'interfaçage avec l'ADC externe en I2C.</div><div class="ttdef"><b>Definition:</b> <a href="ADS1115_8h_source.xhtml#l00034">ADS1115.h:34</a></div></div>
+<div class="ttc" id="aclassADS1115_xhtml_ae9f44334d0b165405a5860435391a94a"><div class="ttname"><a href="classADS1115.xhtml#ae9f44334d0b165405a5860435391a94a">ADS1115::writeConfigs</a></div><div class="ttdeci">void writeConfigs()</div><div class="ttdoc">Écris les configs sur l'ADS1115.</div><div class="ttdef"><b>Definition:</b> <a href="ADS1115_8cpp_source.xhtml#l00057">ADS1115.cpp:57</a></div></div>
+<div class="ttc" id="aclassADS1115_xhtml_afad2e8ed7cb29484f931150db15fe582"><div class="ttname"><a href="classADS1115.xhtml#afad2e8ed7cb29484f931150db15fe582">ADS1115::ADS1115</a></div><div class="ttdeci">ADS1115(const uint8_t deviceAddr)</div><div class="ttdef"><b>Definition:</b> <a href="ADS1115_8cpp_source.xhtml#l00003">ADS1115.cpp:3</a></div></div>
+<div class="ttc" id="aclassADS1115_xhtml_a060d4e9f4032bc758a1ab84259b7ffc3"><div class="ttname"><a href="classADS1115.xhtml#a060d4e9f4032bc758a1ab84259b7ffc3">ADS1115::setDataRate</a></div><div class="ttdeci">void setDataRate(const uint8_t rate)</div><div class="ttdoc">Assigne le datarate.</div><div class="ttdef"><b>Definition:</b> <a href="ADS1115_8cpp_source.xhtml#l00030">ADS1115.cpp:30</a></div></div>
+<div class="ttc" id="aI2C_8h_xhtml"><div class="ttname"><a href="I2C_8h.xhtml">I2C.h</a></div></div>
+<div class="ttc" id="aclassADS1115_xhtml_a78f909ddc4b4efd888515fbe939db589"><div class="ttname"><a href="classADS1115.xhtml#a78f909ddc4b4efd888515fbe939db589">ADS1115::read</a></div><div class="ttdeci">uint16_t read()</div><div class="ttdoc">Lis une valeur sur un channel de l'ADC.</div><div class="ttdef"><b>Definition:</b> <a href="ADS1115_8cpp_source.xhtml#l00062">ADS1115.cpp:62</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
 </small></address>
 </body>
 </html>
