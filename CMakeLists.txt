@@ -14,10 +14,14 @@ set(INCLUDE_DIR src/include/)
 
 # Tous les fichiers sources
 file(GLOB_RECURSE SOURCES ${SOURCE_DIR}/*.cpp)
+file(GLOB PROGRAMS programs/*.cpp)
 
 # Répertoire des headers
 include_directories(${INCLUDE_DIR})
 
 # Compilation
-add_executable(${PROJECT_NAME} ${SOURCES})
+add_library(${PROJECT_NAME}LIB SHARED ${SOURCES})
+
+add_executable(${PROJECT_NAME} programs/main.cpp)
+target_link_libraries(${PROJECT_NAME} LINK_PUBLIC ${PROJECT_NAME}LIB)
 
