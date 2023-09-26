@@ -1,0 +1,9 @@
+digraph "Graphe hiérarchique des classes"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="GPIO",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGPIO.xhtml",tooltip="Classe qui gère le GPIO du raspberry pi."];
+}

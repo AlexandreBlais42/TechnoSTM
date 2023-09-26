@@ -8,6 +8,7 @@
 #include "I2C.h"
 
 #define DEFAULT_ADS1115_CONFIGS 0b0000'0100'1000'0011
+#define CHANNEL_MASK 0b1000'1111'1111'1111
 
 /** @brief Gère l'interfaçage avec l'ADC externe en I2C
  *  @note https://www.ti.com/lit/ds/symlink/ads1115.pdf

@@ -1,0 +1,10 @@
+digraph "I2C"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{I2C\n|+ fileDescriptor\l|+ I2C()\l+ ~I2C()\l+ writeReg8()\l+ writeReg16()\l+ readReg8()\l+ readReg16()\l+ writeData()\l+ readData()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Classe qui s'occupe de la communication I2C."];
+  Node1 -> Node2 [dir="back",color="firebrick4",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{ADS1115\n|+ configs\l+ addressPointer\l|+ ADS1115()\l+ setChannel()\l+ read()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classADS1115.xhtml",tooltip="Gère l'interfaçage avec l'ADC externe en I2C."];
+}
