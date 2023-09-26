@@ -5,7 +5,7 @@ Le programme du Rasberry Pi 3b devra implémenter les fonctionnalités suivantes
 
 -contrôle du CAN ADS1115 pour l'acquisition du signal relatif à l'axe z
 
--contrôle du CNA AD5764 contrôler Arduino Uno (https://github.com/AlexandreBlais42/Arduino-EVAL-AD5764EB-pour-stm) pour le déplacement des actionneurs piézoélectriques
+-contrôle du CNA AD5764 contrôler Arduino Uno pour le déplacement des actionneurs piézoélectriques (https://github.com/AlexandreBlais42/Arduino-EVAL-AD5764EB-pour-stm)
 
 -acquisition et traitement de l'image 3D
 
