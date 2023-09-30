@@ -11,6 +11,9 @@ compile_flags.txt
 .clangd/
 .clangd/*
 
+.cache/
+.cache/*
+
 *.d
 *.slo
 *.lo
