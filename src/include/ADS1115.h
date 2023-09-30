@@ -57,9 +57,10 @@ public:
    *  @param channel Deux bits qui représentent les channels de 0 à 3 inclusif
    */
   void setChannel(const uint8_t channel);
-  
+
   /** @brief Assigne le gain conformément à la datasheet
    *  @param gain Une valeur de 3bits défini à la page 28 de la datasheet
+   *  @note Dans la datasheet, ça affecte le FSR
    */
   void setProgrammableGain(const uint8_t gain);
 
@@ -84,7 +85,8 @@ public:
   void setComparatorPolarity(const bool mode);
 
   /** @brief Assigne le latch de la pin ALERT/RDY
-   *  @param mode Vrai: La pin reste latch jusqu'à la lecture de la donnée, Faux: Pas de latch
+   *  @param mode Vrai: La pin reste latch jusqu'à la lecture de la donnée,
+   * Faux: Pas de latch
    */
   void setLatchingComparator(const bool mode);
 
@@ -100,7 +102,7 @@ public:
   /** @brief Lis une valeur sur un channel de l'ADC
    *  @return La valeur 16 bits lu
    */
-  uint16_t read();
+  int16_t read();
 };
 
 #endif // ADS_1115_H
