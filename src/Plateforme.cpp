@@ -28,7 +28,7 @@ Plateforme::setPositionAbsolute(const Vector3D<uint16_t> &coordinates) {
 void Plateforme::moveToPosition() const {
   std::vector<std::string> stringsToSend(0);
 
-  ser.write("A" + getHexString(position.x));
-  ser.write("B" + getHexString(position.y));
-  ser.write("C" + getHexString(position.z));
+  ser.write("A" + getHexString(position.x) + "\n");
+  ser.write("B" + getHexString(position.y) + "\n");
+  ser.write("C" + getHexString(position.z) + "\n");
 }
