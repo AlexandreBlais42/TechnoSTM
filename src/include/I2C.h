@@ -50,7 +50,7 @@ public:
   void writeData(const T &data) {
 #ifdef __arm__
     if (!write(fileDescriptor, (char *)&data, sizeof(T))){
-      std::cout << "Une erreur est survenue lors de l'écriture dans la communication I2C"
+      std::cout << "Une erreur est survenue lors de l'écriture dans la communication I2C";
     }
 #else
     std::cout << "I2C::write appellé avec data (" << sizeof(data) << " octets)"

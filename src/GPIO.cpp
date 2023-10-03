@@ -3,9 +3,9 @@
 
 GPIO::GPIO() {}
 
-void GPIO::pinMode(const uint8_t pinNumber, const pinMode_t mode){
+void GPIO::pinMode(const uint8_t pinNumber, const uint8_t mode){
   #ifdef __arm__
-    pinMode(pinNumber, state);
+    pinMode(pinNumber, mode);
   #else
   std::cout << "GPIO::setPin appellé avec pinNumber = " << std::to_string(pinNumber)
             << " mode = " << mode << std::endl;

@@ -7,15 +7,15 @@
 
 #ifdef __arm__
 #include <wiringPi.h>
-#endif // __arm__
-
-
+#else
 typedef enum pinMode_t{
   INPUT,
   OUTPUT,
   PWM_OUTPUT,
   GPIO_CLOCK,
 } pinMode_t;
+#endif
+
 /** @brief Classe qui gère le GPIO du raspberry pi
  */
 class GPIO {
@@ -26,7 +26,7 @@ public:
    *  @param pinNumber Le numéro de la pin GPIO
    *  @param mode Le mode de la pin (modes spécifiés dans l'enum pinMode_t)
    */
-  static void pinMode(const uint8_t pinNumber, const pinMode_t mode);
+  static void pinMode(const uint8_t pinNumber, const uint8_t mode);
 
   /** @brief Set une pin du GPIO du raspberry pi à state
    *  @param pinNumber Le numéro de pin de GPIO
