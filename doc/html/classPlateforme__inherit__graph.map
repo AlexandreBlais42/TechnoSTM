@@ -1,0 +1,4 @@
+<map id="Plateforme" name="Plateforme">
+<area shape="rect" id="node1" title="Class qui représente la plateforme et permet de la bouger physiquement." alt="" coords="5,5,181,171"/>
+<area shape="rect" id="node2" href="$classSTM.xhtml" title="Classe qui gère les fonctions du microscope." alt="" coords="56,219,131,296"/>
+</map>

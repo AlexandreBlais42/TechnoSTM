@@ -1,0 +1,9 @@
+<map id="STM" name="STM">
+<area shape="rect" id="node1" title="Classe qui gère les fonctions du microscope." alt="" coords="251,748,325,825"/>
+<area shape="rect" id="node2" href="$classAiguille.xhtml" title="Classe qui gère l&#39;aiguille." alt="" coords="51,571,176,663"/>
+<area shape="rect" id="node3" href="$classADS1115.xhtml" title="Gère l&#39;interfaçage avec l&#39;ADC externe en I2C." alt="" coords="5,233,221,487"/>
+<area shape="rect" id="node4" href="$classI2C.xhtml" title="Classe qui s&#39;occupe de la communication I2C." alt="" coords="51,5,175,185"/>
+<area shape="rect" id="node5" href="$classPlateforme.xhtml" title="Class qui représente la plateforme et permet de la bouger physiquement." alt="" coords="200,535,376,700"/>
+<area shape="rect" id="node6" href="$classStepMotor.xhtml" title="Classe qui gère les mouvements du step moteur." alt="" coords="401,549,535,685"/>
+<area shape="rect" id="node7" href="$classGPIO.xhtml" title="Classe qui gère le GPIO du raspberry pi." alt="" coords="417,307,519,413"/>
+</map>
