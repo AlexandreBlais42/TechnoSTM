@@ -1,3 +1,4 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="Node000000" href="$classGPIO.xhtml" title="Classe qui gère le GPIO du raspberry pi." alt="" coords="5,5,60,32"/>
+<area shape="rect" id="node1" href="$classGPIO.xhtml" title="Classe qui gère le GPIO du raspberry pi." alt="" coords="5,5,60,32"/>
+<area shape="rect" id="node2" href="$classStepMotor.xhtml" title="Classe qui gère les mouvements du step moteur." alt="" coords="108,5,197,32"/>
 </map>

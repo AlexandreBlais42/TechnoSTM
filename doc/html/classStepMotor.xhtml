@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>TechnoSTM: Référence de la classe StepMotor</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,8 +19,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">TechnoSTM
    </div>
    <div id="projectbrief">Un microscope atomique à effet tunnel</div>
@@ -30,22 +30,21 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.9.8 -->
+<!-- Généré par Doxygen 1.8.17 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.xhtml');
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','Recherche');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -56,16 +55,9 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Chargement...</div>
-<div class="SRStatus" id="Searching">Recherche...</div>
-<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 </div><!-- top -->
@@ -74,7 +66,8 @@ $(function() {
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
 <a href="#pub-attribs">Attributs publics</a> &#124;
 <a href="classStepMotor-members.xhtml">Liste de tous les membres</a>  </div>
-  <div class="headertitle"><div class="title">Référence de la classe StepMotor</div></div>
+  <div class="headertitle">
+<div class="title">Référence de la classe StepMotor</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -83,39 +76,52 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="StepMotor_8h_source.xhtml">StepMotor.h</a>&gt;</code></p>
 <div class="dynheader">
+Graphe d'héritage de StepMotor:</div>
+<div class="dyncontent">
+<div class="center"><img src="classStepMotor__inherit__graph.png" border="0" usemap="#StepMotor_inherit__map" alt="Inheritance graph"/></div>
+<map name="StepMotor_inherit__map" id="StepMotor_inherit__map">
+<area shape="rect" title="Classe qui gère les mouvements du step moteur." alt="" coords="5,160,140,296"/>
+<area shape="rect" href="classGPIO.xhtml" title="Classe qui gère le GPIO du raspberry pi." alt="" coords="21,5,124,112"/>
+</map>
+</div>
+<div class="dynheader">
 Graphe de collaboration de StepMotor:</div>
 <div class="dyncontent">
-<div class="center"><img src="classStepMotor__coll__graph.png" border="0" usemap="#aStepMotor_coll__map" alt="Collaboration graph"/></div>
-<map name="aStepMotor_coll__map" id="aStepMotor_coll__map">
-<area shape="rect" title="Classe qui gère les mouvements du step moteur." alt="" coords="5,5,116,139"/>
+<div class="center"><img src="classStepMotor__coll__graph.png" border="0" usemap="#StepMotor_coll__map" alt="Collaboration graph"/></div>
+<map name="StepMotor_coll__map" id="StepMotor_coll__map">
+<area shape="rect" title="Classe qui gère les mouvements du step moteur." alt="" coords="5,160,140,296"/>
+<area shape="rect" href="classGPIO.xhtml" title="Classe qui gère le GPIO du raspberry pi." alt="" coords="21,5,124,112"/>
 </map>
 </div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:a31ba33d855d9b1078c0ae331524ea4dc" id="r_a31ba33d855d9b1078c0ae331524ea4dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.xhtml#a31ba33d855d9b1078c0ae331524ea4dc">StepMotor</a> (const int32_t <a class="el" href="classStepMotor.xhtml#a5d3b6e20ec55fad44836fef89b07a086">position</a>)</td></tr>
-<tr class="separator:a31ba33d855d9b1078c0ae331524ea4dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a635c9b369bb9fa8b6722d485300c144b" id="r_a635c9b369bb9fa8b6722d485300c144b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.xhtml#a635c9b369bb9fa8b6722d485300c144b">goToRelative</a> (const int32_t pos)</td></tr>
-<tr class="memdesc:a635c9b369bb9fa8b6722d485300c144b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mets la position de la plateforme relativement à sa position actuelle.  <br /></td></tr>
+<tr class="memitem:a33cddd18c21cf25a6644a1090d3eb3bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.xhtml#a33cddd18c21cf25a6644a1090d3eb3bc">StepMotor</a> (const int32_t <a class="el" href="classStepMotor.xhtml#a5d3b6e20ec55fad44836fef89b07a086">position</a>, const std::array&lt; uint8_t, 4 &gt; <a class="el" href="classStepMotor.xhtml#a97f1d907c33e6298a06c7431991739f9">pins</a>)</td></tr>
+<tr class="memdesc:a33cddd18c21cf25a6644a1090d3eb3bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de la classe <a class="el" href="classStepMotor.xhtml" title="Classe qui gère les mouvements du step moteur.">StepMotor</a>.  <a href="classStepMotor.xhtml#a33cddd18c21cf25a6644a1090d3eb3bc">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a33cddd18c21cf25a6644a1090d3eb3bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a635c9b369bb9fa8b6722d485300c144b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.xhtml#a635c9b369bb9fa8b6722d485300c144b">goToRelative</a> (const int32_t pos)</td></tr>
+<tr class="memdesc:a635c9b369bb9fa8b6722d485300c144b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mets la position de la plateforme relativement à sa position actuelle.  <a href="classStepMotor.xhtml#a635c9b369bb9fa8b6722d485300c144b">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a635c9b369bb9fa8b6722d485300c144b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03b2aff524cad41785738142e3b7c635" id="r_a03b2aff524cad41785738142e3b7c635"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.xhtml#a03b2aff524cad41785738142e3b7c635">goToAbsolute</a> (const int32_t pos)</td></tr>
-<tr class="memdesc:a03b2aff524cad41785738142e3b7c635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mets la position de la plateforme à la position spécifiée.  <br /></td></tr>
+<tr class="memitem:a03b2aff524cad41785738142e3b7c635"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.xhtml#a03b2aff524cad41785738142e3b7c635">goToAbsolute</a> (const int32_t pos)</td></tr>
+<tr class="memdesc:a03b2aff524cad41785738142e3b7c635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mets la position de la plateforme à la position spécifiée.  <a href="classStepMotor.xhtml#a03b2aff524cad41785738142e3b7c635">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a03b2aff524cad41785738142e3b7c635"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Attributs publics</h2></td></tr>
-<tr class="memitem:a5d3b6e20ec55fad44836fef89b07a086" id="r_a5d3b6e20ec55fad44836fef89b07a086"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.xhtml#a5d3b6e20ec55fad44836fef89b07a086">position</a></td></tr>
+<tr class="memitem:a5d3b6e20ec55fad44836fef89b07a086"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.xhtml#a5d3b6e20ec55fad44836fef89b07a086">position</a></td></tr>
 <tr class="separator:a5d3b6e20ec55fad44836fef89b07a086"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61afaf5bcdbf748851d5051ebffa3e84" id="r_a61afaf5bcdbf748851d5051ebffa3e84"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.xhtml#a61afaf5bcdbf748851d5051ebffa3e84">steps</a></td></tr>
-<tr class="separator:a61afaf5bcdbf748851d5051ebffa3e84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97f1d907c33e6298a06c7431991739f9"><td class="memItemLeft" align="right" valign="top">std::array&lt; uint8_t, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.xhtml#a97f1d907c33e6298a06c7431991739f9">pins</a></td></tr>
+<tr class="separator:a97f1d907c33e6298a06c7431991739f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6007051dca93bba4a4abd4d74d0d2e7"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.xhtml#ad6007051dca93bba4a4abd4d74d0d2e7">pinIndex</a></td></tr>
+<tr class="separator:ad6007051dca93bba4a4abd4d74d0d2e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Classe qui gère les mouvements du step moteur. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="StepMotor_8h_source.xhtml#l00011">11</a> du fichier <a class="el" href="StepMotor_8h_source.xhtml">StepMotor.h</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="StepMotor_8h_source.xhtml#l00012">12</a> du fichier <a class="el" href="StepMotor_8h_source.xhtml">StepMotor.h</a>.</p>
 </div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
-<a id="a31ba33d855d9b1078c0ae331524ea4dc" name="a31ba33d855d9b1078c0ae331524ea4dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31ba33d855d9b1078c0ae331524ea4dc">&#9670;&#160;</a></span>StepMotor()</h2>
+<a id="a33cddd18c21cf25a6644a1090d3eb3bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33cddd18c21cf25a6644a1090d3eb3bc">&#9670;&nbsp;</a></span>StepMotor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -124,19 +130,38 @@ Attributs publics</h2></td></tr>
           <td class="memname">StepMotor::StepMotor </td>
           <td>(</td>
           <td class="paramtype">const int32_t&#160;</td>
-          <td class="paramname"><em>position</em></td><td>)</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::array&lt; uint8_t, 4 &gt;&#160;</td>
+          <td class="paramname"><em>pins</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructeur de la classe <a class="el" href="classStepMotor.xhtml" title="Classe qui gère les mouvements du step moteur.">StepMotor</a>. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>La position initiale du moteur </td></tr>
+    <tr><td class="paramname">pins</td><td>Une liste de 4 valeurs pour les pins </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Définition à la ligne <a class="el" href="StepMotor_8cpp_source.xhtml#l00003">3</a> du fichier <a class="el" href="StepMotor_8cpp_source.xhtml">StepMotor.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions membres</h2>
-<a id="a03b2aff524cad41785738142e3b7c635" name="a03b2aff524cad41785738142e3b7c635"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03b2aff524cad41785738142e3b7c635">&#9670;&#160;</a></span>goToAbsolute()</h2>
+<a id="a03b2aff524cad41785738142e3b7c635"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03b2aff524cad41785738142e3b7c635">&#9670;&nbsp;</a></span>goToAbsolute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -167,12 +192,12 @@ Attributs publics</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="StepMotor_8cpp_source.xhtml#l00023">23</a> du fichier <a class="el" href="StepMotor_8cpp_source.xhtml">StepMotor.cpp</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="StepMotor_8cpp_source.xhtml#l00028">28</a> du fichier <a class="el" href="StepMotor_8cpp_source.xhtml">StepMotor.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a635c9b369bb9fa8b6722d485300c144b" name="a635c9b369bb9fa8b6722d485300c144b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a635c9b369bb9fa8b6722d485300c144b">&#9670;&#160;</a></span>goToRelative()</h2>
+<a id="a635c9b369bb9fa8b6722d485300c144b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a635c9b369bb9fa8b6722d485300c144b">&#9670;&nbsp;</a></span>goToRelative()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -195,35 +220,51 @@ Attributs publics</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="StepMotor_8cpp_source.xhtml#l00005">5</a> du fichier <a class="el" href="StepMotor_8cpp_source.xhtml">StepMotor.cpp</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="StepMotor_8cpp_source.xhtml#l00009">9</a> du fichier <a class="el" href="StepMotor_8cpp_source.xhtml">StepMotor.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Documentation des données membres</h2>
-<a id="a5d3b6e20ec55fad44836fef89b07a086" name="a5d3b6e20ec55fad44836fef89b07a086"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d3b6e20ec55fad44836fef89b07a086">&#9670;&#160;</a></span>position</h2>
+<a id="ad6007051dca93bba4a4abd4d74d0d2e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6007051dca93bba4a4abd4d74d0d2e7">&#9670;&nbsp;</a></span>pinIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t StepMotor::pinIndex</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="StepMotor_8h_source.xhtml#l00016">16</a> du fichier <a class="el" href="StepMotor_8h_source.xhtml">StepMotor.h</a>.</p>
+
+</div>
+</div>
+<a id="a97f1d907c33e6298a06c7431991739f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97f1d907c33e6298a06c7431991739f9">&#9670;&nbsp;</a></span>pins</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;uint8_t, 4&gt; StepMotor::pins</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="StepMotor_8h_source.xhtml#l00015">15</a> du fichier <a class="el" href="StepMotor_8h_source.xhtml">StepMotor.h</a>.</p>
+
+</div>
+</div>
+<a id="a5d3b6e20ec55fad44836fef89b07a086"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d3b6e20ec55fad44836fef89b07a086">&#9670;&nbsp;</a></span>position</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">int32_t StepMotor::position</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Définition à la ligne <a class="el" href="StepMotor_8h_source.xhtml#l00013">13</a> du fichier <a class="el" href="StepMotor_8h_source.xhtml">StepMotor.h</a>.</p>
-
-</div>
-</div>
-<a id="a61afaf5bcdbf748851d5051ebffa3e84" name="a61afaf5bcdbf748851d5051ebffa3e84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61afaf5bcdbf748851d5051ebffa3e84">&#9670;&#160;</a></span>steps</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int8_t StepMotor::steps</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -239,7 +280,9 @@ Attributs publics</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
 </small></address>
 </body>
 </html>
