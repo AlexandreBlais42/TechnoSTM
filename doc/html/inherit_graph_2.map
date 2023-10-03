@@ -1,4 +1,3 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="node1" href="$classI2C.xhtml" title="Classe qui s&#39;occupe de la communication I2C." alt="" coords="5,5,48,32"/>
-<area shape="rect" id="node2" href="$classADS1115.xhtml" title="Gère l&#39;interfaçage avec l&#39;ADC externe en I2C." alt="" coords="96,5,177,32"/>
+<area shape="rect" id="node1" href="$classPlateforme.xhtml" title="Class qui représente la plateforme et permet de la bouger physiquement." alt="" coords="5,5,100,32"/>
 </map>

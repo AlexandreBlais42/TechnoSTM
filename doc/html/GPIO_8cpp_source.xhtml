@@ -81,7 +81,7 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">  #else</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  std::cout &lt;&lt; <span class="stringliteral">&quot;GPIO::setPin appellé avec pinNumber = &quot;</span> &lt;&lt; std::to_string(pinNumber)</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            &lt;&lt; <span class="stringliteral">&quot; mode = &quot;</span> &lt;&lt; mode &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">  #endif</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">  #endif // __arm__</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classGPIO.xhtml#a60ac204e399c56d031c0cd4d95acddf8">   15</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classGPIO.xhtml#a60ac204e399c56d031c0cd4d95acddf8">GPIO::setPin</a>(<span class="keyword">const</span> uint8_t pinNumber, <span class="keyword">const</span> <span class="keywordtype">bool</span> state) {</div>

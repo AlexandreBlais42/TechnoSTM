@@ -75,13 +75,22 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classAiguille.xhtml">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="classAiguille.xhtml">Aiguille</a> {</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;};</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#endif // AIGUILLE_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ADS1115_8h.xhtml">ADS1115.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classAiguille.xhtml">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classAiguille.xhtml">Aiguille</a> : <span class="keyword">private</span> <a class="code" href="classADS1115.xhtml">ADS1115</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <a class="code" href="classAiguille.xhtml#ae43d7692e2277b64c7d73828ae589ec6">Aiguille</a>(<span class="keyword">const</span> uint8_t deviceAddr);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  int16_t <a class="code" href="classAiguille.xhtml#a79524fc4fee83ab6116cbd31ea74abee">readVoltage</a>();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif // AIGUILLE_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassAiguille_xhtml"><div class="ttname"><a href="classAiguille.xhtml">Aiguille</a></div><div class="ttdoc">Classe qui gère l'aiguille.</div><div class="ttdef"><b>Definition:</b> <a href="Aiguille_8h_source.xhtml#l00008">Aiguille.h:8</a></div></div>
+<div class="ttc" id="aclassAiguille_xhtml_a79524fc4fee83ab6116cbd31ea74abee"><div class="ttname"><a href="classAiguille.xhtml#a79524fc4fee83ab6116cbd31ea74abee">Aiguille::readVoltage</a></div><div class="ttdeci">int16_t readVoltage()</div><div class="ttdoc">Lit une valeur correspondant au courant sur l'aiguille.</div><div class="ttdef"><b>Definition:</b> <a href="Aiguille_8cpp_source.xhtml#l00005">Aiguille.cpp:5</a></div></div>
+<div class="ttc" id="aclassAiguille_xhtml"><div class="ttname"><a href="classAiguille.xhtml">Aiguille</a></div><div class="ttdoc">Classe qui gère l'aiguille.</div><div class="ttdef"><b>Definition:</b> <a href="Aiguille_8h_source.xhtml#l00010">Aiguille.h:10</a></div></div>
+<div class="ttc" id="aADS1115_8h_xhtml"><div class="ttname"><a href="ADS1115_8h.xhtml">ADS1115.h</a></div></div>
+<div class="ttc" id="aclassADS1115_xhtml"><div class="ttname"><a href="classADS1115.xhtml">ADS1115</a></div><div class="ttdoc">Gère l'interfaçage avec l'ADC externe en I2C.</div><div class="ttdef"><b>Definition:</b> <a href="ADS1115_8h_source.xhtml#l00034">ADS1115.h:34</a></div></div>
+<div class="ttc" id="aclassAiguille_xhtml_ae43d7692e2277b64c7d73828ae589ec6"><div class="ttname"><a href="classAiguille.xhtml#ae43d7692e2277b64c7d73828ae589ec6">Aiguille::Aiguille</a></div><div class="ttdeci">Aiguille(const uint8_t deviceAddr)</div><div class="ttdoc">Constructeur de la classe aiguille.</div><div class="ttdef"><b>Definition:</b> <a href="Aiguille_8cpp_source.xhtml#l00003">Aiguille.cpp:3</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Généré par &#160;<a href="http://www.doxygen.org/index.html">

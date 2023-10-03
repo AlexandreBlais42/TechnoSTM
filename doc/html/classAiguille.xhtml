@@ -62,6 +62,9 @@ $(function() {
 
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="classAiguille-members.xhtml">Liste de tous les membres</a>  </div>
   <div class="headertitle">
 <div class="title">Référence de la classe Aiguille</div>  </div>
 </div><!--header-->
@@ -72,19 +75,94 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="Aiguille_8h_source.xhtml">Aiguille.h</a>&gt;</code></p>
 <div class="dynheader">
+Graphe d'héritage de Aiguille:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAiguille__inherit__graph.png" border="0" usemap="#Aiguille_inherit__map" alt="Inheritance graph"/></div>
+<map name="Aiguille_inherit__map" id="Aiguille_inherit__map">
+<area shape="rect" title="Classe qui gère l&#39;aiguille." alt="" coords="51,535,176,627"/>
+<area shape="rect" href="classADS1115.xhtml" title="Gère l&#39;interfaçage avec l&#39;ADC externe en I2C." alt="" coords="5,233,221,487"/>
+<area shape="rect" href="classI2C.xhtml" title="Classe qui s&#39;occupe de la communication I2C." alt="" coords="51,5,175,185"/>
+</map>
+</div>
+<div class="dynheader">
 Graphe de collaboration de Aiguille:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAiguille__coll__graph.png" border="0" usemap="#Aiguille_coll__map" alt="Collaboration graph"/></div>
 <map name="Aiguille_coll__map" id="Aiguille_coll__map">
-<area shape="rect" title="Classe qui gère l&#39;aiguille." alt="" coords="5,5,76,83"/>
+<area shape="rect" title="Classe qui gère l&#39;aiguille." alt="" coords="51,535,176,627"/>
+<area shape="rect" href="classADS1115.xhtml" title="Gère l&#39;interfaçage avec l&#39;ADC externe en I2C." alt="" coords="5,233,221,487"/>
+<area shape="rect" href="classI2C.xhtml" title="Classe qui s&#39;occupe de la communication I2C." alt="" coords="51,5,175,185"/>
 </map>
 </div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:ae43d7692e2277b64c7d73828ae589ec6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiguille.xhtml#ae43d7692e2277b64c7d73828ae589ec6">Aiguille</a> (const uint8_t deviceAddr)</td></tr>
+<tr class="memdesc:ae43d7692e2277b64c7d73828ae589ec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de la classe aiguille.  <a href="classAiguille.xhtml#ae43d7692e2277b64c7d73828ae589ec6">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae43d7692e2277b64c7d73828ae589ec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79524fc4fee83ab6116cbd31ea74abee"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAiguille.xhtml#a79524fc4fee83ab6116cbd31ea74abee">readVoltage</a> ()</td></tr>
+<tr class="memdesc:a79524fc4fee83ab6116cbd31ea74abee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lit une valeur correspondant au courant sur l'aiguille.  <a href="classAiguille.xhtml#a79524fc4fee83ab6116cbd31ea74abee">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a79524fc4fee83ab6116cbd31ea74abee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Classe qui gère l'aiguille. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="Aiguille_8h_source.xhtml#l00008">8</a> du fichier <a class="el" href="Aiguille_8h_source.xhtml">Aiguille.h</a>.</p>
-</div><hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
+<p class="definition">Définition à la ligne <a class="el" href="Aiguille_8h_source.xhtml#l00010">10</a> du fichier <a class="el" href="Aiguille_8h_source.xhtml">Aiguille.h</a>.</p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a id="ae43d7692e2277b64c7d73828ae589ec6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae43d7692e2277b64c7d73828ae589ec6">&#9670;&nbsp;</a></span>Aiguille()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Aiguille::Aiguille </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>deviceAddr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructeur de la classe aiguille. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ADCAddr</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="Aiguille_8cpp_source.xhtml#l00003">3</a> du fichier <a class="el" href="Aiguille_8cpp_source.xhtml">Aiguille.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a id="a79524fc4fee83ab6116cbd31ea74abee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79524fc4fee83ab6116cbd31ea74abee">&#9670;&nbsp;</a></span>readVoltage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int16_t Aiguille::readVoltage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lit une valeur correspondant au courant sur l'aiguille. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>La valeur du courant lu </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="Aiguille_8cpp_source.xhtml#l00005">5</a> du fichier <a class="el" href="Aiguille_8cpp_source.xhtml">Aiguille.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
 <li>src/include/<a class="el" href="Aiguille_8h_source.xhtml">Aiguille.h</a></li>
+<li>src/<a class="el" href="Aiguille_8cpp_source.xhtml">Aiguille.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
