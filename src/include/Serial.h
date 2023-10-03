@@ -6,7 +6,9 @@
 #include <string>
 #include <vector>
 
-#include "Vector3D.h"
+#ifdef __arm__
+  #include <wiringSerial.h>
+#endif // __arm__
 
 /** @brief Classe qui permet de communiquer sériellement entre autre pour
  * communiquer avec le DAC 16bits AnalogDevices
@@ -14,6 +16,7 @@
 class Serial {
 public:
   std::string devicePath;
+  int fileDescriptor;
 
   Serial();
 
