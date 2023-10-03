@@ -2,18 +2,24 @@
 #define STEPMOTOR_H
 
 #include <cstdint>
+#include <array>
 
 #include "GPIO.h"
 #include "Utils.h"
 
 /** @brief Classe qui gère les mouvements du step moteur
  */
-class StepMotor {
+class StepMotor : private GPIO {
 public:
   int32_t position;
-  int8_t steps;
+  std::array<uint8_t, 4> pins;
+  int8_t pinIndex;
 
-  StepMotor(const int32_t position);
+  /** @brief Constructeur de la classe StepMotor
+   *  @param position La position initiale du moteur
+   *  @param pins Une liste de 4 valeurs pour les pins
+   */
+  StepMotor(const int32_t position, const std::array<uint8_t, 4> pins);
 
   /** @brief Mets la position de la plateforme relativement à sa position
    * actuelle

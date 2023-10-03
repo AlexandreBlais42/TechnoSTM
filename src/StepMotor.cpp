@@ -1,6 +1,10 @@
 #include "StepMotor.h"
 
-StepMotor::StepMotor(const int32_t position) : position(position), steps(0) {}
+StepMotor::StepMotor(const int32_t position, const std::array<uint8_t, 4> pins) : position(position), pins(pins), pinIndex(0) {
+  for (const uint8_t pin : pins){
+    pinMode(pin, OUTPUT);
+  }
+}
 
 void StepMotor::goToRelative(const int32_t pos) {
   position += pos;
@@ -11,10 +15,11 @@ void StepMotor::goToRelative(const int32_t pos) {
   }
 
   for (uint8_t _ = 0; _ < abs(pos); _++) {
-    GPIO::setPin(steps, false);
-    steps += direction;
-    steps %= 4;
-    GPIO::setPin(steps, true);
+    setPin(pins[pinIndex], false);
+    pinIndex += direction;
+    pinIndex += 4; // -1 % 4 == -1 en C++, On a besoin d'un index positif
+    pinIndex %= 4;
+    setPin(pins[pinIndex], true);
 
     delay_ms(5);
   }

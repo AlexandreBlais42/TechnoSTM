@@ -6,7 +6,7 @@
 #include "Utils.h"
 #include "Vector3D.h"
 
-int main() {
+int main(int argc, char *argv[]) {
   Plateforme plateforme("/dev/ttyUSB0");
   I2C conn(10);
 }
