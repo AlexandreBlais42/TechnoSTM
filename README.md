@@ -1,14 +1,16 @@
 # TechnoSTM
-Un microscope atomique à effet tunnel
+## Un microscope atomique à effet tunnel
 
 Le programme du Rasberry Pi 3b devra implémenter les fonctionnalités suivantes:
 
--contrôle du CAN ADS1115 pour l'acquisition du signal relatif à l'axe z
++ Contrôle du CAN ADS1115 pour l'acquisition du signal relatif à l'axe z
 
--contrôle du CNA AD5764 contrôler par un Arduino Uno pour le déplacement des actionneurs piézoélectriques (https://github.com/AlexandreBlais42/Arduino-EVAL-AD5764EB-pour-stm)
++ Contrôle du CNA AD5764 contrôler par un Arduino Uno pour le déplacement des actionneurs piézoélectriques : [Code Source](https://github.com/AlexandreBlais42/Arduino-EVAL-AD5764EB-pour-stm)
 
--acquisition et traitement de l'image 3D
++ Acquisition et traitement de l'image 3D
 
--2 modes fonctionnement, (1)(déplacement à hauteur constante), (2)(déplacement à courant constant avec une boucle de retour)
++ 2 modes fonctionnement, 
+    1. déplacement à hauteur constante
+    2. déplacement à courant constant
 
--contrôle du moteur pas à pas pour la première approche grossière
++ Contrôle du moteur pas à pas pour la première approche grossière;
