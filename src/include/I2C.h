@@ -60,6 +60,7 @@ public:
 
   template <typename T>
   /** @brief Lits une donnée sur la communication I2C
+   *  @todo Inverse l'ordre des octets lors de la lecture
    */
   T readData() {
 #ifdef __arm__
