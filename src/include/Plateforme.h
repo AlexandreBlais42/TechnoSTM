@@ -12,10 +12,9 @@
 /** @brief Class qui représente la plateforme et permet de la bouger
  * physiquement
  */
-class Plateforme {
+class Plateforme : private Serial{
 public:
   Vector3D<uint16_t> position;
-  Serial ser;
 
   Plateforme(const std::string devicePath);
 
