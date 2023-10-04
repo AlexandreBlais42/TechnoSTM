@@ -18,7 +18,7 @@ public:
   std::string devicePath;
   int fileDescriptor;
 
-  Serial();
+  Serial(const std::string devicePath, const uint32_t baudrate);
 
   /** @brief Setup la connection sérielle
    *  @param devicePath Le chemin du fichier qui permet de communiquer sur le

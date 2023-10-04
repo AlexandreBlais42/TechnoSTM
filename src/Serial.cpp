@@ -1,6 +1,8 @@
 #include "Serial.h"
 
-Serial::Serial() {}
+Serial::Serial(const std::string devicePath, const uint32_t baudrate) {
+  begin(devicePath, baudrate);
+}
 
 void Serial::begin(const std::string devicePath, const uint32_t baudrate) {
 #ifdef __arm__

@@ -1,9 +1,6 @@
 #include "Plateforme.h"
 
-Plateforme::Plateforme(const std::string devicePath) {
-  ser = Serial();
-  ser.begin(devicePath, 115200);
-}
+Plateforme::Plateforme(const std::string devicePath) : Serial(devicePath, 115200){}
 
 inline void Plateforme::setPositionRelative(const uint16_t x, const uint16_t y,
                                             const uint16_t z) {
@@ -28,7 +25,7 @@ Plateforme::setPositionAbsolute(const Vector3D<uint16_t> &coordinates) {
 void Plateforme::moveToPosition() const {
   std::vector<std::string> stringsToSend(0);
 
-  ser.write("A" + getHexString(position.x) + "\n");
-  ser.write("B" + getHexString(position.y) + "\n");
-  ser.write("C" + getHexString(position.z) + "\n");
+  Serial::write("A" + getHexString(position.x) + "\n");
+  Serial::write("B" + getHexString(position.y) + "\n");
+  Serial::write("C" + getHexString(position.z) + "\n");
 }
