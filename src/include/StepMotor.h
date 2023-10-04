@@ -1,8 +1,8 @@
 #ifndef STEPMOTOR_H
 #define STEPMOTOR_H
 
-#include <cstdint>
 #include <array>
+#include <cstdint>
 
 #include "GPIO.h"
 #include "Utils.h"

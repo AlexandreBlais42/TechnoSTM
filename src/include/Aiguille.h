@@ -10,13 +10,13 @@
 class Aiguille : private ADS1115 {
 public:
   /** @brief Constructeur de la classe aiguille
-  *   @param ADCAddr
-  */
+   *   @param ADCAddr
+   */
   Aiguille(const uint8_t deviceAddr);
 
   /** @brief Lit une valeur correspondant au courant sur l'aiguille
-  *   @return La valeur du courant lu
-  */
+   *   @return La valeur du courant lu
+   */
   int16_t readVoltage();
 };
 

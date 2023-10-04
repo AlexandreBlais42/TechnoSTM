@@ -1,14 +1,13 @@
 #ifndef IMAGE_H
 #define IMAGE_H
 
-
-#include <iostream>
 #include <cstdint>
+#include <iostream>
 // #include <gwyddion.h> ??????????
 
 /** @brief Classe pour l'image et le traitement de celle ci
  */
-class Image{
+class Image {
 public:
   Image();
 };

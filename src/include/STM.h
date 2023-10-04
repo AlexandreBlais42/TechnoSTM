@@ -1,8 +1,8 @@
 #ifndef STM_H
 #define STM_H
 
-#include <iostream>
 #include <cstdint>
+#include <iostream>
 
 #include "Aiguille.h"
 #include "Plateforme.h"
@@ -12,9 +12,8 @@
  */
 class STM : private Aiguille, private Plateforme, private StepMotor {
 public:
-  STM(const uint8_t deviceAddr, const std::string devicePath, std::array<uint8_t, 4> pins);
-
-
+  STM(const uint8_t deviceAddr, const std::string devicePath,
+      std::array<uint8_t, 4> pins);
 };
 
 #endif // STM_H

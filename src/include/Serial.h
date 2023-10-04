@@ -7,7 +7,7 @@
 #include <vector>
 
 #ifdef __arm__
-  #include <wiringSerial.h>
+#include <wiringSerial.h>
 #endif // __arm__
 
 /** @brief Classe qui permet de communiquer sériellement entre autre pour

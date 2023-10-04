@@ -8,7 +8,7 @@
 #ifdef __arm__
 #include <wiringPi.h>
 #else
-typedef enum pinMode_t{
+typedef enum pinMode_t {
   INPUT,
   OUTPUT,
   PWM_OUTPUT,
