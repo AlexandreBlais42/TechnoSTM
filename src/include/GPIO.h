@@ -26,7 +26,7 @@ public:
    *  @param pinNumber Le numéro de la pin GPIO
    *  @param mode Le mode de la pin (modes spécifiés dans l'enum pinMode_t)
    */
-  static void pinMode(const uint8_t pinNumber, const uint8_t mode);
+  static void _pinMode(const uint8_t pinNumber, const uint8_t mode);
 
   /** @brief Set une pin du GPIO du raspberry pi à state
    *  @param pinNumber Le numéro de pin de GPIO

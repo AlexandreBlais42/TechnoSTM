@@ -3,7 +3,7 @@
 
 GPIO::GPIO() {}
 
-void GPIO::pinMode(const uint8_t pinNumber, const uint8_t mode) {
+void GPIO::_pinMode(const uint8_t pinNumber, const uint8_t mode) {
 #ifdef __arm__
   pinMode(pinNumber, mode);
 #else
