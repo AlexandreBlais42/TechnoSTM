@@ -5,8 +5,8 @@ foreach(_PROGRAM ${_PROGRAMS})
   add_executable(${PROGRAM_NAME} ${_PROGRAM})
 
   target_link_libraries(${PROGRAM_NAME} LINK_PUBLIC STM)
-  if (${CMAKE_HOST_SYSTEM_PROCESSOR} STREQUAL armv71)
-    target_link_libraries($PROGRAM_NAME LINK_PUBLIC wiringPi)
+  if (${CMAKE_HOST_SYSTEM_PROCESSOR} STREQUAL armv7l)
+    target_link_libraries(${PROGRAM_NAME} LINK_PUBLIC wiringPi)
   endif()
 endforeach()
 
