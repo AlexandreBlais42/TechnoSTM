@@ -100,29 +100,30 @@ $(function() {
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classI2C.xhtml#afcef607b4a2c5f5b4e9d04875a8f110f">   50</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classI2C.xhtml#afcef607b4a2c5f5b4e9d04875a8f110f">writeData</a>(<span class="keyword">const</span> T &amp;data) {</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#ifdef __arm__</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span> (!write(<a class="code" href="classI2C.xhtml#a6076b46894ad33eeec883cf4be22e5bb">fileDescriptor</a>, (<span class="keywordtype">char</span> *)&amp;data, <span class="keyword">sizeof</span>(T))){</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      std::cout &lt;&lt; <span class="stringliteral">&quot;Une erreur est survenue lors de l&#39;écriture dans la communication I2C&quot;</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;I2C::write appellé avec data (&quot;</span> &lt;&lt; <span class="keyword">sizeof</span>(data) &lt;&lt; <span class="stringliteral">&quot; octets)&quot;</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;              &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif // __arm__</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classI2C.xhtml#a45af5e21a1a2856d0a22f533ce125e69">   64</a></span>&#160;  T <a class="code" href="classI2C.xhtml#a45af5e21a1a2856d0a22f533ce125e69">readData</a>() {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#ifdef __arm__</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    T data;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    read(<a class="code" href="classI2C.xhtml#a6076b46894ad33eeec883cf4be22e5bb">fileDescriptor</a>, (<span class="keywordtype">char</span> *)&amp;data, <span class="keyword">sizeof</span>(T));</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> data;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;I2C::read appellé&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif // __arm__</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif // I2C_H</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span> (!write(<a class="code" href="classI2C.xhtml#a6076b46894ad33eeec883cf4be22e5bb">fileDescriptor</a>, (<span class="keywordtype">char</span> *)&amp;data, <span class="keyword">sizeof</span>(T))) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      std::cout &lt;&lt; <span class="stringliteral">&quot;Une erreur est survenue lors de l&#39;écriture dans la &quot;</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                   <span class="stringliteral">&quot;communication I2C&quot;</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;I2C::write appellé avec data (&quot;</span> &lt;&lt; <span class="keyword">sizeof</span>(data) &lt;&lt; <span class="stringliteral">&quot; octets)&quot;</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;              &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif // __arm__</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classI2C.xhtml#a45af5e21a1a2856d0a22f533ce125e69">   66</a></span>&#160;  T <a class="code" href="classI2C.xhtml#a45af5e21a1a2856d0a22f533ce125e69">readData</a>() {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#ifdef __arm__</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    T data;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    read(<a class="code" href="classI2C.xhtml#a6076b46894ad33eeec883cf4be22e5bb">fileDescriptor</a>, (<span class="keywordtype">char</span> *)&amp;data, <span class="keyword">sizeof</span>(T));</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> data;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;I2C::read appellé&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif // __arm__</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;};</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#endif // I2C_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassI2C_xhtml"><div class="ttname"><a href="classI2C.xhtml">I2C</a></div><div class="ttdoc">Classe qui s'occupe de la communication I2C.</div><div class="ttdef"><b>Definition:</b> <a href="I2C_8h_source.xhtml#l00019">I2C.h:19</a></div></div>
 <div class="ttc" id="aclassI2C_xhtml_a56648ccb9d05c90d8076931a636b9e03"><div class="ttname"><a href="classI2C.xhtml#a56648ccb9d05c90d8076931a636b9e03">I2C::I2C</a></div><div class="ttdeci">I2C(const uint8_t deviceAddr)</div><div class="ttdef"><b>Definition:</b> <a href="I2C_8cpp_source.xhtml#l00010">I2C.cpp:10</a></div></div>
@@ -133,7 +134,7 @@ $(function() {
 <div class="ttc" id="aclassI2C_xhtml_aaf3b3907acf403d5d2a4fac65313bd1b"><div class="ttname"><a href="classI2C.xhtml#aaf3b3907acf403d5d2a4fac65313bd1b">I2C::readReg16</a></div><div class="ttdeci">uint16_t readReg16(int reg)</div><div class="ttdoc">Lit une valeur 16 bits d'un registre.</div><div class="ttdef"><b>Definition:</b> <a href="I2C_8cpp_source.xhtml#l00031">I2C.cpp:31</a></div></div>
 <div class="ttc" id="aclassI2C_xhtml_a693ee37e6aac13948d6ee30915fae9b7"><div class="ttname"><a href="classI2C.xhtml#a693ee37e6aac13948d6ee30915fae9b7">I2C::writeReg16</a></div><div class="ttdeci">void writeReg16(int reg, uint16_t data)</div><div class="ttdoc">Écrit une valeur de 16 bit sur un registre.</div><div class="ttdef"><b>Definition:</b> <a href="I2C_8cpp_source.xhtml#l00025">I2C.cpp:25</a></div></div>
 <div class="ttc" id="aclassI2C_xhtml_a7b7d2fd2959101aa562b5d23cee86fe8"><div class="ttname"><a href="classI2C.xhtml#a7b7d2fd2959101aa562b5d23cee86fe8">I2C::writeReg8</a></div><div class="ttdeci">void writeReg8(int reg, uint8_t data)</div><div class="ttdoc">Écrit une valeur de 8 bit sur un registre.</div><div class="ttdef"><b>Definition:</b> <a href="I2C_8cpp_source.xhtml#l00022">I2C.cpp:22</a></div></div>
-<div class="ttc" id="aclassI2C_xhtml_a45af5e21a1a2856d0a22f533ce125e69"><div class="ttname"><a href="classI2C.xhtml#a45af5e21a1a2856d0a22f533ce125e69">I2C::readData</a></div><div class="ttdeci">T readData()</div><div class="ttdoc">Lits une donnée sur la communication I2C.</div><div class="ttdef"><b>Definition:</b> <a href="I2C_8h_source.xhtml#l00064">I2C.h:64</a></div></div>
+<div class="ttc" id="aclassI2C_xhtml_a45af5e21a1a2856d0a22f533ce125e69"><div class="ttname"><a href="classI2C.xhtml#a45af5e21a1a2856d0a22f533ce125e69">I2C::readData</a></div><div class="ttdeci">T readData()</div><div class="ttdoc">Lits une donnée sur la communication I2C.</div><div class="ttdef"><b>Definition:</b> <a href="I2C_8h_source.xhtml#l00066">I2C.h:66</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Généré par &#160;<a href="http://www.doxygen.org/index.html">

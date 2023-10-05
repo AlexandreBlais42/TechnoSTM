@@ -73,8 +73,8 @@ $(function() {
 <a href="STM_8h.xhtml">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef STM_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define STM_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Aiguille_8h.xhtml">Aiguille.h</a>&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Plateforme_8h.xhtml">Plateforme.h</a>&quot;</span></div>
@@ -82,14 +82,14 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classSTM.xhtml">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSTM.xhtml">STM</a> : <span class="keyword">private</span> <a class="code" href="classAiguille.xhtml">Aiguille</a>, <span class="keyword">private</span> <a class="code" href="classPlateforme.xhtml">Plateforme</a>, <span class="keyword">private</span> <a class="code" href="classStepMotor.xhtml">StepMotor</a> {</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <a class="code" href="classSTM.xhtml#aa97d4289fec938b469102250ca145851">STM</a>(<span class="keyword">const</span> uint8_t deviceAddr, <span class="keyword">const</span> std::string devicePath, std::array&lt;uint8_t, 4&gt; <a class="code" href="classStepMotor.xhtml#a97f1d907c33e6298a06c7431991739f9">pins</a>);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;};</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif // STM_H</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <a class="code" href="classSTM.xhtml#aa97d4289fec938b469102250ca145851">STM</a>(<span class="keyword">const</span> uint8_t deviceAddr, <span class="keyword">const</span> std::string <a class="code" href="classSerial.xhtml#adace273fec553f5df81ae2ec1ba162fd">devicePath</a>,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      std::array&lt;uint8_t, 4&gt; <a class="code" href="classStepMotor.xhtml#a97f1d907c33e6298a06c7431991739f9">pins</a>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;};</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif // STM_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassAiguille_xhtml"><div class="ttname"><a href="classAiguille.xhtml">Aiguille</a></div><div class="ttdoc">Classe qui gère l'aiguille.</div><div class="ttdef"><b>Definition:</b> <a href="Aiguille_8h_source.xhtml#l00010">Aiguille.h:10</a></div></div>
+<div class="ttc" id="aclassSerial_xhtml_adace273fec553f5df81ae2ec1ba162fd"><div class="ttname"><a href="classSerial.xhtml#adace273fec553f5df81ae2ec1ba162fd">Serial::devicePath</a></div><div class="ttdeci">std::string devicePath</div><div class="ttdef"><b>Definition:</b> <a href="Serial_8h_source.xhtml#l00018">Serial.h:18</a></div></div>
 <div class="ttc" id="aclassStepMotor_xhtml"><div class="ttname"><a href="classStepMotor.xhtml">StepMotor</a></div><div class="ttdoc">Classe qui gère les mouvements du step moteur.</div><div class="ttdef"><b>Definition:</b> <a href="StepMotor_8h_source.xhtml#l00012">StepMotor.h:12</a></div></div>
 <div class="ttc" id="aAiguille_8h_xhtml"><div class="ttname"><a href="Aiguille_8h.xhtml">Aiguille.h</a></div></div>
 <div class="ttc" id="aclassSTM_xhtml"><div class="ttname"><a href="classSTM.xhtml">STM</a></div><div class="ttdoc">Classe qui gère les fonctions du microscope.</div><div class="ttdef"><b>Definition:</b> <a href="STM_8h_source.xhtml#l00013">STM.h:13</a></div></div>

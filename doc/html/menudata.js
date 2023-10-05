@@ -22,12 +22,14 @@ for the JavaScript code in this file
 */
 var menudata={children:[
 {text:"Page principale",url:"index.xhtml"},
+{text:"Pages associées",url:"pages.xhtml"},
 {text:"Classes",url:"annotated.xhtml",children:[
 {text:"Liste des classes",url:"annotated.xhtml"},
 {text:"Index des classes",url:"classes.xhtml"},
 {text:"Hiérarchie des classes",url:"inherits.xhtml"},
 {text:"Membres de classe",url:"functions.xhtml",children:[
 {text:"Tout",url:"functions.xhtml",children:[
+{text:"_",url:"functions.xhtml#index__5F"},
 {text:"a",url:"functions.xhtml#index_a"},
 {text:"b",url:"functions.xhtml#index_b"},
 {text:"c",url:"functions.xhtml#index_c"},
@@ -47,6 +49,7 @@ var menudata={children:[
 {text:"z",url:"functions.xhtml#index_z"},
 {text:"~",url:"functions.xhtml#index__7E"}]},
 {text:"Fonctions",url:"functions_func.xhtml",children:[
+{text:"_",url:"functions_func.xhtml#index__5F"},
 {text:"a",url:"functions_func.xhtml#index_a"},
 {text:"b",url:"functions_func.xhtml#index_b"},
 {text:"g",url:"functions_func.xhtml#index_g"},
@@ -67,4 +70,5 @@ var menudata={children:[
 {text:"Fonctions",url:"globals_func.xhtml"},
 {text:"Définitions de type",url:"globals_type.xhtml"},
 {text:"Énumérations",url:"globals_enum.xhtml"},
-{text:"Valeurs énumérées",url:"globals_eval.xhtml"}]}]}]}
+{text:"Valeurs énumérées",url:"globals_eval.xhtml"}]}]},
+{text:"Exemples",url:"examples.xhtml"}]}

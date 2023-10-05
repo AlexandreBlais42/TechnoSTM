@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['read_42',['read',['../classADS1115.xhtml#afa5cf7d1699ceb7f34270b0260c5bc5a',1,'ADS1115::read()'],['../classSerial.xhtml#af10648b801138712457976e00462c77a',1,'Serial::read()']]],
-  ['readdata_43',['readData',['../classI2C.xhtml#a45af5e21a1a2856d0a22f533ce125e69',1,'I2C']]],
-  ['readreg16_44',['readReg16',['../classI2C.xhtml#aaf3b3907acf403d5d2a4fac65313bd1b',1,'I2C']]],
-  ['readreg8_45',['readReg8',['../classI2C.xhtml#adb3720e4ef4a115433a2b7600e722228',1,'I2C']]],
-  ['readvoltage_46',['readVoltage',['../classAiguille.xhtml#a79524fc4fee83ab6116cbd31ea74abee',1,'Aiguille']]]
+  ['operator_2b_31',['operator+',['../Vector3D_8h.xhtml#a4155e98441c8cb114333f0ff1e6c5b3c',1,'Vector3D.h']]],
+  ['operator_2b_3d_32',['operator+=',['../classVector3D.xhtml#a4a849acd4e9c0984137cc92ac38f449f',1,'Vector3D']]],
+  ['operator_2d_33',['operator-',['../Vector3D_8h.xhtml#af9093e7750cb72e26d0b5c2775b09811',1,'Vector3D.h']]],
+  ['operator_2d_3d_34',['operator-=',['../classVector3D.xhtml#a49e949a58eb95ea8aaca119a65f3db06',1,'Vector3D']]],
+  ['output_35',['OUTPUT',['../GPIO_8h.xhtml#ace9769c8acaf8eaf1b4312a5706f6d04a2ab08d3e103968f5f4f26b66a52e99d6',1,'GPIO.h']]]
 ];

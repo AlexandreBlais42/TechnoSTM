@@ -1,0 +1,5 @@
+<map id="Serial" name="Serial">
+<area shape="rect" id="node1" title="Classe qui permet de communiquer sériellement entre autre pour communiquer avec le DAC 16bits AnalogD..." alt="" coords="31,5,155,141"/>
+<area shape="rect" id="node2" href="$classPlateforme.xhtml" title="Class qui représente la plateforme et permet de la bouger physiquement." alt="" coords="5,189,181,340"/>
+<area shape="rect" id="node3" href="$classSTM.xhtml" title="Classe qui gère les fonctions du microscope." alt="" coords="56,388,131,465"/>
+</map>

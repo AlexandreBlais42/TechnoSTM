@@ -72,46 +72,49 @@ $(function() {
 <div class="contents">
 <a href="Serial_8cpp.xhtml">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Serial_8h.xhtml">Serial.h</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="classSerial.xhtml#a3667c3137f2df94716b5193f9fb736ab">    3</a></span>&#160;<a class="code" href="classSerial.xhtml#a3667c3137f2df94716b5193f9fb736ab">Serial::Serial</a>() {}</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classSerial.xhtml#a2eec06a1d2643449f3db523c669183b6">    5</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSerial.xhtml#a2eec06a1d2643449f3db523c669183b6">Serial::begin</a>(<span class="keyword">const</span> std::string devicePath, <span class="keyword">const</span> uint32_t baudrate) {</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifdef __arm__</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordflow">if</span> (deviceDescriptor = serialOpen(<a class="code" href="classSerial.xhtml#adace273fec553f5df81ae2ec1ba162fd">devicePath</a>.c_str(), baudrate) == -1){</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Erreur lors de l&#39;initialisation de la connection sérielle&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    exit(1);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  }</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  std::cout &lt;&lt; <span class="stringliteral">&quot;Serial::begin, device : &quot;</span> &lt;&lt; <a class="code" href="classSerial.xhtml#adace273fec553f5df81ae2ec1ba162fd">devicePath</a></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            &lt;&lt; <span class="stringliteral">&quot; baudrate : &quot;</span> &lt;&lt; baudrate &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#endif // __arm__</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classSerial.xhtml#ad41ba0be253ee02be5a629247e424cc0">   17</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSerial.xhtml#ad41ba0be253ee02be5a629247e424cc0">Serial::write</a>(<span class="keyword">const</span> std::string s)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifdef __arm__</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  serialPuts(<a class="code" href="classSerial.xhtml#a192193e93b5c5c582eb304b12a9a9cd2">fileDescriptor</a>, s.c_str());</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  std::cout &lt;&lt; <span class="stringliteral">&quot;Serial::write : &quot;</span> &lt;&lt; s &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif // __arm__</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classSerial.xhtml#af10648b801138712457976e00462c77a">   25</a></span>&#160;std::vector&lt;char&gt; <a class="code" href="classSerial.xhtml#af10648b801138712457976e00462c77a">Serial::read</a>(<span class="keyword">const</span> uint32_t amount)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#ifdef __arm__</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  std::vector&lt;char&gt; toReturn(0);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">for</span> (uint32_t i = 0 ; i &lt; amount ; i++){</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    toReturn.push_back(serialGetChar(<a class="code" href="classSerial.xhtml#a192193e93b5c5c582eb304b12a9a9cd2">fileDescriptor</a>));</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  std::cout &lt;&lt; <span class="stringliteral">&quot;Serial::read : &quot;</span> &lt;&lt; amount &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordflow">return</span> std::vector&lt;char&gt;(amount, 0);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif // __arm__</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="classSerial.xhtml#abdf0d42fe72e16ef10bed8f6df583e0d">    3</a></span>&#160;<a class="code" href="classSerial.xhtml#abdf0d42fe72e16ef10bed8f6df583e0d">Serial::Serial</a>(<span class="keyword">const</span> std::string devicePath, <span class="keyword">const</span> uint32_t baudrate) {</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  <a class="code" href="classSerial.xhtml#a2eec06a1d2643449f3db523c669183b6">begin</a>(<a class="code" href="classSerial.xhtml#adace273fec553f5df81ae2ec1ba162fd">devicePath</a>, baudrate);</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;}</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classSerial.xhtml#a2eec06a1d2643449f3db523c669183b6">    7</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSerial.xhtml#a2eec06a1d2643449f3db523c669183b6">Serial::begin</a>(<span class="keyword">const</span> std::string devicePath, <span class="keyword">const</span> uint32_t baudrate) {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifdef __arm__</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classSerial.xhtml#a192193e93b5c5c582eb304b12a9a9cd2">fileDescriptor</a> = serialOpen(<a class="code" href="classSerial.xhtml#adace273fec553f5df81ae2ec1ba162fd">devicePath</a>.c_str(), baudrate) == -1) {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Erreur lors de l&#39;initialisation de la connection sérielle&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;              &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    exit(1);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  }</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  std::cout &lt;&lt; <span class="stringliteral">&quot;Serial::begin, device : &quot;</span> &lt;&lt; <a class="code" href="classSerial.xhtml#adace273fec553f5df81ae2ec1ba162fd">devicePath</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            &lt;&lt; <span class="stringliteral">&quot; baudrate : &quot;</span> &lt;&lt; baudrate &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif // __arm__</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classSerial.xhtml#ad41ba0be253ee02be5a629247e424cc0">   20</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSerial.xhtml#ad41ba0be253ee02be5a629247e424cc0">Serial::write</a>(<span class="keyword">const</span> std::string s)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#ifdef __arm__</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  serialPuts(<a class="code" href="classSerial.xhtml#a192193e93b5c5c582eb304b12a9a9cd2">fileDescriptor</a>, s.c_str());</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  std::cout &lt;&lt; <span class="stringliteral">&quot;Serial::write : &quot;</span> &lt;&lt; s &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif // __arm__</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classSerial.xhtml#af10648b801138712457976e00462c77a">   28</a></span>&#160;std::vector&lt;char&gt; <a class="code" href="classSerial.xhtml#af10648b801138712457976e00462c77a">Serial::read</a>(<span class="keyword">const</span> uint32_t amount)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#ifdef __arm__</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  std::vector&lt;char&gt; toReturn(0);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; amount; i++) {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    toReturn.push_back(serialGetchar(<a class="code" href="classSerial.xhtml#a192193e93b5c5c582eb304b12a9a9cd2">fileDescriptor</a>));</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  std::cout &lt;&lt; <span class="stringliteral">&quot;Serial::read : &quot;</span> &lt;&lt; amount &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordflow">return</span> std::vector&lt;char&gt;(amount, 0);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif // __arm__</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassSerial_xhtml_a192193e93b5c5c582eb304b12a9a9cd2"><div class="ttname"><a href="classSerial.xhtml#a192193e93b5c5c582eb304b12a9a9cd2">Serial::fileDescriptor</a></div><div class="ttdeci">int fileDescriptor</div><div class="ttdef"><b>Definition:</b> <a href="Serial_8h_source.xhtml#l00019">Serial.h:19</a></div></div>
 <div class="ttc" id="aclassSerial_xhtml_adace273fec553f5df81ae2ec1ba162fd"><div class="ttname"><a href="classSerial.xhtml#adace273fec553f5df81ae2ec1ba162fd">Serial::devicePath</a></div><div class="ttdeci">std::string devicePath</div><div class="ttdef"><b>Definition:</b> <a href="Serial_8h_source.xhtml#l00018">Serial.h:18</a></div></div>
-<div class="ttc" id="aclassSerial_xhtml_ad41ba0be253ee02be5a629247e424cc0"><div class="ttname"><a href="classSerial.xhtml#ad41ba0be253ee02be5a629247e424cc0">Serial::write</a></div><div class="ttdeci">void write(const std::string s) const</div><div class="ttdoc">Écrit sur le port sériel.</div><div class="ttdef"><b>Definition:</b> <a href="Serial_8cpp_source.xhtml#l00017">Serial.cpp:17</a></div></div>
-<div class="ttc" id="aclassSerial_xhtml_af10648b801138712457976e00462c77a"><div class="ttname"><a href="classSerial.xhtml#af10648b801138712457976e00462c77a">Serial::read</a></div><div class="ttdeci">std::vector&lt; char &gt; read(const uint32_t amount) const</div><div class="ttdoc">Lis des données du port sériel.</div><div class="ttdef"><b>Definition:</b> <a href="Serial_8cpp_source.xhtml#l00025">Serial.cpp:25</a></div></div>
-<div class="ttc" id="aclassSerial_xhtml_a2eec06a1d2643449f3db523c669183b6"><div class="ttname"><a href="classSerial.xhtml#a2eec06a1d2643449f3db523c669183b6">Serial::begin</a></div><div class="ttdeci">void begin(const std::string devicePath, const uint32_t baudrate)</div><div class="ttdoc">Setup la connection sérielle.</div><div class="ttdef"><b>Definition:</b> <a href="Serial_8cpp_source.xhtml#l00005">Serial.cpp:5</a></div></div>
-<div class="ttc" id="aclassSerial_xhtml_a3667c3137f2df94716b5193f9fb736ab"><div class="ttname"><a href="classSerial.xhtml#a3667c3137f2df94716b5193f9fb736ab">Serial::Serial</a></div><div class="ttdeci">Serial()</div><div class="ttdef"><b>Definition:</b> <a href="Serial_8cpp_source.xhtml#l00003">Serial.cpp:3</a></div></div>
+<div class="ttc" id="aclassSerial_xhtml_abdf0d42fe72e16ef10bed8f6df583e0d"><div class="ttname"><a href="classSerial.xhtml#abdf0d42fe72e16ef10bed8f6df583e0d">Serial::Serial</a></div><div class="ttdeci">Serial(const std::string devicePath, const uint32_t baudrate)</div><div class="ttdef"><b>Definition:</b> <a href="Serial_8cpp_source.xhtml#l00003">Serial.cpp:3</a></div></div>
+<div class="ttc" id="aclassSerial_xhtml_ad41ba0be253ee02be5a629247e424cc0"><div class="ttname"><a href="classSerial.xhtml#ad41ba0be253ee02be5a629247e424cc0">Serial::write</a></div><div class="ttdeci">void write(const std::string s) const</div><div class="ttdoc">Écrit sur le port sériel.</div><div class="ttdef"><b>Definition:</b> <a href="Serial_8cpp_source.xhtml#l00020">Serial.cpp:20</a></div></div>
+<div class="ttc" id="aclassSerial_xhtml_af10648b801138712457976e00462c77a"><div class="ttname"><a href="classSerial.xhtml#af10648b801138712457976e00462c77a">Serial::read</a></div><div class="ttdeci">std::vector&lt; char &gt; read(const uint32_t amount) const</div><div class="ttdoc">Lis des données du port sériel.</div><div class="ttdef"><b>Definition:</b> <a href="Serial_8cpp_source.xhtml#l00028">Serial.cpp:28</a></div></div>
+<div class="ttc" id="aclassSerial_xhtml_a2eec06a1d2643449f3db523c669183b6"><div class="ttname"><a href="classSerial.xhtml#a2eec06a1d2643449f3db523c669183b6">Serial::begin</a></div><div class="ttdeci">void begin(const std::string devicePath, const uint32_t baudrate)</div><div class="ttdoc">Setup la connection sérielle.</div><div class="ttdef"><b>Definition:</b> <a href="Serial_8cpp_source.xhtml#l00007">Serial.cpp:7</a></div></div>
 <div class="ttc" id="aSerial_8h_xhtml"><div class="ttname"><a href="Serial_8h.xhtml">Serial.h</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

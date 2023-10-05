@@ -80,8 +80,9 @@ Graphe d'héritage de Plateforme:</div>
 <div class="dyncontent">
 <div class="center"><img src="classPlateforme__inherit__graph.png" border="0" usemap="#Plateforme_inherit__map" alt="Inheritance graph"/></div>
 <map name="Plateforme_inherit__map" id="Plateforme_inherit__map">
-<area shape="rect" title="Class qui représente la plateforme et permet de la bouger physiquement." alt="" coords="5,5,181,171"/>
-<area shape="rect" href="classSTM.xhtml" title="Classe qui gère les fonctions du microscope." alt="" coords="56,219,131,296"/>
+<area shape="rect" title="Class qui représente la plateforme et permet de la bouger physiquement." alt="" coords="5,189,181,340"/>
+<area shape="rect" href="classSTM.xhtml" title="Classe qui gère les fonctions du microscope." alt="" coords="56,388,131,465"/>
+<area shape="rect" href="classSerial.xhtml" title="Classe qui permet de communiquer sériellement entre autre pour communiquer avec le DAC 16bits AnalogD..." alt="" coords="31,5,155,141"/>
 </map>
 </div>
 <div class="dynheader">
@@ -89,15 +90,15 @@ Graphe de collaboration de Plateforme:</div>
 <div class="dyncontent">
 <div class="center"><img src="classPlateforme__coll__graph.png" border="0" usemap="#Plateforme_coll__map" alt="Collaboration graph"/></div>
 <map name="Plateforme_coll__map" id="Plateforme_coll__map">
-<area shape="rect" title="Class qui représente la plateforme et permet de la bouger physiquement." alt="" coords="83,219,259,369"/>
-<area shape="rect" href="classVector3D.xhtml" title=" " alt="" coords="5,5,169,156"/>
-<area shape="rect" href="classSerial.xhtml" title="Classe qui permet de communiquer sériellement entre autre pour communiquer avec le DAC 16bits AnalogD..." alt="" coords="193,13,317,149"/>
+<area shape="rect" title="Class qui représente la plateforme et permet de la bouger physiquement." alt="" coords="63,219,239,369"/>
+<area shape="rect" href="classSerial.xhtml" title="Classe qui permet de communiquer sériellement entre autre pour communiquer avec le DAC 16bits AnalogD..." alt="" coords="5,13,129,149"/>
+<area shape="rect" href="classVector3D.xhtml" title=" " alt="" coords="153,5,317,156"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:a135704fcb674444622c09a78040111f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateforme.xhtml#a135704fcb674444622c09a78040111f2">Plateforme</a> (const std::string devicePath)</td></tr>
+<tr class="memitem:a135704fcb674444622c09a78040111f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateforme.xhtml#a135704fcb674444622c09a78040111f2">Plateforme</a> (const std::string <a class="el" href="classSerial.xhtml#adace273fec553f5df81ae2ec1ba162fd">devicePath</a>)</td></tr>
 <tr class="separator:a135704fcb674444622c09a78040111f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cad8a09db18e0a349d65d00d8043ded"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateforme.xhtml#a2cad8a09db18e0a349d65d00d8043ded">setPositionRelative</a> (const uint16_t x, const uint16_t y, const uint16_t z)</td></tr>
 <tr class="memdesc:a2cad8a09db18e0a349d65d00d8043ded"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mets la position de la plateforme relativement à sa position actuelle.  <a href="classPlateforme.xhtml#a2cad8a09db18e0a349d65d00d8043ded">Plus de détails...</a><br /></td></tr>
@@ -119,8 +120,6 @@ Fonctions membres publiques</h2></td></tr>
 Attributs publics</h2></td></tr>
 <tr class="memitem:a92764326284638f62319d8592b285755"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3D.xhtml">Vector3D</a>&lt; uint16_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateforme.xhtml#a92764326284638f62319d8592b285755">position</a></td></tr>
 <tr class="separator:a92764326284638f62319d8592b285755"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e52e188a10a3c1a2d924cd1234d641b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSerial.xhtml">Serial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateforme.xhtml#a4e52e188a10a3c1a2d924cd1234d641b">ser</a></td></tr>
-<tr class="separator:a4e52e188a10a3c1a2d924cd1234d641b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Class qui représente la plateforme et permet de la bouger physiquement. </p>
@@ -165,7 +164,7 @@ Attributs publics</h2></td></tr>
 
 <p>Bouges physiquement la plateforme à la coordonnée dans la variable membre position en envoyant des commandes sur le port sériel. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="Plateforme_8cpp_source.xhtml#l00028">28</a> du fichier <a class="el" href="Plateforme_8cpp_source.xhtml">Plateforme.cpp</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="Plateforme_8cpp_source.xhtml#l00025">25</a> du fichier <a class="el" href="Plateforme_8cpp_source.xhtml">Plateforme.cpp</a>.</p>
 
 </div>
 </div>
@@ -219,7 +218,7 @@ Attributs publics</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="Plateforme_8cpp_source.xhtml#l00018">18</a> du fichier <a class="el" href="Plateforme_8cpp_source.xhtml">Plateforme.cpp</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="Plateforme_8cpp_source.xhtml#l00015">15</a> du fichier <a class="el" href="Plateforme_8cpp_source.xhtml">Plateforme.cpp</a>.</p>
 
 </div>
 </div>
@@ -255,7 +254,7 @@ Attributs publics</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="Plateforme_8cpp_source.xhtml#l00024">24</a> du fichier <a class="el" href="Plateforme_8cpp_source.xhtml">Plateforme.cpp</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="Plateforme_8cpp_source.xhtml#l00021">21</a> du fichier <a class="el" href="Plateforme_8cpp_source.xhtml">Plateforme.cpp</a>.</p>
 
 </div>
 </div>
@@ -309,7 +308,7 @@ Attributs publics</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="Plateforme_8cpp_source.xhtml#l00008">8</a> du fichier <a class="el" href="Plateforme_8cpp_source.xhtml">Plateforme.cpp</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="Plateforme_8cpp_source.xhtml#l00005">5</a> du fichier <a class="el" href="Plateforme_8cpp_source.xhtml">Plateforme.cpp</a>.</p>
 
 </div>
 </div>
@@ -345,7 +344,7 @@ Attributs publics</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="Plateforme_8cpp_source.xhtml#l00014">14</a> du fichier <a class="el" href="Plateforme_8cpp_source.xhtml">Plateforme.cpp</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="Plateforme_8cpp_source.xhtml#l00011">11</a> du fichier <a class="el" href="Plateforme_8cpp_source.xhtml">Plateforme.cpp</a>.</p>
 
 </div>
 </div>
@@ -363,22 +362,6 @@ Attributs publics</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Définition à la ligne <a class="el" href="Plateforme_8h_source.xhtml#l00017">17</a> du fichier <a class="el" href="Plateforme_8h_source.xhtml">Plateforme.h</a>.</p>
-
-</div>
-</div>
-<a id="a4e52e188a10a3c1a2d924cd1234d641b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e52e188a10a3c1a2d924cd1234d641b">&#9670;&nbsp;</a></span>ser</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classSerial.xhtml">Serial</a> Plateforme::ser</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Définition à la ligne <a class="el" href="Plateforme_8h_source.xhtml#l00018">18</a> du fichier <a class="el" href="Plateforme_8h_source.xhtml">Plateforme.h</a>.</p>
 
 </div>
 </div>

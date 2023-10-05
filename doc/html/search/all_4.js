@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['filedescriptor_11',['fileDescriptor',['../classI2C.xhtml#a6076b46894ad33eeec883cf4be22e5bb',1,'I2C::fileDescriptor()'],['../classSerial.xhtml#a192193e93b5c5c582eb304b12a9a9cd2',1,'Serial::fileDescriptor()']]]
+  ['delay_5fms_10',['delay_ms',['../Utils_8h.xhtml#a4ff75b6d8acb96f8ae024087ad9f7922',1,'delay_ms(const uint32_t time):&#160;Utils.cpp'],['../Utils_8cpp.xhtml#a4ff75b6d8acb96f8ae024087ad9f7922',1,'delay_ms(const uint32_t time):&#160;Utils.cpp']]],
+  ['devicepath_11',['devicePath',['../classSerial.xhtml#adace273fec553f5df81ae2ec1ba162fd',1,'Serial']]]
 ];

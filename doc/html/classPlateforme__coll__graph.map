@@ -1,5 +1,5 @@
 <map id="Plateforme" name="Plateforme">
-<area shape="rect" id="node1" title="Class qui représente la plateforme et permet de la bouger physiquement." alt="" coords="83,219,259,369"/>
-<area shape="rect" id="node2" href="$classVector3D.xhtml" title=" " alt="" coords="5,5,169,156"/>
-<area shape="rect" id="node3" href="$classSerial.xhtml" title="Classe qui permet de communiquer sériellement entre autre pour communiquer avec le DAC 16bits AnalogD..." alt="" coords="193,13,317,149"/>
+<area shape="rect" id="node1" title="Class qui représente la plateforme et permet de la bouger physiquement." alt="" coords="63,219,239,369"/>
+<area shape="rect" id="node2" href="$classSerial.xhtml" title="Classe qui permet de communiquer sériellement entre autre pour communiquer avec le DAC 16bits AnalogD..." alt="" coords="5,13,129,149"/>
+<area shape="rect" id="node3" href="$classVector3D.xhtml" title=" " alt="" coords="153,5,317,156"/>
 </map>

@@ -76,6 +76,16 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="Serial_8h_source.xhtml">Serial.h</a>&gt;</code></p>
 <div class="dynheader">
+Graphe d'héritage de Serial:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSerial__inherit__graph.png" border="0" usemap="#Serial_inherit__map" alt="Inheritance graph"/></div>
+<map name="Serial_inherit__map" id="Serial_inherit__map">
+<area shape="rect" title="Classe qui permet de communiquer sériellement entre autre pour communiquer avec le DAC 16bits AnalogD..." alt="" coords="31,5,155,141"/>
+<area shape="rect" href="classPlateforme.xhtml" title="Class qui représente la plateforme et permet de la bouger physiquement." alt="" coords="5,189,181,340"/>
+<area shape="rect" href="classSTM.xhtml" title="Classe qui gère les fonctions du microscope." alt="" coords="56,388,131,465"/>
+</map>
+</div>
+<div class="dynheader">
 Graphe de collaboration de Serial:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSerial__coll__graph.png" border="0" usemap="#Serial_coll__map" alt="Collaboration graph"/></div>
@@ -86,8 +96,8 @@ Graphe de collaboration de Serial:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:a3667c3137f2df94716b5193f9fb736ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSerial.xhtml#a3667c3137f2df94716b5193f9fb736ab">Serial</a> ()</td></tr>
-<tr class="separator:a3667c3137f2df94716b5193f9fb736ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdf0d42fe72e16ef10bed8f6df583e0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSerial.xhtml#abdf0d42fe72e16ef10bed8f6df583e0d">Serial</a> (const std::string <a class="el" href="classSerial.xhtml#adace273fec553f5df81ae2ec1ba162fd">devicePath</a>, const uint32_t baudrate)</td></tr>
+<tr class="separator:abdf0d42fe72e16ef10bed8f6df583e0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2eec06a1d2643449f3db523c669183b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSerial.xhtml#a2eec06a1d2643449f3db523c669183b6">begin</a> (const std::string <a class="el" href="classSerial.xhtml#adace273fec553f5df81ae2ec1ba162fd">devicePath</a>, const uint32_t baudrate)</td></tr>
 <tr class="memdesc:a2eec06a1d2643449f3db523c669183b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup la connection sérielle.  <a href="classSerial.xhtml#a2eec06a1d2643449f3db523c669183b6">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a2eec06a1d2643449f3db523c669183b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -110,8 +120,8 @@ Attributs publics</h2></td></tr>
 
 <p class="definition">Définition à la ligne <a class="el" href="Serial_8h_source.xhtml#l00016">16</a> du fichier <a class="el" href="Serial_8h_source.xhtml">Serial.h</a>.</p>
 </div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
-<a id="a3667c3137f2df94716b5193f9fb736ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3667c3137f2df94716b5193f9fb736ab">&#9670;&nbsp;</a></span>Serial()</h2>
+<a id="abdf0d42fe72e16ef10bed8f6df583e0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdf0d42fe72e16ef10bed8f6df583e0d">&#9670;&nbsp;</a></span>Serial()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -119,8 +129,19 @@ Attributs publics</h2></td></tr>
         <tr>
           <td class="memname">Serial::Serial </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>devicePath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const uint32_t&#160;</td>
+          <td class="paramname"><em>baudrate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -165,7 +186,7 @@ Attributs publics</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="Serial_8cpp_source.xhtml#l00005">5</a> du fichier <a class="el" href="Serial_8cpp_source.xhtml">Serial.cpp</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="Serial_8cpp_source.xhtml#l00007">7</a> du fichier <a class="el" href="Serial_8cpp_source.xhtml">Serial.cpp</a>.</p>
 
 </div>
 </div>
@@ -194,7 +215,7 @@ Attributs publics</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>Un vecteur de char contenant les données lues </dd></dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="Serial_8cpp_source.xhtml#l00025">25</a> du fichier <a class="el" href="Serial_8cpp_source.xhtml">Serial.cpp</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="Serial_8cpp_source.xhtml#l00028">28</a> du fichier <a class="el" href="Serial_8cpp_source.xhtml">Serial.cpp</a>.</p>
 
 </div>
 </div>
@@ -222,7 +243,7 @@ Attributs publics</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="Serial_8cpp_source.xhtml#l00017">17</a> du fichier <a class="el" href="Serial_8cpp_source.xhtml">Serial.cpp</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="Serial_8cpp_source.xhtml#l00020">20</a> du fichier <a class="el" href="Serial_8cpp_source.xhtml">Serial.cpp</a>.</p>
 
 </div>
 </div>
