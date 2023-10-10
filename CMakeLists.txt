@@ -9,3 +9,4 @@ add_compile_options(-Wall -O2)
 
 add_subdirectory(programs)
 add_subdirectory(src)
+add_subdirectory(tests)

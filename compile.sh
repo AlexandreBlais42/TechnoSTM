@@ -1,1 +1,1 @@
-cmake --build build/
+cmake --build build/ -j 4

@@ -26,6 +26,15 @@ void delay_ms(const uint32_t time);
  *  @return Les données inversées
  *  @example 0x1234 deviendrait 0x3412
  */
-template <typename T> T invertBytes(T data);
+template <typename T> T invertBytes(T data) {
+  T toReturn = 0;
+  uint8_t *ptr = (uint8_t *)&data;
+  for (uint16_t _ = 0; _ < sizeof(data); _++) {
+    toReturn <<= 8;
+    toReturn += *ptr;
+    ptr++;
+  }
+  return toReturn;
+}
 
 #endif // UTILS_H
