@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['write_76',['write',['../classSerial.xhtml#ad41ba0be253ee02be5a629247e424cc0',1,'Serial']]],
-  ['writeconfigs_77',['writeConfigs',['../classADS1115.xhtml#ae9f44334d0b165405a5860435391a94a',1,'ADS1115']]],
-  ['writedata_78',['writeData',['../classI2C.xhtml#afcef607b4a2c5f5b4e9d04875a8f110f',1,'I2C']]],
-  ['writereg16_79',['writeReg16',['../classI2C.xhtml#a693ee37e6aac13948d6ee30915fae9b7',1,'I2C']]],
-  ['writereg8_80',['writeReg8',['../classI2C.xhtml#a7b7d2fd2959101aa562b5d23cee86fe8',1,'I2C']]]
+  ['vector3d_0',['vector3d',['../classVector3D.xhtml',1,'Vector3D&lt; T &gt;'],['../classVector3D.xhtml#abce4fda8bdc463b11d37c9ee2b30bd70',1,'Vector3D::Vector3D()'],['../classVector3D.xhtml#ad75dfced4bee76cd097e34354c83e379',1,'Vector3D::Vector3D(const T x, const T y, const T z)']]],
+  ['vector3d_2ecpp_1',['Vector3D.cpp',['../Vector3D_8cpp.xhtml',1,'']]],
+  ['vector3d_2eh_2',['Vector3D.h',['../Vector3D_8h.xhtml',1,'']]],
+  ['vector3d_3c_20uint16_5ft_20_3e_3',['Vector3D&lt; uint16_t &gt;',['../classVector3D.xhtml',1,'']]]
 ];

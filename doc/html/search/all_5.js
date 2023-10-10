@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['filedescriptor_12',['fileDescriptor',['../classI2C.xhtml#a6076b46894ad33eeec883cf4be22e5bb',1,'I2C::fileDescriptor()'],['../classSerial.xhtml#a192193e93b5c5c582eb304b12a9a9cd2',1,'Serial::fileDescriptor()']]]
+  ['exportimage_0',['exportImage',['../classSTM.xhtml#a73fce9660364a06ae2bffa3ce6eeb13f',1,'STM']]]
 ];
