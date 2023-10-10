@@ -12,13 +12,13 @@
 /** @brief Class qui représente la plateforme et permet de la bouger
  * physiquement
  */
-class Plateforme : private Serial{
+class Plateforme : private Serial {
 public:
   Vector3D<uint16_t> position;
 
   Plateforme(const std::string devicePath);
 
-  /** @brief Mets la position de la plateforme relativement à sa position
+  /** @brief Bouge plateforme relativement à sa position
    * actuelle
    *  @param x La quantité à bouger en x
    *  @param y La quantité à bouger en y
@@ -26,20 +26,20 @@ public:
    */
   inline void setPositionRelative(const uint16_t x, const uint16_t y,
                                   const uint16_t z);
-  /** @brief Mets la position de la plateforme relativement à sa position
+  /** @brief Bouge plateforme relativement à sa position
    * actuelle
    *  @param coordinates Vector3D spécifiant la quantité à bouger
    */
   inline void setPositionRelative(const Vector3D<uint16_t> &coordinates);
 
-  /** @brief Mets la position de la plateforme à la position spécifiée
+  /** @brief Bouge la plateforme à la position spécifiée
    *  @param x La position en x
    *  @param y La position en y
    *  @param z La position en z
    */
   inline void setPositionAbsolute(const uint16_t x, const uint16_t y,
                                   const uint16_t z);
-  /** @brief Mets la position de la plateforme à la position spécifiée
+  /** @brief Bouge plateforme à la position spécifiée
    *  @param coordinates Vector3D spécifiant la position à aller
    */
   inline void setPositionAbsolute(const Vector3D<uint16_t> &coordinates);
