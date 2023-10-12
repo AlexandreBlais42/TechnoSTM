@@ -8,6 +8,8 @@ extern "C" {
 #include <unistd.h>
 }
 
+#include "Utils.h"
+
 #ifdef __arm__
 /** @note À changer pour <linux-i2c-dev.h> si ça marche pas bien
  */
@@ -49,7 +51,8 @@ public:
    */
   void writeData(const T &data) {
 #ifdef __arm__
-    if (!write(fileDescriptor, (char *)&data, sizeof(T))) {
+    T invertedData = invertBytes<T>(data);
+    if (!write(fileDescriptor, (char *)&invertedData, sizeof(T))) {
       std::cout << "Une erreur est survenue lors de l'écriture dans la "
                    "communication I2C";
     }
@@ -61,12 +64,12 @@ public:
 
   template <typename T>
   /** @brief Lits une donnée sur la communication I2C
-   *  @todo Inverse l'ordre des octets lors de la lecture
    */
   T readData() {
 #ifdef __arm__
     T data;
     read(fileDescriptor, (char *)&data, sizeof(T));
+    data = invertBytes<T>(data);
     return data;
 #else
     std::cout << "I2C::read appellé" << std::endl;
