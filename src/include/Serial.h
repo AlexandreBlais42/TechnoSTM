@@ -20,12 +20,6 @@ public:
 
   Serial(const std::string devicePath, const uint32_t baudrate);
 
-  /** @brief Setup la connection sérielle
-   *  @param devicePath Le chemin du fichier qui permet de communiquer sur le
-   * port sériel
-   *  @param baudrate Le débit en bit/s de la communication
-   */
-  void begin(const std::string devicePath, const uint32_t baudrate);
 
   /** @brief Écrit sur le port sériel
    *  @param s La chaîne de charactères à écrire
@@ -37,6 +31,14 @@ public:
    *  @return Un vecteur de char contenant les données lues
    */
   std::vector<char> read(const uint32_t amount) const;
+
+private:
+  /** @brief Setup la connection sérielle
+   *  @param devicePath Le chemin du fichier qui permet de communiquer sur le
+   * port sériel
+   *  @param baudrate Le débit en bit/s de la communication
+   */
+  void begin(const std::string devicePath, const uint32_t baudrate);
 };
 
 #endif // SERIAL_H
