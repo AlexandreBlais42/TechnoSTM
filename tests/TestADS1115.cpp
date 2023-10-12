@@ -4,8 +4,10 @@
 
 int main(int argc, char *argv[]) {
   std::cout << "Test de l'ADC, appuyer sur enter pour lire une valeur";
-  ADS1115 adc(48);
+  ADS1115 adc(0x48);
   adc.setChannel(0);
+  adc.setSingleConversionMode(false);
+  adc.writeConfigs();
 
   int16_t readVoltage;
   while (true) {
