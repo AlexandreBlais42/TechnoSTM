@@ -13,7 +13,7 @@ class StepMotor : private GPIO {
 public:
   int32_t position;
   std::array<uint8_t, 4> pins;
-  int8_t pinIndex;
+  uint8_t pinIndex;
 
   /** @brief Constructeur de la classe StepMotor
    *  @param position La position initiale du moteur

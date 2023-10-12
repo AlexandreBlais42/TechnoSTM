@@ -18,11 +18,10 @@ void StepMotor::goToRelative(const int32_t pos) {
   for (uint16_t _ = 0; _ < abs(pos); _++) {
     setPin(pins[pinIndex], false);
     pinIndex += direction;
-    pinIndex += 4; // -1 % 4 == -1 en C++, On a besoin d'un index positif
     pinIndex %= 4;
     setPin(pins[pinIndex], true);
 
-    delay_ms(1);
+    delay_ms(3); // @note Le Délai optimal est à trouver
   }
 }
 

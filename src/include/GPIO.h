@@ -22,6 +22,10 @@ class GPIO {
 public:
   GPIO();
 
+  /** Initialize le GPIO dans la librairie wiringPi
+   */
+  static void begin();
+
   /** @brief Mets une pin au mode spécifié
    *  @param pinNumber Le numéro de la pin GPIO
    *  @param mode Le mode de la pin (modes spécifiés dans l'enum pinMode_t)
