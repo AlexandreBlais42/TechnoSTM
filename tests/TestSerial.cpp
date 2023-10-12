@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
   }
 
   Serial connection(argv[1], 115200);
-  connection.write("Test d'ectriture");
+  connection.write("Test d'ecriture");
 
   std::cout << "Lecture du port sériel : ";
   for (char c : connection.read(5)) {
