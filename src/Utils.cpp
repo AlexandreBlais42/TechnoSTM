@@ -16,7 +16,7 @@ std::string getHexString(uint16_t data) {
     data >>= 4;
   }
   str += getHexCharacter(data & 0x0F);
-  for (int8_t i = 3; i >= 0; i--) {
+  for (int8_t i = 2; i >= 0; i--) {
     str += chars[i];
   }
   return str;
