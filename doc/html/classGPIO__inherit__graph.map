@@ -1,7 +1,7 @@
 <map id="GPIO" name="GPIO">
-<area shape="rect" id="Node000001" title="Classe qui gère le GPIO du raspberry pi." alt="" coords="67,5,155,117"/>
-<area shape="rect" id="Node000002" href="$classStepMotor.xhtml" title="Classe qui gère les mouvements du step moteur." alt="" coords="56,165,167,320"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,132,114,165,109,165,109,132"/>
-<area shape="rect" id="Node000003" href="$classSTM.xhtml" title="Classe qui gère les fonctions du microscope." alt="" coords="5,368,217,565"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="114,335,114,368,109,368,109,335"/>
+<area shape="rect" id="Node000001" title="Classe qui gère le GPIO du raspberry pi." alt="" coords="67,5,155,139"/>
+<area shape="rect" id="Node000002" href="$classStepMotor.xhtml" title="Classe qui gère les mouvements du step moteur." alt="" coords="56,187,167,341"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,154,114,187,109,187,109,154"/>
+<area shape="rect" id="Node000003" href="$classSTM.xhtml" title="Classe qui gère les fonctions du microscope." alt="" coords="5,389,217,587"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="114,356,114,390,109,390,109,356"/>
 </map>

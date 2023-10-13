@@ -87,11 +87,11 @@ Graphe d'héritage de Serial:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSerial__inherit__graph.png" border="0" usemap="#aSerial_inherit__map" alt="Inheritance graph"/></div>
 <map name="aSerial_inherit__map" id="aSerial_inherit__map">
-<area shape="rect" title="Classe qui permet de communiquer sériellement entre autre pour communiquer avec le DAC 16bits AnalogD..." alt="" coords="61,5,161,160"/>
-<area shape="rect" href="classPlateforme.xhtml" title="Class qui représente la plateforme et permet de la bouger physiquement." alt="" coords="37,208,185,384"/>
-<area shape="poly" title=" " alt="" coords="114,175,114,208,109,208,109,175"/>
-<area shape="rect" href="classSTM.xhtml" title="Classe qui gère les fonctions du microscope." alt="" coords="5,432,217,629"/>
-<area shape="poly" title=" " alt="" coords="114,399,114,432,109,432,109,399"/>
+<area shape="rect" title="Classe qui permet de communiquer sériellement entre autre pour communiquer avec le DAC 16bits AnalogD..." alt="" coords="61,5,161,139"/>
+<area shape="rect" href="classPlateforme.xhtml" title="Class qui représente la plateforme et permet de la bouger physiquement." alt="" coords="37,187,185,363"/>
+<area shape="poly" title=" " alt="" coords="114,154,114,187,109,187,109,154"/>
+<area shape="rect" href="classSTM.xhtml" title="Classe qui gère les fonctions du microscope." alt="" coords="5,411,217,608"/>
+<area shape="poly" title=" " alt="" coords="114,377,114,411,109,411,109,377"/>
 </map>
 </div>
 <div class="dynheader">
@@ -99,7 +99,7 @@ Graphe de collaboration de Serial:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSerial__coll__graph.png" border="0" usemap="#aSerial_coll__map" alt="Collaboration graph"/></div>
 <map name="aSerial_coll__map" id="aSerial_coll__map">
-<area shape="rect" title="Classe qui permet de communiquer sériellement entre autre pour communiquer avec le DAC 16bits AnalogD..." alt="" coords="5,5,105,160"/>
+<area shape="rect" title="Classe qui permet de communiquer sériellement entre autre pour communiquer avec le DAC 16bits AnalogD..." alt="" coords="5,5,105,139"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -107,9 +107,6 @@ Graphe de collaboration de Serial:</div>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:abdf0d42fe72e16ef10bed8f6df583e0d" id="r_abdf0d42fe72e16ef10bed8f6df583e0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSerial.xhtml#abdf0d42fe72e16ef10bed8f6df583e0d">Serial</a> (const std::string <a class="el" href="classSerial.xhtml#adace273fec553f5df81ae2ec1ba162fd">devicePath</a>, const uint32_t baudrate)</td></tr>
 <tr class="separator:abdf0d42fe72e16ef10bed8f6df583e0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2eec06a1d2643449f3db523c669183b6" id="r_a2eec06a1d2643449f3db523c669183b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSerial.xhtml#a2eec06a1d2643449f3db523c669183b6">begin</a> (const std::string <a class="el" href="classSerial.xhtml#adace273fec553f5df81ae2ec1ba162fd">devicePath</a>, const uint32_t baudrate)</td></tr>
-<tr class="memdesc:a2eec06a1d2643449f3db523c669183b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup la connection sérielle.  <br /></td></tr>
-<tr class="separator:a2eec06a1d2643449f3db523c669183b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad41ba0be253ee02be5a629247e424cc0" id="r_ad41ba0be253ee02be5a629247e424cc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSerial.xhtml#ad41ba0be253ee02be5a629247e424cc0">write</a> (const std::string s) const</td></tr>
 <tr class="memdesc:ad41ba0be253ee02be5a629247e424cc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Écrit sur le port sériel.  <br /></td></tr>
 <tr class="separator:ad41ba0be253ee02be5a629247e424cc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,45 +157,6 @@ Attributs publics</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions membres</h2>
-<a id="a2eec06a1d2643449f3db523c669183b6" name="a2eec06a1d2643449f3db523c669183b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2eec06a1d2643449f3db523c669183b6">&#9670;&#160;</a></span>begin()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Serial::begin </td>
-          <td>(</td>
-          <td class="paramtype">const std::string&#160;</td>
-          <td class="paramname"><em>devicePath</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const uint32_t&#160;</td>
-          <td class="paramname"><em>baudrate</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Setup la connection sérielle. </p>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">devicePath</td><td>Le chemin du fichier qui permet de communiquer sur le port sériel </td></tr>
-    <tr><td class="paramname">baudrate</td><td>Le débit en bit/s de la communication </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Définition à la ligne <a class="el" href="Serial_8cpp_source.xhtml#l00007">7</a> du fichier <a class="el" href="Serial_8cpp_source.xhtml">Serial.cpp</a>.</p>
-
-</div>
-</div>
 <a id="af10648b801138712457976e00462c77a" name="af10648b801138712457976e00462c77a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af10648b801138712457976e00462c77a">&#9670;&#160;</a></span>read()</h2>
 
