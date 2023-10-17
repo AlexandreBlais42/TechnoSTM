@@ -1,5 +1,4 @@
 <map id="StepMotor" name="StepMotor">
-<area shape="rect" id="Node000001" title="Classe qui gère les mouvements du step moteur." alt="" coords="5,187,116,341"/>
-<area shape="rect" id="Node000002" href="$classGPIO.xhtml" title="Classe qui gère le GPIO du raspberry pi." alt="" coords="17,5,105,139"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,154,63,187,58,187,58,154"/>
+<area shape="rect" id="node1" title="Classe qui gère les mouvements du step moteur." alt="" coords="5,175,140,311"/>
+<area shape="rect" id="node2" href="$classGPIO.xhtml" title="Classe qui gère le GPIO du raspberry pi." alt="" coords="17,5,128,127"/>
 </map>

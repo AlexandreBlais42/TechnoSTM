@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vector3d_0',['vector3d',['../classVector3D.xhtml#abce4fda8bdc463b11d37c9ee2b30bd70',1,'Vector3D::Vector3D()'],['../classVector3D.xhtml#ad75dfced4bee76cd097e34354c83e379',1,'Vector3D::Vector3D(const T x, const T y, const T z)']]]
+  ['_7ei2c_174',['~I2C',['../classI2C.xhtml#afaad09fa9bdd23623bddbdcd7585a9fe',1,'I2C']]]
 ];

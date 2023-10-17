@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['gethexcharacter_0',['gethexcharacter',['../Utils_8h.xhtml#af97f04f38b727b3b62c070523541a1ab',1,'getHexCharacter(const uint8_t val):&#160;Utils.cpp'],['../Utils_8cpp.xhtml#af97f04f38b727b3b62c070523541a1ab',1,'getHexCharacter(const uint8_t val):&#160;Utils.cpp']]],
-  ['gethexstring_1',['gethexstring',['../Utils_8h.xhtml#af5821342a676c43e1a11c4c0c274aed3',1,'getHexString(uint16_t data):&#160;Utils.cpp'],['../Utils_8cpp.xhtml#af5821342a676c43e1a11c4c0c274aed3',1,'getHexString(uint16_t data):&#160;Utils.cpp']]],
-  ['gotoabsolute_2',['goToAbsolute',['../classStepMotor.xhtml#a03b2aff524cad41785738142e3b7c635',1,'StepMotor']]],
-  ['gotonextposition_3',['goToNextPosition',['../classSTM.xhtml#aa07048b16ce23ed283dc62bf7596aeeb',1,'STM']]],
-  ['gotorelative_4',['goToRelative',['../classStepMotor.xhtml#a635c9b369bb9fa8b6722d485300c144b',1,'StepMotor']]],
-  ['gpio_5',['gpio',['../classGPIO.xhtml',1,'GPIO'],['../classGPIO.xhtml#ab443a641cef81b1a9ec0211c5aa9c1ac',1,'GPIO::GPIO()']]],
-  ['gpio_2ecpp_6',['GPIO.cpp',['../GPIO_8cpp.xhtml',1,'']]],
-  ['gpio_2eh_7',['GPIO.h',['../GPIO_8h.xhtml',1,'']]],
-  ['gpio_5fclock_8',['GPIO_CLOCK',['../GPIO_8h.xhtml#ace9769c8acaf8eaf1b4312a5706f6d04ab4e87037b5b30a21fcd7df4f5f058da0',1,'GPIO.h']]]
+  ['i2c_24',['I2C',['../classI2C.xhtml',1,'I2C'],['../classI2C.xhtml#a56648ccb9d05c90d8076931a636b9e03',1,'I2C::I2C()']]],
+  ['i2c_2ecpp_25',['I2C.cpp',['../I2C_8cpp.xhtml',1,'']]],
+  ['i2c_2eh_26',['I2C.h',['../I2C_8h.xhtml',1,'']]],
+  ['image_27',['Image',['../classImage.xhtml',1,'Image'],['../classImage.xhtml#a58edd1c45b4faeb5f789b0d036d02313',1,'Image::Image()']]],
+  ['image_2ecpp_28',['Image.cpp',['../Image_8cpp.xhtml',1,'']]],
+  ['image_2eh_29',['Image.h',['../Image_8h.xhtml',1,'']]],
+  ['initialize_30',['Initialize',['../classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faa5416085d154e61b542bb310f631017b8',1,'STM']]],
+  ['input_31',['INPUT',['../GPIO_8h.xhtml#ace9769c8acaf8eaf1b4312a5706f6d04ae310c909d76b003d016bef8bdf16936a',1,'GPIO.h']]],
+  ['invertbytes_32',['invertBytes',['../Utils_8h.xhtml#a3a99af9e82c4e29d735c95844bcafbb3',1,'Utils.h']]]
 ];

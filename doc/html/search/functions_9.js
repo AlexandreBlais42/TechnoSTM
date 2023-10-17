@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['operator_2b_0',['operator+',['../Vector3D_8h.xhtml#a55c727bd7c091dde908d5ebc1d2ed5ac',1,'Vector3D.h']]],
-  ['operator_2b_3d_1',['operator+=',['../classVector3D.xhtml#a4a849acd4e9c0984137cc92ac38f449f',1,'Vector3D']]],
-  ['operator_2d_2',['operator-',['../Vector3D_8h.xhtml#a5346303d9d1b44906e9a4ff73f8a097c',1,'Vector3D.h']]],
-  ['operator_2d_3d_3',['operator-=',['../classVector3D.xhtml#a49e949a58eb95ea8aaca119a65f3db06',1,'Vector3D']]]
+  ['read_147',['read',['../classADS1115.xhtml#afa5cf7d1699ceb7f34270b0260c5bc5a',1,'ADS1115::read()'],['../classSerial.xhtml#af10648b801138712457976e00462c77a',1,'Serial::read()']]],
+  ['readdata_148',['readData',['../classI2C.xhtml#a45af5e21a1a2856d0a22f533ce125e69',1,'I2C']]],
+  ['readreg16_149',['readReg16',['../classI2C.xhtml#aaf3b3907acf403d5d2a4fac65313bd1b',1,'I2C']]],
+  ['readreg8_150',['readReg8',['../classI2C.xhtml#adb3720e4ef4a115433a2b7600e722228',1,'I2C']]],
+  ['readvoltage_151',['readVoltage',['../classAiguille.xhtml#a79524fc4fee83ab6116cbd31ea74abee',1,'Aiguille']]]
 ];

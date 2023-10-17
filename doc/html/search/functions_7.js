@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['i2c_0',['I2C',['../classI2C.xhtml#a56648ccb9d05c90d8076931a636b9e03',1,'I2C']]],
-  ['image_1',['Image',['../classImage.xhtml#a58edd1c45b4faeb5f789b0d036d02313',1,'Image']]],
-  ['initialize_2',['initialize',['../classSTM.xhtml#ae3020d2395fbf0010045054e6cdc28f4',1,'STM']]],
-  ['invertbytes_3',['invertBytes',['../Utils_8h.xhtml#a3a99af9e82c4e29d735c95844bcafbb3',1,'Utils.h']]]
+  ['operator_2b_142',['operator+',['../Vector3D_8h.xhtml#a4155e98441c8cb114333f0ff1e6c5b3c',1,'Vector3D.h']]],
+  ['operator_2b_3d_143',['operator+=',['../classVector3D.xhtml#a4a849acd4e9c0984137cc92ac38f449f',1,'Vector3D']]],
+  ['operator_2d_144',['operator-',['../Vector3D_8h.xhtml#af9093e7750cb72e26d0b5c2775b09811',1,'Vector3D.h']]],
+  ['operator_2d_3d_145',['operator-=',['../classVector3D.xhtml#a49e949a58eb95ea8aaca119a65f3db06',1,'Vector3D']]]
 ];

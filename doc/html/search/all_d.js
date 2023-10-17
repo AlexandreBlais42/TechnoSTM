@@ -1,8 +1,28 @@
 var searchData=
 [
-  ['read_0',['read',['../classADS1115.xhtml#afa5cf7d1699ceb7f34270b0260c5bc5a',1,'ADS1115::read()'],['../classSerial.xhtml#af10648b801138712457976e00462c77a',1,'Serial::read()']]],
-  ['readdata_1',['readData',['../classI2C.xhtml#a45af5e21a1a2856d0a22f533ce125e69',1,'I2C']]],
-  ['readreg16_2',['readReg16',['../classI2C.xhtml#aaf3b3907acf403d5d2a4fac65313bd1b',1,'I2C']]],
-  ['readreg8_3',['readReg8',['../classI2C.xhtml#adb3720e4ef4a115433a2b7600e722228',1,'I2C']]],
-  ['readvoltage_4',['readVoltage',['../classAiguille.xhtml#a79524fc4fee83ab6116cbd31ea74abee',1,'Aiguille']]]
+  ['save_5fpixel_54',['Save_pixel',['../classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faa920ca1330603c0f1126c5c6566dac6af',1,'STM']]],
+  ['serial_55',['Serial',['../classSerial.xhtml',1,'Serial'],['../classSerial.xhtml#abdf0d42fe72e16ef10bed8f6df583e0d',1,'Serial::Serial()']]],
+  ['serial_2ecpp_56',['Serial.cpp',['../Serial_8cpp.xhtml',1,'']]],
+  ['serial_2eh_57',['Serial.h',['../Serial_8h.xhtml',1,'']]],
+  ['setchannel_58',['setChannel',['../classADS1115.xhtml#ad59ca1407380028c79e07fc250cb2b6e',1,'ADS1115']]],
+  ['setcomparatorpolarity_59',['setComparatorPolarity',['../classADS1115.xhtml#a542d6a601e81e53c6e0c093a4b2806a1',1,'ADS1115']]],
+  ['setcomparatorqueue_60',['setComparatorQueue',['../classADS1115.xhtml#a1bc61a61705f47b502defa35038c6ae0',1,'ADS1115']]],
+  ['setcomparemode_61',['setCompareMode',['../classADS1115.xhtml#a743358bd138e7150caca85a660c18f61',1,'ADS1115']]],
+  ['setdatarate_62',['setDataRate',['../classADS1115.xhtml#a060d4e9f4032bc758a1ab84259b7ffc3',1,'ADS1115']]],
+  ['setlatchingcomparator_63',['setLatchingComparator',['../classADS1115.xhtml#a298a37734c72abc13bd3c39c51677050',1,'ADS1115']]],
+  ['setoperationalstatus_64',['setOperationalStatus',['../classADS1115.xhtml#ad8c554dd4605e425f8740cbcb8a1086f',1,'ADS1115']]],
+  ['setpin_65',['setPin',['../classGPIO.xhtml#a60ac204e399c56d031c0cd4d95acddf8',1,'GPIO']]],
+  ['setpositionabsolute_66',['setPositionAbsolute',['../classPlateforme.xhtml#af80e65c1197de126e9833e6673692de7',1,'Plateforme::setPositionAbsolute(const uint16_t x, const uint16_t y, const uint16_t z)'],['../classPlateforme.xhtml#af9acb3402ca8117dbd8c0133247a9b4c',1,'Plateforme::setPositionAbsolute(const Vector3D&lt; uint16_t &gt; &amp;coordinates)']]],
+  ['setpositionrelative_67',['setPositionRelative',['../classPlateforme.xhtml#a2cad8a09db18e0a349d65d00d8043ded',1,'Plateforme::setPositionRelative(const uint16_t x, const uint16_t y, const uint16_t z)'],['../classPlateforme.xhtml#a50444c2d7dbe3f8fecc7bbfdbab3b82b',1,'Plateforme::setPositionRelative(const Vector3D&lt; uint16_t &gt; &amp;coordinates)']]],
+  ['setprogrammablegain_68',['setProgrammableGain',['../classADS1115.xhtml#a5d78829ad1797a9c62beafc28c3d8c75',1,'ADS1115']]],
+  ['setsingleconversionmode_69',['setSingleConversionMode',['../classADS1115.xhtml#ab69ceeacac8e5d859342ca6db445f5bc',1,'ADS1115']]],
+  ['start_70',['start',['../classSTM.xhtml#a57cd7a5bb5498268e91b4904d7122242',1,'STM']]],
+  ['state_71',['state',['../classSTM.xhtml#a3973744a192fb0dd28ddc59ee4f08cca',1,'STM']]],
+  ['statemachinestates_72',['StateMachineStates',['../classSTM.xhtml#a255d5d557c750725297a786f0ca7e5fa',1,'STM::StateMachineStates()'],['../classSTM.xhtml#a124075d97546e5a0c005e13d2de843d4',1,'STM::StateMachineStates()']]],
+  ['stepmotor_73',['StepMotor',['../classStepMotor.xhtml',1,'StepMotor'],['../classStepMotor.xhtml#a33cddd18c21cf25a6644a1090d3eb3bc',1,'StepMotor::StepMotor()']]],
+  ['stepmotor_2ecpp_74',['StepMotor.cpp',['../StepMotor_8cpp.xhtml',1,'']]],
+  ['stepmotor_2eh_75',['StepMotor.h',['../StepMotor_8h.xhtml',1,'']]],
+  ['stm_76',['STM',['../classSTM.xhtml',1,'STM'],['../classSTM.xhtml#aa97d4289fec938b469102250ca145851',1,'STM::STM()']]],
+  ['stm_2ecpp_77',['STM.cpp',['../STM_8cpp.xhtml',1,'']]],
+  ['stm_2eh_78',['STM.h',['../STM_8h.xhtml',1,'']]]
 ];
