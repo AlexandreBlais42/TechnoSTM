@@ -9,6 +9,7 @@ void GPIO::begin(){
 }
 
 void GPIO::_pinMode(const uint8_t pinNumber, const uint8_t mode) {
+  assert(pinNumber <= 27);
 #ifdef __arm__
   pinMode(pinNumber, mode);
 #else
@@ -18,7 +19,7 @@ void GPIO::_pinMode(const uint8_t pinNumber, const uint8_t mode) {
 }
 
 void GPIO::setPin(const uint8_t pinNumber, const bool state) {
-  assert(pinNumber >= 2 && pinNumber <= 27);
+  assert(pinNumber <= 27);
 #ifdef __arm__
   digitalWrite(pinNumber, state);
 #else
