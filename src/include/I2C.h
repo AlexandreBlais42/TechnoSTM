@@ -3,10 +3,7 @@
 
 #include <cstdint>
 #include <iostream>
-
-extern "C" {
 #include <unistd.h>
-}
 
 #include "Utils.h"
 #include "Serial.h"
@@ -58,7 +55,7 @@ public:
                    "communication I2C";
     }
 #else
-    std::cout << "I2C::write appellé avec data (" << sizeof(data) << " octets)"
+    DEBUG << "I2C::writeData appellé avec data (" << sizeof(data) << " octets)"
               << std::endl;
 #endif // __arm__
   }
@@ -73,7 +70,7 @@ public:
     data = invertBytes<T>(data);
     return data;
 #else
-    std::cout << "I2C::read appellé" << std::endl;
+    DEBUG << "I2C::readData appellé" << std::endl;
     return 0;
 #endif // __arm__
   }
