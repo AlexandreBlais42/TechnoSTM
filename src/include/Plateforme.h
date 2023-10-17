@@ -24,25 +24,25 @@ public:
    *  @param y La quantité à bouger en y
    *  @param z La quantité à bouger en z
    */
-  inline void setPositionRelative(const uint16_t x, const uint16_t y,
+  void setPositionRelative(const uint16_t x, const uint16_t y,
                                   const uint16_t z);
   /** @brief Bouge plateforme relativement à sa position
    * actuelle
    *  @param coordinates Vector3D spécifiant la quantité à bouger
    */
-  inline void setPositionRelative(const Vector3D<uint16_t> &coordinates);
+  void setPositionRelative(const Vector3D<uint16_t> &coordinates);
 
   /** @brief Bouge la plateforme à la position spécifiée
    *  @param x La position en x
    *  @param y La position en y
    *  @param z La position en z
    */
-  inline void setPositionAbsolute(const uint16_t x, const uint16_t y,
+  void setPositionAbsolute(const uint16_t x, const uint16_t y,
                                   const uint16_t z);
   /** @brief Bouge plateforme à la position spécifiée
    *  @param coordinates Vector3D spécifiant la position à aller
    */
-  inline void setPositionAbsolute(const Vector3D<uint16_t> &coordinates);
+  void setPositionAbsolute(const Vector3D<uint16_t> &coordinates);
 
   /** @brief Bouges physiquement la plateforme à la coordonnée dans la variable
    * membre position en envoyant des commandes sur le port sériel
