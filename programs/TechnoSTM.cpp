@@ -1,12 +1,9 @@
 #include <cstdint>
 #include <iostream>
 
-#include "I2C.h"
-#include "Plateforme.h"
-#include "Utils.h"
-#include "Vector3D.h"
+#include "STM.h"
 
 int main(int argc, char *argv[]) {
-  Plateforme plateforme("/dev/ttyUSB0");
-  I2C conn(10);
+  std::array<uint8_t, 4> pins = {25, 8, 7, 3};
+  STM microscope(0x48, "/dev/ttyUSB0", pins);
 }

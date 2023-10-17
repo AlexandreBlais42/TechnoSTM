@@ -8,13 +8,38 @@
 #include "Plateforme.h"
 #include "StepMotor.h"
 
+
 /** @brief Classe qui gère les fonctions du microscope
  */
 class STM : private Aiguille, private Plateforme, private StepMotor {
 public:
+  /** @brief États de la machine à états du microscope
+   *  @note Initialize            : Monte le step moteur de 40 pour s'éloigner du matériel
+   *  @note Find_sample           : Monte le matériel jusqu'à ce qu'il soit détecté ou que la hauteur maximale est atteinte
+   *  @note Lower_motor           : Descend le matériel et ensuite le moteur
+   *  @note Mesure_height         : Ajuste le microscope jusqu'à obtenir le voltage désiré
+   *  @note Save_pixel            : Insère la hauteur mesurée dans l'image
+   *  @note Goto_next_coordinate  : Déplace le microscope à la prochaine coordonnée pour l'image
+   */
+  typedef enum StateMachineStates {
+    Initialize,
+    Find_sample,
+    Lower_motor,
+    Mesure_height,
+    Save_pixel,
+    Goto_next_coordinate
+  } StateMachineStates;
+
   STM(const uint8_t deviceAddr, const std::string devicePath,
       std::array<uint8_t, 4> pins);
 
+  StateMachineStates state;
+
+  /** @brief Démarre la machine à état qui gère le microscope
+   */
+  void start();
+
+private:
   /** @brief Initialise la position de la plateforme et du stepmoteur
    */
   void initialize();
@@ -29,7 +54,7 @@ public:
    */
   void acquirePixelAtConstantCurrent();
 
-  /** @brief Va à la prochaine coordonée pour la prochaine mesure
+  /** @brief Va à la prochaine coordonnée pour la prochaine mesure
    */
   void goToNextPosition();
 
