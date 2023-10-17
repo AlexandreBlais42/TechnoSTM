@@ -5,6 +5,8 @@
 #include <cstdint>
 #include <iostream>
 
+#include "Debug.h"
+
 #ifdef __arm__
 #include <wiringPi.h>
 #else

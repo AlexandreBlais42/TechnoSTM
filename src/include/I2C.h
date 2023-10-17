@@ -9,6 +9,7 @@ extern "C" {
 }
 
 #include "Utils.h"
+#include "Serial.h"
 
 #ifdef __arm__
 /** @note À changer pour <linux-i2c-dev.h> si ça marche pas bien

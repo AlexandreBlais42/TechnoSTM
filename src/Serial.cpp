@@ -12,7 +12,7 @@ void Serial::begin(const std::string devicePath, const uint32_t baudrate) {
     exit(1);
   }
 #else
-  std::cout << "Serial::begin, device : " << devicePath
+  DEBUG << "Serial::begin, device : " << devicePath
             << " baudrate : " << baudrate << std::endl;
 #endif // __arm__
 }
@@ -21,7 +21,7 @@ void Serial::write(const std::string s) const {
 #ifdef __arm__
   serialPuts(fileDescriptor, s.c_str());
 #else
-  std::cout << "Serial::write : " << s << std::endl;
+  DEBUG << "Serial::write : " << s << std::endl;
 #endif // __arm__
 }
 
@@ -32,7 +32,7 @@ std::vector<char> Serial::read(const uint32_t amount) const {
     toReturn.push_back(serialGetchar(fileDescriptor));
   }
 #else
-  std::cout << "Serial::read : " << amount << std::endl;
+  DEBUG << "Serial::read : " << amount << std::endl;
   return std::vector<char>(amount, 0);
 #endif // __arm__
 }

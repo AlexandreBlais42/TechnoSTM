@@ -6,6 +6,8 @@
 #include <string>
 #include <vector>
 
+#include "Debug.h"
+
 #ifdef __arm__
 #include <wiringSerial.h>
 #endif // __arm__
