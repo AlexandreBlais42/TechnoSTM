@@ -8,6 +8,10 @@
 #include "Plateforme.h"
 #include "StepMotor.h"
 
+// @todo Trouver la valeur de lecture d'aiguille à laquelle arrêter
+#define AIGUILLE_THRESHOLD_VOLTAGE 1000             // Voltage à lequel on considère que le matériel a été détecté
+#define AIGUILLE_CONSTANT_CURRENT_VOLTAGE 20000     // Voltage (arbitraire) que l'on doit avoir en mode courant constant
+
 
 /** @brief Classe qui gère les fonctions du microscope
  */
@@ -40,10 +44,6 @@ public:
   void start();
 
 private:
-  /** @brief Initialise la position de la plateforme et du stepmoteur
-   */
-  void initialize();
-
   /** @brief Lit le voltage de l'aiguille et l'insère dans l'image (Mesure par
    * hauteur constante)
    */
