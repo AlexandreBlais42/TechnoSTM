@@ -13,7 +13,7 @@ void GPIO::_pinMode(const uint8_t pinNumber, const uint8_t mode) {
   pinMode(pinNumber, mode);
 #else
   std::cout << "GPIO::setPin appellé avec pinNumber = "
-            << std::to_string(pinNumber) << " mode = " << mode << std::endl;
+            << std::to_string(pinNumber) << " mode = " << (mode ? "output" : "Input") << std::endl;
 #endif // __arm__
 }
 
