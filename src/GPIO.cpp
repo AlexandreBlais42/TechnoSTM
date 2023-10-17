@@ -1,5 +1,4 @@
 #include "GPIO.h"
-#include <string>
 
 GPIO::GPIO() {}
 

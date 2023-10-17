@@ -8,10 +8,10 @@
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="100,239,100,272,95,272,95,239"/>
 <area shape="rect" id="Node000005" href="$classPlateforme.xhtml" title="Class qui représente la plateforme et permet de la bouger physiquement." alt="" coords="185,645,333,821"/>
 <area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="261,836,261,870,256,870,256,836"/>
-<area shape="rect" id="Node000006" href="$classSerial.xhtml" title="Classe qui permet de communiquer sériellement entre autre pour communiquer avec le DAC 16bits AnalogD..." alt="" coords="214,357,314,512"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="265,527,263,645,258,645,260,527"/>
+<area shape="rect" id="Node000006" href="$classSerial.xhtml" title="Classe qui permet de communiquer sériellement entre autre pour communiquer avec le DAC 16bits AnalogD..." alt="" coords="214,368,314,501"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="265,516,263,646,258,645,260,516"/>
 <area shape="rect" id="Node000007" href="$classStepMotor.xhtml" title="Classe qui gère les mouvements du step moteur." alt="" coords="357,656,467,811"/>
 <area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="356,825,325,871,321,868,351,822"/>
-<area shape="rect" id="Node000008" href="$classGPIO.xhtml" title="Classe qui gère le GPIO du raspberry pi." alt="" coords="368,379,456,491"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="415,505,415,656,409,656,409,505"/>
+<area shape="rect" id="Node000008" href="$classGPIO.xhtml" title="Classe qui gère le GPIO du raspberry pi." alt="" coords="368,368,456,501"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="415,516,415,656,409,656,409,516"/>
 </map>
