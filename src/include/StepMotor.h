@@ -25,11 +25,11 @@ public:
    * actuelle
    *  @param pos La quantité à bouger
    */
-  void goToRelative(const int32_t pos);
+  void setPositionRelative(const int32_t pos);
   /** @brief Mets la position de la plateforme à la position spécifiée
    *  @param pos La position à aller
    */
-  inline void goToAbsolute(const int32_t pos);
+  inline void setPositionAbsolute(const int32_t pos);
 };
 
 #endif // STEPMOTOR_H

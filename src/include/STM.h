@@ -9,21 +9,26 @@
 #include "StepMotor.h"
 
 // @todo Trouver la valeur de lecture d'aiguille à laquelle arrêter
-#define AIGUILLE_THRESHOLD_VOLTAGE 1000             // Voltage à lequel on considère que le matériel a été détecté
-#define AIGUILLE_CONSTANT_CURRENT_VOLTAGE 20000     // Voltage (arbitraire) que l'on doit avoir en mode courant constant
-
+#define AIGUILLE_THRESHOLD_VOLTAGE                                             \
+  1000 // Voltage à lequel on considère que le matériel a été détecté
+#define AIGUILLE_CONSTANT_CURRENT_VOLTAGE                                      \
+  20000 // Voltage (arbitraire) que l'on doit avoir en mode courant constant
 
 /** @brief Classe qui gère les fonctions du microscope
  */
 class STM : private Aiguille, private Plateforme, private StepMotor {
 public:
   /** @brief États de la machine à états du microscope
-   *  @note Initialize            : Monte le step moteur de 40 pour s'éloigner du matériel
-   *  @note Find_sample           : Monte le matériel jusqu'à ce qu'il soit détecté ou que la hauteur maximale est atteinte
+   *  @note Initialize            : Monte le step moteur de 40 pour s'éloigner
+   * du matériel
+   *  @note Find_sample           : Monte le matériel jusqu'à ce qu'il soit
+   * détecté ou que la hauteur maximale est atteinte
    *  @note Lower_motor           : Descend le matériel et ensuite le moteur
-   *  @note Mesure_height         : Ajuste le microscope jusqu'à obtenir le voltage désiré
+   *  @note Mesure_height         : Ajuste le microscope jusqu'à obtenir le
+   * voltage désiré
    *  @note Save_pixel            : Insère la hauteur mesurée dans l'image
-   *  @note Goto_next_coordinate  : Déplace le microscope à la prochaine coordonnée pour l'image
+   *  @note Goto_next_coordinate  : Déplace le microscope à la prochaine
+   * coordonnée pour l'image
    */
   typedef enum StateMachineStates {
     Initialize,
