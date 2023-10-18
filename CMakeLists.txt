@@ -5,8 +5,6 @@ project(TechnoSTM)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-add_subdirectory(lib/fftw-3.3.10)
-
 add_compile_options(-Wall -O2 -DDEBUG_MODE)
 
 add_subdirectory(programs)
