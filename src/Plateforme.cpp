@@ -3,7 +3,8 @@
 Plateforme::Plateforme(const std::string devicePath)
     : Serial(devicePath, 115200) {}
 
-void Plateforme::setPositionRelative(const uint16_t x, const uint16_t y, const uint16_t z) {
+void Plateforme::setPositionRelative(const uint16_t x, const uint16_t y,
+                                     const uint16_t z) {
   position += Vector3D<uint16_t>(x, y, z);
   moveToPosition();
 }
@@ -13,7 +14,8 @@ void Plateforme::setPositionRelative(const Vector3D<uint16_t> &coordinates) {
   moveToPosition();
 }
 
-void Plateforme::setPositionAbsolute(const uint16_t x, const uint16_t y, const uint16_t z) {
+void Plateforme::setPositionAbsolute(const uint16_t x, const uint16_t y,
+                                     const uint16_t z) {
   position = Vector3D<uint16_t>(x, y, z);
   moveToPosition();
 }

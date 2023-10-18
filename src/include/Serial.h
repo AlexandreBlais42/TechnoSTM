@@ -22,7 +22,6 @@ public:
 
   Serial(const std::string devicePath, const uint32_t baudrate);
 
-
   /** @brief Écrit sur le port sériel
    *  @param s La chaîne de charactères à écrire
    */

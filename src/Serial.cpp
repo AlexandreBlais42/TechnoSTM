@@ -13,7 +13,7 @@ void Serial::begin(const std::string devicePath, const uint32_t baudrate) {
   }
 #else
   DEBUG << "Serial::begin, device : " << devicePath
-            << " baudrate : " << baudrate << std::endl;
+        << " baudrate : " << baudrate << std::endl;
 #endif // __arm__
 }
 
