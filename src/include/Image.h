@@ -21,8 +21,11 @@ public:
   std::string ZUnits;
   std::vector<std::vector<float>> data;
 
-  Image(uint32_t XRes, uint32_t YRes, std::string title, std::string ZUnits);
+  Image(const uint32_t XRes, const uint32_t YRes, const std::string title, const std::string ZUnits);
 
+  /** @brief Cette fonction retourne un fichier en format *.gsf dans un vecteur de uint8_t
+   *  @return Le vecteur d'uint8_t avec les données
+   */
   std::vector<uint8_t> getGSFFile();
 };
 
