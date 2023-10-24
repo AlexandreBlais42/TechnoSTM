@@ -1,6 +1,12 @@
 #include "Image.h"
 
-Image::Image(const uint32_t XRes, const uint32_t YRes, const std::string title, const std::string ZUnits) : XRes(XRes), YRes(YRes), title(title), ZUnits(ZUnits){
+Image::Image(){}
+
+void Image::initialize(const uint32_t XRes, const uint32_t YRes, const std::string title, const std::string ZUnits){
+  this->XRes = XRes;
+  this->YRes = YRes;
+  this->title = title;
+  this->ZUnits = ZUnits;
   XReal = XRes * 0.000'000'000'15;
   YReal = YRes * 0.000'000'000'15;
   XOffset = 0;
@@ -9,7 +15,14 @@ Image::Image(const uint32_t XRes, const uint32_t YRes, const std::string title, 
   data = std::vector<std::vector<float>>(XRes, std::vector<float>(YRes)); // Empty Vector
 }
 
+void Image::setPixel(const uint32_t XCoordinate, const uint32_t YCoordinate, const float value){
+  assert(XCoordinate < XRes);
+  assert(YCoordinate < YRes);
+  data[YCoordinate][XCoordinate] = value;
+}
+
 std::vector<uint8_t> Image::getGSFFile(){
+  // https://gwyddion.net/documentation/user-guide-en/gsf.html
   std::vector<uint8_t> GSFFile;
 
   // Réserver assez d'espace dans le vecteur pour ne pas devoir en réserver dans chaque push_back
@@ -20,8 +33,8 @@ std::vector<uint8_t> Image::getGSFFile(){
     std::string("Gwyddion Simple Field 1.0") + 
     "\nXRes = " + std::to_string(XRes) + 
     "\nYRes = " + std::to_string(YRes) + 
-    "\nXReal = 15e-8" + 
-    "\nYReal = 15e-8" + 
+    "\nXReal = 15e-11" + 
+    "\nYReal = 15e-11" + 
     "\nXYUnits = " + XYUnits +
     "\nZUnits = " + ZUnits + 
     "\nTitle = " + title;

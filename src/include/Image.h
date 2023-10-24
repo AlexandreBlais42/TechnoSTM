@@ -21,7 +21,15 @@ public:
   std::string ZUnits;
   std::vector<std::vector<float>> data;
 
-  Image(const uint32_t XRes, const uint32_t YRes, const std::string title, const std::string ZUnits);
+  Image();
+
+  void initialize(const uint32_t XRes, const uint32_t YRes, const std::string title, const std::string ZUnits);
+  /** @brief Insère un pixel dans la matrice data
+   *  @param XCoordinate La coordonnée en X
+   *  @param YCoordinate La coordonnée en Y
+   *  @param value Un float qui correspond à la valeur lue (En mètre ou ampère)
+   */
+  void setPixel(const uint32_t XCoordinate, const uint32_t YCoordinate, const float value);
 
   /** @brief Cette fonction retourne un fichier en format *.gsf dans un vecteur de uint8_t
    *  @return Le vecteur d'uint8_t avec les données

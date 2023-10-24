@@ -14,3 +14,7 @@ Le programme du Rasberry Pi 3b devra implémenter les fonctionnalités suivantes
     2. déplacement à courant constant
 
 + Contrôle du moteur pas à pas pour la première approche grossière;
+
+## Crédits
+
+Un grand merci à [Dan Berard](https://dberard.com) pour son site qui a été d'une grande aide lors de la conception du microscope.

@@ -7,6 +7,7 @@
 #include "Aiguille.h"
 #include "Plateforme.h"
 #include "StepMotor.h"
+#include "Image.h"
 
 // @todo Trouver la valeur de lecture d'aiguille à laquelle arrêter
 #define AIGUILLE_THRESHOLD_VOLTAGE 1000             // Voltage à lequel on considère que le matériel a été détecté
@@ -15,8 +16,14 @@
 
 /** @brief Classe qui gère les fonctions du microscope
  */
-class STM : private Aiguille, private Plateforme, private StepMotor {
+class STM : private Aiguille, private Plateforme, private StepMotor{
 public:
+  Image image;
+  int16_t voltageAiguille;
+  uint32_t resolutionX;
+  uint32_t resolutionY; 
+  uint32_t scale; // La taille d'un pas
+
   /** @brief États de la machine à états du microscope
    *  @note Initialize            : Monte le step moteur de 40 pour s'éloigner du matériel
    *  @note Find_sample           : Monte le matériel jusqu'à ce qu'il soit détecté ou que la hauteur maximale est atteinte
@@ -35,7 +42,7 @@ public:
   } StateMachineStates;
 
   STM(const uint8_t deviceAddr, const std::string devicePath,
-      std::array<uint8_t, 4> pins);
+      std::array<uint8_t, 4> pins, const uint32_t resolutionX, const uint32_t resolutionY, const uint32_t scale);
 
   StateMachineStates state;
 
