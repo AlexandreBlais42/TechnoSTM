@@ -10,6 +10,6 @@ int main(int argc, char *argv[]) {
   for (const auto pin : motor.pins) {
     std::cout << std::to_string(pin) << std::endl;
   }
-  motor.goToRelative(-500);
+  motor.setPositionRelative(-500);
   return 0;
 }

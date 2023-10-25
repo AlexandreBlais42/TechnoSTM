@@ -7,7 +7,7 @@ StepMotor::StepMotor(const int32_t position, const std::array<uint8_t, 4> pins)
   }
 }
 
-void StepMotor::goToRelative(const int32_t pos) {
+void StepMotor::setPositionRelative(const int32_t pos) {
   position += pos;
 
   int8_t direction = 1;
@@ -25,6 +25,6 @@ void StepMotor::goToRelative(const int32_t pos) {
   }
 }
 
-inline void StepMotor::goToAbsolute(const int32_t pos) {
-  goToRelative(pos - position);
+inline void StepMotor::setPositionAbsolute(const int32_t pos) {
+  setPositionRelative(pos - position);
 }

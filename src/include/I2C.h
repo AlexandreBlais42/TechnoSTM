@@ -5,8 +5,8 @@
 #include <iostream>
 #include <unistd.h>
 
-#include "Utils.h"
 #include "Serial.h"
+#include "Utils.h"
 
 #ifdef __arm__
 /** @note À changer pour <linux-i2c-dev.h> si ça marche pas bien
@@ -56,7 +56,7 @@ public:
     }
 #else
     DEBUG << "I2C::writeData appellé avec data (" << sizeof(data) << " octets)"
-              << std::endl;
+          << std::endl;
 #endif // __arm__
   }
 

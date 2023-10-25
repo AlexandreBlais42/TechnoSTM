@@ -25,7 +25,7 @@ public:
    *  @param z La quantité à bouger en z
    */
   void setPositionRelative(const uint16_t x, const uint16_t y,
-                                  const uint16_t z);
+                           const uint16_t z);
   /** @brief Bouge plateforme relativement à sa position
    * actuelle
    *  @param coordinates Vector3D spécifiant la quantité à bouger
@@ -38,7 +38,7 @@ public:
    *  @param z La position en z
    */
   void setPositionAbsolute(const uint16_t x, const uint16_t y,
-                                  const uint16_t z);
+                           const uint16_t z);
   /** @brief Bouge plateforme à la position spécifiée
    *  @param coordinates Vector3D spécifiant la position à aller
    */

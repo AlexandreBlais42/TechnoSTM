@@ -1,7 +1,7 @@
 #include "STM.h"
 
 STM::STM(const uint8_t deviceAddr, const std::string devicePath,
-         std::array<uint8_t, 4> pins, const uint32_t resolutionX, 
+         std::array<uint8_t, 4> pins, const uint32_t resolutionX,
          const uint32_t resolutionY, const uint32_t scale)
     : Aiguille(deviceAddr), Plateforme(devicePath), StepMotor(0, pins),
       resolutionX(resolutionX), resolutionY(resolutionY), scale(scale) {
@@ -9,21 +9,21 @@ STM::STM(const uint8_t deviceAddr, const std::string devicePath,
   voltageAiguille = 0;
 }
 
-void STM::start(){
-  std::cout << "État : " << std::to_string(state) << std::endl << std::endl;
-  switch (state){
+void STM::start() {
+  int16_t voltageAiguille = 0;
+  while (true) {
+    std::cout << "État : " << std::to_string(state) << std::endl << std::endl;
+    switch (state) {
     case Initialize:
-      voltageAiguille = 0;
-      image.initialize(resolutionX, resolutionY, "Courant constant", "m");
-      StepMotor::goToRelative(-40);
+      StepMotor::setPositionRelative(-40);
       state = Find_sample;
       break;
 
     case Find_sample:
       Plateforme::setPositionRelative(0, 0, 1);
-      if (Plateforme::position.z >= UINT16_MAX / 2){
+      if (Plateforme::position.z >= UINT16_MAX / 2) {
         state = Lower_motor;
-      } else if (Aiguille::readVoltage() >= AIGUILLE_THRESHOLD_VOLTAGE){ 
+      } else if (Aiguille::readVoltage() >= AIGUILLE_THRESHOLD_VOLTAGE) {
         state = Mesure_height;
       }
       break;
@@ -31,29 +31,33 @@ void STM::start(){
     case Lower_motor:
       Plateforme::setPositionAbsolute(0, 0, 0);
       delay_ms(2); // Laisser le temps à la plateforme de descendre
-      StepMotor::goToRelative(1);
+      StepMotor::setPositionRelative(1);
       state = Find_sample;
       break;
 
     case Mesure_height:
       voltageAiguille = Aiguille::readVoltage();
-      if (abs(voltageAiguille - AIGUILLE_CONSTANT_CURRENT_VOLTAGE) < 300){
+      if (abs(voltageAiguille - AIGUILLE_CONSTANT_CURRENT_VOLTAGE) < 300) {
         state = Save_pixel;
-      } else if ( voltageAiguille < AIGUILLE_CONSTANT_CURRENT_VOLTAGE){ // Le matériel est trop loin
+      } else if (voltageAiguille <
+                 AIGUILLE_CONSTANT_CURRENT_VOLTAGE) { // Le matériel est trop
+                                                      // loin
         Plateforme::setPositionRelative(0, 0, 1);
-      } else {                                                          // Le matériel est trop proche
+      } else { // Le matériel est trop proche
         Plateforme::setPositionRelative(0, 0, -1);
       }
       break;
 
     case Save_pixel:
-      image.setPixel(Plateforme::position.x, Plateforme::position.y, Plateforme::position.z);
+      image.setPixel(Plateforme::position.x, Plateforme::position.y,
+                     Plateforme::position.z);
       state = Goto_next_coordinate;
       break;
 
     case Goto_next_coordinate:
       // @todo Code pour aller à la prochaine coordonnée
       break;
+    }
   }
 }
 

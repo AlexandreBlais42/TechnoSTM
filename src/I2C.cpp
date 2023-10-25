@@ -34,32 +34,28 @@ uint16_t I2C::readReg16(int reg) {
 #else // Pas sur le raspberry pi
 
 I2C::I2C(const uint8_t deviceAddr) {
-  DEBUG << "I2C::I2C appellé avec deviceAddr = "
-            << std::to_string(deviceAddr) << std::endl;
+  DEBUG << "I2C::I2C appellé avec deviceAddr = " << std::to_string(deviceAddr)
+        << std::endl;
 }
 
-I2C::~I2C() { 
-  DEBUG << "I2C::~I2C appellé " << std::endl; 
-}
+I2C::~I2C() { DEBUG << "I2C::~I2C appellé " << std::endl; }
 
 void I2C::writeReg8(int reg, uint8_t data) {
   DEBUG << "I2C::" << __FUNCTION__ << "appellé avec reg = " << reg
-            << " et data = " << data << std::endl;
+        << " et data = " << data << std::endl;
 }
 void I2C::writeReg16(int reg, uint16_t data) {
   DEBUG << "I2C::" << __FUNCTION__ << "appellé avec reg = " << reg
-            << " et data = " << data << std::endl;
+        << " et data = " << data << std::endl;
 }
 
 uint8_t I2C::readReg8(int reg) {
-  DEBUG << "I2C::" << __FUNCTION__ << "appellé avec reg = " << reg
-            << std::endl;
+  DEBUG << "I2C::" << __FUNCTION__ << "appellé avec reg = " << reg << std::endl;
   return 0;
 }
 
 uint16_t I2C::readReg16(int reg) {
-  DEBUG << "I2C::" << __FUNCTION__ << "appellé avec reg = " << reg
-            << std::endl;
+  DEBUG << "I2C::" << __FUNCTION__ << "appellé avec reg = " << reg << std::endl;
   return 0;
 }
 
