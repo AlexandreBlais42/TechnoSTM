@@ -6,7 +6,8 @@ SocketServer::SocketServer(){}
 void SocketServer::begin(const uint16_t port){
   this->port = port;
   if ((fd = socket(AF_INET, SOCK_STREAM, 0)) < 0){
-    std::cout << "Erreurs lors de l'appel de socket()" << std::endl;
+    COUTERROR;
+    COUTERRNO;
     exit(1);
   }
 
@@ -19,6 +20,18 @@ void SocketServer::begin(const uint16_t port){
   address.sin_port = htons(port);
 
   if (bind(fd, (struct sockaddr *) &address, sizeof(address)) < 0){
-    std::cout << "Erreur lors de l'appel de bind()";
+    COUTERROR;
+    COUTERRNO;
   }
+
+  if(listen(fd, 1) < 0){ // N'autorise qu'une seule connection en backlog
+    COUTERROR;
+    COUTERRNO;
+  }
+
+  std::thread(&SocketServer::acceptConnections, this); 
+}
+
+void SocketServer::acceptConnections(){
+
 }
