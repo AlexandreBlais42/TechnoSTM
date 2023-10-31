@@ -15,14 +15,12 @@
 class SocketServer{
 public:
   uint16_t port;
-  int fd;
+  int fd; // fd veut dire File Descriptor et est un entier qui représente une connection
   struct sockaddr_in address;
   int opt;
-  std::vector<int> connections();
   SocketServer();
 
   void begin(const uint16_t port);
-  void acceptConnections();
 };
 
 #endif // SOCKET_H

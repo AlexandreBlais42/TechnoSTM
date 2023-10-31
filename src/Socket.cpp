@@ -28,10 +28,4 @@ void SocketServer::begin(const uint16_t port){
     COUTERROR;
     COUTERRNO;
   }
-
-  std::thread(&SocketServer::acceptConnections, this); 
-}
-
-void SocketServer::acceptConnections(){
-
 }
