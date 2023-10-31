@@ -1,26 +1,24 @@
 /*
- @licstart  The following is the entire license notice for the JavaScript code in this file.
+@licstart  The following is the entire license notice for the
+JavaScript code in this file.
 
- The MIT License (MIT)
+Copyright (C) 1997-2019 by Dimitri van Heesch
 
- Copyright (C) 1997-2020 by Dimitri van Heesch
+This program is free software; you can redistribute it and/or modify
+it under the terms of version 2 of the GNU General Public License as published by
+the Free Software Foundation
 
- Permission is hereby granted, free of charge, to any person obtaining a copy of this software
- and associated documentation files (the "Software"), to deal in the Software without restriction,
- including without limitation the rights to use, copy, modify, merge, publish, distribute,
- sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
 
- The above copyright notice and this permission notice shall be included in all copies or
- substantial portions of the Software.
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
- BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
- NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
- DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
- @licend  The above is the entire license notice for the JavaScript code in this file
+@licend  The above is the entire license notice
+for the JavaScript code in this file
 */
 var menudata={children:[
 {text:"Page principale",url:"index.xhtml"},
@@ -44,6 +42,7 @@ var menudata={children:[
 {text:"p",url:"functions.xhtml#index_p"},
 {text:"r",url:"functions.xhtml#index_r"},
 {text:"s",url:"functions.xhtml#index_s"},
+{text:"t",url:"functions.xhtml#index_t"},
 {text:"v",url:"functions.xhtml#index_v"},
 {text:"w",url:"functions.xhtml#index_w"},
 {text:"x",url:"functions.xhtml#index_x"},
@@ -64,7 +63,21 @@ var menudata={children:[
 {text:"v",url:"functions_func.xhtml#index_v"},
 {text:"w",url:"functions_func.xhtml#index_w"},
 {text:"~",url:"functions_func.xhtml#index__7E"}]},
-{text:"Variables",url:"functions_vars.xhtml"},
+{text:"Variables",url:"functions_vars.xhtml",children:[
+{text:"a",url:"functions_vars.xhtml#index_a"},
+{text:"c",url:"functions_vars.xhtml#index_c"},
+{text:"d",url:"functions_vars.xhtml#index_d"},
+{text:"f",url:"functions_vars.xhtml#index_f"},
+{text:"i",url:"functions_vars.xhtml#index_i"},
+{text:"o",url:"functions_vars.xhtml#index_o"},
+{text:"p",url:"functions_vars.xhtml#index_p"},
+{text:"r",url:"functions_vars.xhtml#index_r"},
+{text:"s",url:"functions_vars.xhtml#index_s"},
+{text:"t",url:"functions_vars.xhtml#index_t"},
+{text:"v",url:"functions_vars.xhtml#index_v"},
+{text:"x",url:"functions_vars.xhtml#index_x"},
+{text:"y",url:"functions_vars.xhtml#index_y"},
+{text:"z",url:"functions_vars.xhtml#index_z"}]},
 {text:"Définitions de type",url:"functions_type.xhtml"},
 {text:"Énumérations",url:"functions_enum.xhtml"},
 {text:"Valeurs énumérées",url:"functions_eval.xhtml"}]}]},

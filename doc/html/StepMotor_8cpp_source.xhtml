@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>TechnoSTM:  Fichier source de src/StepMotor.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,8 +19,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">TechnoSTM
    </div>
    <div id="projectbrief">Un microscope atomique à effet tunnel</div>
@@ -30,28 +30,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.9.8 -->
+<!-- Généré par Doxygen 1.8.17 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.xhtml');
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','Recherche');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -61,16 +55,9 @@ $(document).ready(function() { init_codefold(0); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Chargement...</div>
-<div class="SRStatus" id="Searching">Recherche...</div>
-<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -79,60 +66,57 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">StepMotor.cpp</div></div>
+  <div class="headertitle">
+<div class="title">StepMotor.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="StepMotor_8cpp.xhtml">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="StepMotor_8h.xhtml">StepMotor.h</a>&quot;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="foldopen" id="foldopen00003" data-start="{" data-end="}">
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classStepMotor.xhtml#a33cddd18c21cf25a6644a1090d3eb3bc">    3</a></span><a class="code hl_function" href="classStepMotor.xhtml#a33cddd18c21cf25a6644a1090d3eb3bc">StepMotor::StepMotor</a>(<span class="keyword">const</span> int32_t position, <span class="keyword">const</span> std::array&lt;uint8_t, 4&gt; pins)</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>    : position(position), pins(pins), pinIndex(0) {</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> uint8_t pin : <a class="code hl_variable" href="classStepMotor.xhtml#a97f1d907c33e6298a06c7431991739f9">pins</a>) {</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    <a class="code hl_function" href="classGPIO.xhtml#a31bfbf66af9272166a61a2c203cd80e5">_pinMode</a>(pin, <a class="code hl_enumvalue" href="GPIO_8h.xhtml#ace9769c8acaf8eaf1b4312a5706f6d04a2ab08d3e103968f5f4f26b66a52e99d6">OUTPUT</a>);</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>  }</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>}</div>
-</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classStepMotor.xhtml#a3ddf152feee728aff63f39d7a22ee9e9">   10</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classStepMotor.xhtml#a3ddf152feee728aff63f39d7a22ee9e9">StepMotor::setPositionRelative</a>(<span class="keyword">const</span> int32_t pos) {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  <a class="code hl_variable" href="classStepMotor.xhtml#a5d3b6e20ec55fad44836fef89b07a086">position</a> += pos;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  int8_t direction = 1;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <span class="keywordflow">if</span> (pos &lt; 0) {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    direction *= -1;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  }</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <span class="keywordflow">for</span> (uint16_t _ = 0; _ &lt; abs(pos); _++) {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_function" href="classGPIO.xhtml#a60ac204e399c56d031c0cd4d95acddf8">setPin</a>(<a class="code hl_variable" href="classStepMotor.xhtml#a97f1d907c33e6298a06c7431991739f9">pins</a>[<a class="code hl_variable" href="classStepMotor.xhtml#af369f89f8986e38528ff5ee0824d3d97">pinIndex</a>], <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_variable" href="classStepMotor.xhtml#af369f89f8986e38528ff5ee0824d3d97">pinIndex</a> += direction;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_variable" href="classStepMotor.xhtml#af369f89f8986e38528ff5ee0824d3d97">pinIndex</a> %= 4;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_function" href="classGPIO.xhtml#a60ac204e399c56d031c0cd4d95acddf8">setPin</a>(<a class="code hl_variable" href="classStepMotor.xhtml#a97f1d907c33e6298a06c7431991739f9">pins</a>[<a class="code hl_variable" href="classStepMotor.xhtml#af369f89f8986e38528ff5ee0824d3d97">pinIndex</a>], <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_function" href="Utils_8h.xhtml#a4ff75b6d8acb96f8ae024087ad9f7922">delay_ms</a>(3); <span class="comment">// @note Le Délai optimal est à trouver</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  }</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
-</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classStepMotor.xhtml#ae260977967e45f3fd0647d2c9e2ae1f2">   28</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classStepMotor.xhtml#ae260977967e45f3fd0647d2c9e2ae1f2">StepMotor::setPositionAbsolute</a>(<span class="keyword">const</span> int32_t pos) {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <a class="code hl_function" href="classStepMotor.xhtml#a3ddf152feee728aff63f39d7a22ee9e9">setPositionRelative</a>(pos - <a class="code hl_variable" href="classStepMotor.xhtml#a5d3b6e20ec55fad44836fef89b07a086">position</a>);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>}</div>
-</div>
-<div class="ttc" id="aGPIO_8h_xhtml_ace9769c8acaf8eaf1b4312a5706f6d04a2ab08d3e103968f5f4f26b66a52e99d6"><div class="ttname"><a href="GPIO_8h.xhtml#ace9769c8acaf8eaf1b4312a5706f6d04a2ab08d3e103968f5f4f26b66a52e99d6">OUTPUT</a></div><div class="ttdeci">@ OUTPUT</div><div class="ttdef"><b>Definition</b> <a href="GPIO_8h_source.xhtml#l00015">GPIO.h:15</a></div></div>
-<div class="ttc" id="aStepMotor_8h_xhtml"><div class="ttname"><a href="StepMotor_8h.xhtml">StepMotor.h</a></div></div>
-<div class="ttc" id="aUtils_8h_xhtml_a4ff75b6d8acb96f8ae024087ad9f7922"><div class="ttname"><a href="Utils_8h.xhtml#a4ff75b6d8acb96f8ae024087ad9f7922">delay_ms</a></div><div class="ttdeci">void delay_ms(const uint32_t time)</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.xhtml#l00025">Utils.cpp:25</a></div></div>
-<div class="ttc" id="aclassGPIO_xhtml_a31bfbf66af9272166a61a2c203cd80e5"><div class="ttname"><a href="classGPIO.xhtml#a31bfbf66af9272166a61a2c203cd80e5">GPIO::_pinMode</a></div><div class="ttdeci">static void _pinMode(const uint8_t pinNumber, const uint8_t mode)</div><div class="ttdoc">Mets une pin au mode spécifié</div><div class="ttdef"><b>Definition</b> <a href="GPIO_8cpp_source.xhtml#l00011">GPIO.cpp:11</a></div></div>
-<div class="ttc" id="aclassGPIO_xhtml_a60ac204e399c56d031c0cd4d95acddf8"><div class="ttname"><a href="classGPIO.xhtml#a60ac204e399c56d031c0cd4d95acddf8">GPIO::setPin</a></div><div class="ttdeci">static void setPin(const uint8_t pinNumber, const bool state)</div><div class="ttdoc">Set une pin du GPIO du raspberry pi à state.</div><div class="ttdef"><b>Definition</b> <a href="GPIO_8cpp_source.xhtml#l00021">GPIO.cpp:21</a></div></div>
-<div class="ttc" id="aclassStepMotor_xhtml_a33cddd18c21cf25a6644a1090d3eb3bc"><div class="ttname"><a href="classStepMotor.xhtml#a33cddd18c21cf25a6644a1090d3eb3bc">StepMotor::StepMotor</a></div><div class="ttdeci">StepMotor(const int32_t position, const std::array&lt; uint8_t, 4 &gt; pins)</div><div class="ttdoc">Constructeur de la classe StepMotor.</div><div class="ttdef"><b>Definition</b> <a href="StepMotor_8cpp_source.xhtml#l00003">StepMotor.cpp:3</a></div></div>
-<div class="ttc" id="aclassStepMotor_xhtml_a3ddf152feee728aff63f39d7a22ee9e9"><div class="ttname"><a href="classStepMotor.xhtml#a3ddf152feee728aff63f39d7a22ee9e9">StepMotor::setPositionRelative</a></div><div class="ttdeci">void setPositionRelative(const int32_t pos)</div><div class="ttdoc">Mets la position de la plateforme relativement à sa position actuelle.</div><div class="ttdef"><b>Definition</b> <a href="StepMotor_8cpp_source.xhtml#l00010">StepMotor.cpp:10</a></div></div>
-<div class="ttc" id="aclassStepMotor_xhtml_a5d3b6e20ec55fad44836fef89b07a086"><div class="ttname"><a href="classStepMotor.xhtml#a5d3b6e20ec55fad44836fef89b07a086">StepMotor::position</a></div><div class="ttdeci">int32_t position</div><div class="ttdef"><b>Definition</b> <a href="StepMotor_8h_source.xhtml#l00014">StepMotor.h:14</a></div></div>
-<div class="ttc" id="aclassStepMotor_xhtml_a97f1d907c33e6298a06c7431991739f9"><div class="ttname"><a href="classStepMotor.xhtml#a97f1d907c33e6298a06c7431991739f9">StepMotor::pins</a></div><div class="ttdeci">std::array&lt; uint8_t, 4 &gt; pins</div><div class="ttdef"><b>Definition</b> <a href="StepMotor_8h_source.xhtml#l00015">StepMotor.h:15</a></div></div>
-<div class="ttc" id="aclassStepMotor_xhtml_ae260977967e45f3fd0647d2c9e2ae1f2"><div class="ttname"><a href="classStepMotor.xhtml#ae260977967e45f3fd0647d2c9e2ae1f2">StepMotor::setPositionAbsolute</a></div><div class="ttdeci">void setPositionAbsolute(const int32_t pos)</div><div class="ttdoc">Mets la position de la plateforme à la position spécifiée.</div><div class="ttdef"><b>Definition</b> <a href="StepMotor_8cpp_source.xhtml#l00028">StepMotor.cpp:28</a></div></div>
-<div class="ttc" id="aclassStepMotor_xhtml_af369f89f8986e38528ff5ee0824d3d97"><div class="ttname"><a href="classStepMotor.xhtml#af369f89f8986e38528ff5ee0824d3d97">StepMotor::pinIndex</a></div><div class="ttdeci">uint8_t pinIndex</div><div class="ttdef"><b>Definition</b> <a href="StepMotor_8h_source.xhtml#l00016">StepMotor.h:16</a></div></div>
+<a href="StepMotor_8cpp.xhtml">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="StepMotor_8h.xhtml">StepMotor.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="classStepMotor.xhtml#a33cddd18c21cf25a6644a1090d3eb3bc">    3</a></span>&#160;<a class="code" href="classStepMotor.xhtml#a33cddd18c21cf25a6644a1090d3eb3bc">StepMotor::StepMotor</a>(<span class="keyword">const</span> int32_t position, <span class="keyword">const</span> std::array&lt;uint8_t, 4&gt; pins)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    : position(position), pins(pins), pinIndex(0) {</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> uint8_t pin : <a class="code" href="classStepMotor.xhtml#a97f1d907c33e6298a06c7431991739f9">pins</a>) {</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="classGPIO.xhtml#a31bfbf66af9272166a61a2c203cd80e5">_pinMode</a>(pin, <a class="code" href="GPIO_8h.xhtml#ace9769c8acaf8eaf1b4312a5706f6d04a2ab08d3e103968f5f4f26b66a52e99d6">OUTPUT</a>);</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  }</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;}</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classStepMotor.xhtml#a3ddf152feee728aff63f39d7a22ee9e9">   10</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classStepMotor.xhtml#a3ddf152feee728aff63f39d7a22ee9e9">StepMotor::setPositionRelative</a>(<span class="keyword">const</span> int32_t pos) {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <a class="code" href="classStepMotor.xhtml#a5d3b6e20ec55fad44836fef89b07a086">position</a> += pos;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  int8_t direction = 1;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordflow">if</span> (pos &lt; 0) {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    direction *= -1;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  }</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordflow">for</span> (uint16_t _ = 0; _ &lt; abs(pos); _++) {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classGPIO.xhtml#a60ac204e399c56d031c0cd4d95acddf8">setPin</a>(<a class="code" href="classStepMotor.xhtml#a97f1d907c33e6298a06c7431991739f9">pins</a>[<a class="code" href="classStepMotor.xhtml#af369f89f8986e38528ff5ee0824d3d97">pinIndex</a>], <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classStepMotor.xhtml#af369f89f8986e38528ff5ee0824d3d97">pinIndex</a> += direction;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classStepMotor.xhtml#af369f89f8986e38528ff5ee0824d3d97">pinIndex</a> %= 4;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classGPIO.xhtml#a60ac204e399c56d031c0cd4d95acddf8">setPin</a>(<a class="code" href="classStepMotor.xhtml#a97f1d907c33e6298a06c7431991739f9">pins</a>[<a class="code" href="classStepMotor.xhtml#af369f89f8986e38528ff5ee0824d3d97">pinIndex</a>], <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="Utils_8h.xhtml#a4ff75b6d8acb96f8ae024087ad9f7922">delay_ms</a>(3); <span class="comment">// @note Le Délai optimal est à trouver</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classStepMotor.xhtml#ae260977967e45f3fd0647d2c9e2ae1f2">   28</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classStepMotor.xhtml#ae260977967e45f3fd0647d2c9e2ae1f2">StepMotor::setPositionAbsolute</a>(<span class="keyword">const</span> int32_t pos) {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <a class="code" href="classStepMotor.xhtml#a3ddf152feee728aff63f39d7a22ee9e9">setPositionRelative</a>(pos - <a class="code" href="classStepMotor.xhtml#a5d3b6e20ec55fad44836fef89b07a086">position</a>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassGPIO_xhtml_a60ac204e399c56d031c0cd4d95acddf8"><div class="ttname"><a href="classGPIO.xhtml#a60ac204e399c56d031c0cd4d95acddf8">GPIO::setPin</a></div><div class="ttdeci">static void setPin(const uint8_t pinNumber, const bool state)</div><div class="ttdoc">Set une pin du GPIO du raspberry pi à state.</div><div class="ttdef"><b>Definition:</b> <a href="GPIO_8cpp_source.xhtml#l00021">GPIO.cpp:21</a></div></div>
+<div class="ttc" id="aUtils_8h_xhtml_a4ff75b6d8acb96f8ae024087ad9f7922"><div class="ttname"><a href="Utils_8h.xhtml#a4ff75b6d8acb96f8ae024087ad9f7922">delay_ms</a></div><div class="ttdeci">void delay_ms(const uint32_t time)</div><div class="ttdef"><b>Definition:</b> <a href="Utils_8cpp_source.xhtml#l00025">Utils.cpp:25</a></div></div>
+<div class="ttc" id="aclassGPIO_xhtml_a31bfbf66af9272166a61a2c203cd80e5"><div class="ttname"><a href="classGPIO.xhtml#a31bfbf66af9272166a61a2c203cd80e5">GPIO::_pinMode</a></div><div class="ttdeci">static void _pinMode(const uint8_t pinNumber, const uint8_t mode)</div><div class="ttdoc">Mets une pin au mode spécifié</div><div class="ttdef"><b>Definition:</b> <a href="GPIO_8cpp_source.xhtml#l00011">GPIO.cpp:11</a></div></div>
+<div class="ttc" id="aGPIO_8h_xhtml_ace9769c8acaf8eaf1b4312a5706f6d04a2ab08d3e103968f5f4f26b66a52e99d6"><div class="ttname"><a href="GPIO_8h.xhtml#ace9769c8acaf8eaf1b4312a5706f6d04a2ab08d3e103968f5f4f26b66a52e99d6">OUTPUT</a></div><div class="ttdeci">@ OUTPUT</div><div class="ttdef"><b>Definition:</b> <a href="GPIO_8h_source.xhtml#l00015">GPIO.h:15</a></div></div>
+<div class="ttc" id="aclassStepMotor_xhtml_a5d3b6e20ec55fad44836fef89b07a086"><div class="ttname"><a href="classStepMotor.xhtml#a5d3b6e20ec55fad44836fef89b07a086">StepMotor::position</a></div><div class="ttdeci">int32_t position</div><div class="ttdef"><b>Definition:</b> <a href="StepMotor_8h_source.xhtml#l00014">StepMotor.h:14</a></div></div>
+<div class="ttc" id="aclassStepMotor_xhtml_a33cddd18c21cf25a6644a1090d3eb3bc"><div class="ttname"><a href="classStepMotor.xhtml#a33cddd18c21cf25a6644a1090d3eb3bc">StepMotor::StepMotor</a></div><div class="ttdeci">StepMotor(const int32_t position, const std::array&lt; uint8_t, 4 &gt; pins)</div><div class="ttdoc">Constructeur de la classe StepMotor.</div><div class="ttdef"><b>Definition:</b> <a href="StepMotor_8cpp_source.xhtml#l00003">StepMotor.cpp:3</a></div></div>
+<div class="ttc" id="aclassStepMotor_xhtml_ae260977967e45f3fd0647d2c9e2ae1f2"><div class="ttname"><a href="classStepMotor.xhtml#ae260977967e45f3fd0647d2c9e2ae1f2">StepMotor::setPositionAbsolute</a></div><div class="ttdeci">void setPositionAbsolute(const int32_t pos)</div><div class="ttdoc">Mets la position de la plateforme à la position spécifiée.</div><div class="ttdef"><b>Definition:</b> <a href="StepMotor_8cpp_source.xhtml#l00028">StepMotor.cpp:28</a></div></div>
+<div class="ttc" id="aclassStepMotor_xhtml_a97f1d907c33e6298a06c7431991739f9"><div class="ttname"><a href="classStepMotor.xhtml#a97f1d907c33e6298a06c7431991739f9">StepMotor::pins</a></div><div class="ttdeci">std::array&lt; uint8_t, 4 &gt; pins</div><div class="ttdef"><b>Definition:</b> <a href="StepMotor_8h_source.xhtml#l00015">StepMotor.h:15</a></div></div>
+<div class="ttc" id="aStepMotor_8h_xhtml"><div class="ttname"><a href="StepMotor_8h.xhtml">StepMotor.h</a></div></div>
+<div class="ttc" id="aclassStepMotor_xhtml_af369f89f8986e38528ff5ee0824d3d97"><div class="ttname"><a href="classStepMotor.xhtml#af369f89f8986e38528ff5ee0824d3d97">StepMotor::pinIndex</a></div><div class="ttdeci">uint8_t pinIndex</div><div class="ttdef"><b>Definition:</b> <a href="StepMotor_8h_source.xhtml#l00016">StepMotor.h:16</a></div></div>
+<div class="ttc" id="aclassStepMotor_xhtml_a3ddf152feee728aff63f39d7a22ee9e9"><div class="ttname"><a href="classStepMotor.xhtml#a3ddf152feee728aff63f39d7a22ee9e9">StepMotor::setPositionRelative</a></div><div class="ttdeci">void setPositionRelative(const int32_t pos)</div><div class="ttdoc">Mets la position de la plateforme relativement à sa position actuelle.</div><div class="ttdef"><b>Definition:</b> <a href="StepMotor_8cpp_source.xhtml#l00010">StepMotor.cpp:10</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
 </small></address>
 </body>
 </html>

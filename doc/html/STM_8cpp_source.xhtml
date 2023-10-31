@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>TechnoSTM:  Fichier source de src/STM.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,8 +19,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">TechnoSTM
    </div>
    <div id="projectbrief">Un microscope atomique à effet tunnel</div>
@@ -30,28 +30,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.9.8 -->
+<!-- Généré par Doxygen 1.8.17 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.xhtml');
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','Recherche');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -61,16 +55,9 @@ $(document).ready(function() { init_codefold(0); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Chargement...</div>
-<div class="SRStatus" id="Searching">Recherche...</div>
-<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -79,104 +66,110 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">STM.cpp</div></div>
+  <div class="headertitle">
+<div class="title">STM.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="STM_8cpp.xhtml">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="STM_8h.xhtml">STM.h</a>&quot;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="foldopen" id="foldopen00003" data-start="{" data-end="}">
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classSTM.xhtml#aa97d4289fec938b469102250ca145851">    3</a></span><a class="code hl_function" href="classSTM.xhtml#aa97d4289fec938b469102250ca145851">STM::STM</a>(<span class="keyword">const</span> uint8_t deviceAddr, <span class="keyword">const</span> std::string devicePath,</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>         std::array&lt;uint8_t, 4&gt; pins)</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    : <a class="code hl_class" href="classAiguille.xhtml">Aiguille</a>(deviceAddr), <a class="code hl_class" href="classPlateforme.xhtml">Plateforme</a>(devicePath), <a class="code hl_class" href="classStepMotor.xhtml">StepMotor</a>(0, pins) {</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>  <a class="code hl_variable" href="classSTM.xhtml#a3973744a192fb0dd28ddc59ee4f08cca">state</a> = <a class="code hl_enumvalue" href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faa5416085d154e61b542bb310f631017b8">Initialize</a>;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>}</div>
-</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="foldopen" id="foldopen00009" data-start="{" data-end="}">
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classSTM.xhtml#a57cd7a5bb5498268e91b4904d7122242">    9</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classSTM.xhtml#a57cd7a5bb5498268e91b4904d7122242">STM::start</a>() {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  <a class="code hl_function" href="classI2C.xhtml#afcef607b4a2c5f5b4e9d04875a8f110f">int16_t</a> <a class="code hl_function" href="classI2C.xhtml#afcef607b4a2c5f5b4e9d04875a8f110f">voltageAiguille</a> = 0;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;État : &quot;</span> &lt;&lt; std::to_string(<a class="code hl_variable" href="classSTM.xhtml#a3973744a192fb0dd28ddc59ee4f08cca">state</a>) &lt;&lt; std::endl &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordflow">switch</span> (<a class="code hl_variable" href="classSTM.xhtml#a3973744a192fb0dd28ddc59ee4f08cca">state</a>) {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faa5416085d154e61b542bb310f631017b8">Initialize</a>:</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>      <a class="code hl_function" href="classStepMotor.xhtml#a3ddf152feee728aff63f39d7a22ee9e9">StepMotor::setPositionRelative</a>(-40);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>      <a class="code hl_variable" href="classSTM.xhtml#a3973744a192fb0dd28ddc59ee4f08cca">state</a> = <a class="code hl_enumvalue" href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faaa96fe29cf0cbfe28778568f678386a1d">Find_sample</a>;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faaa96fe29cf0cbfe28778568f678386a1d">Find_sample</a>:</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>      <a class="code hl_function" href="classPlateforme.xhtml#a2cad8a09db18e0a349d65d00d8043ded">Plateforme::setPositionRelative</a>(0, 0, 1);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="classPlateforme.xhtml#a92764326284638f62319d8592b285755">Plateforme::position</a>.z &gt;= <a class="code hl_function" href="classI2C.xhtml#afcef607b4a2c5f5b4e9d04875a8f110f">UINT16_MAX</a> / 2) {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <a class="code hl_variable" href="classSTM.xhtml#a3973744a192fb0dd28ddc59ee4f08cca">state</a> = <a class="code hl_enumvalue" href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faaab6c3328134f68d1f2eeb6256edba2dd">Lower_motor</a>;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="classAiguille.xhtml#a79524fc4fee83ab6116cbd31ea74abee">Aiguille::readVoltage</a>() &gt;= <a class="code hl_function" href="classI2C.xhtml#afcef607b4a2c5f5b4e9d04875a8f110f">AIGUILLE_THRESHOLD_VOLTAGE</a>) {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <a class="code hl_variable" href="classSTM.xhtml#a3973744a192fb0dd28ddc59ee4f08cca">state</a> = <a class="code hl_enumvalue" href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faa49564889c7f59475a1e1db1306c9afa6">Mesure_height</a>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>      }</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faaab6c3328134f68d1f2eeb6256edba2dd">Lower_motor</a>:</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      <a class="code hl_function" href="classPlateforme.xhtml#af80e65c1197de126e9833e6673692de7">Plateforme::setPositionAbsolute</a>(0, 0, 0);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>      <a class="code hl_function" href="Utils_8h.xhtml#a4ff75b6d8acb96f8ae024087ad9f7922">delay_ms</a>(2); <span class="comment">// Laisser le temps à la plateforme de descendre</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      <a class="code hl_function" href="classStepMotor.xhtml#a3ddf152feee728aff63f39d7a22ee9e9">StepMotor::setPositionRelative</a>(1);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>      <a class="code hl_variable" href="classSTM.xhtml#a3973744a192fb0dd28ddc59ee4f08cca">state</a> = <a class="code hl_enumvalue" href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faaa96fe29cf0cbfe28778568f678386a1d">Find_sample</a>;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faa49564889c7f59475a1e1db1306c9afa6">Mesure_height</a>:</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      <a class="code hl_function" href="classI2C.xhtml#afcef607b4a2c5f5b4e9d04875a8f110f">voltageAiguille</a> = <a class="code hl_function" href="classAiguille.xhtml#a79524fc4fee83ab6116cbd31ea74abee">Aiguille::readVoltage</a>();</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="classI2C.xhtml#afcef607b4a2c5f5b4e9d04875a8f110f">abs</a>(<a class="code hl_function" href="classI2C.xhtml#afcef607b4a2c5f5b4e9d04875a8f110f">voltageAiguille</a> - <a class="code hl_function" href="classI2C.xhtml#afcef607b4a2c5f5b4e9d04875a8f110f">AIGUILLE_CONSTANT_CURRENT_VOLTAGE</a>) &lt; 300) {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_variable" href="classSTM.xhtml#a3973744a192fb0dd28ddc59ee4f08cca">state</a> = <a class="code hl_enumvalue" href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faa920ca1330603c0f1126c5c6566dac6af">Save_pixel</a>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="classI2C.xhtml#afcef607b4a2c5f5b4e9d04875a8f110f">voltageAiguille</a> &lt;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                 <a class="code hl_function" href="classI2C.xhtml#afcef607b4a2c5f5b4e9d04875a8f110f">AIGUILLE_CONSTANT_CURRENT_VOLTAGE</a>) { <span class="comment">// Le matériel est trop</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                                                      <span class="comment">// loin</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_function" href="classPlateforme.xhtml#a2cad8a09db18e0a349d65d00d8043ded">Plateforme::setPositionRelative</a>(0, 0, 1);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      } <span class="keywordflow">else</span> { <span class="comment">// Le matériel est trop proche</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_function" href="classPlateforme.xhtml#a2cad8a09db18e0a349d65d00d8043ded">Plateforme::setPositionRelative</a>(0, 0, -1);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>      }</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faa920ca1330603c0f1126c5c6566dac6af">Save_pixel</a>:</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      <span class="comment">// @todo Code pour savegarder le pixel sur l&#39;image</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faa3a48a1e5dec74287f03176a63fda6c30">Goto_next_coordinate</a>:</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      <span class="comment">// @todo Code pour aller à la prochaine coordonnée</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  }</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}</div>
-</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keywordtype">void</span> STM::acquirePixelAtConstantHeight() {}</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keywordtype">void</span> STM::acquirePixelAtConstantCurrent() {}</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keywordtype">void</span> STM::goToNextPosition() {}</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keywordtype">void</span> STM::fixImage() {}</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keywordtype">void</span> STM::exportImage(<span class="keyword">const</span> std::string filename) {}</div>
-<div class="ttc" id="aSTM_8h_xhtml"><div class="ttname"><a href="STM_8h.xhtml">STM.h</a></div></div>
-<div class="ttc" id="aUtils_8h_xhtml_a4ff75b6d8acb96f8ae024087ad9f7922"><div class="ttname"><a href="Utils_8h.xhtml#a4ff75b6d8acb96f8ae024087ad9f7922">delay_ms</a></div><div class="ttdeci">void delay_ms(const uint32_t time)</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.xhtml#l00025">Utils.cpp:25</a></div></div>
-<div class="ttc" id="aclassAiguille_xhtml"><div class="ttname"><a href="classAiguille.xhtml">Aiguille</a></div><div class="ttdoc">Classe qui gère l'aiguille.</div><div class="ttdef"><b>Definition</b> <a href="Aiguille_8h_source.xhtml#l00010">Aiguille.h:10</a></div></div>
-<div class="ttc" id="aclassAiguille_xhtml_a79524fc4fee83ab6116cbd31ea74abee"><div class="ttname"><a href="classAiguille.xhtml#a79524fc4fee83ab6116cbd31ea74abee">Aiguille::readVoltage</a></div><div class="ttdeci">int16_t readVoltage()</div><div class="ttdoc">Lit une valeur correspondant au courant sur l'aiguille.</div><div class="ttdef"><b>Definition</b> <a href="Aiguille_8cpp_source.xhtml#l00005">Aiguille.cpp:5</a></div></div>
-<div class="ttc" id="aclassI2C_xhtml_afcef607b4a2c5f5b4e9d04875a8f110f"><div class="ttname"><a href="classI2C.xhtml#afcef607b4a2c5f5b4e9d04875a8f110f">I2C::writeData</a></div><div class="ttdeci">void writeData(const T &amp;data)</div><div class="ttdoc">Écrits une donnée sur la communication I2C.</div><div class="ttdef"><b>Definition</b> <a href="I2C_8h_source.xhtml#l00050">I2C.h:50</a></div></div>
-<div class="ttc" id="aclassPlateforme_xhtml"><div class="ttname"><a href="classPlateforme.xhtml">Plateforme</a></div><div class="ttdoc">Class qui représente la plateforme et permet de la bouger physiquement.</div><div class="ttdef"><b>Definition</b> <a href="Plateforme_8h_source.xhtml#l00015">Plateforme.h:15</a></div></div>
-<div class="ttc" id="aclassPlateforme_xhtml_a2cad8a09db18e0a349d65d00d8043ded"><div class="ttname"><a href="classPlateforme.xhtml#a2cad8a09db18e0a349d65d00d8043ded">Plateforme::setPositionRelative</a></div><div class="ttdeci">void setPositionRelative(const uint16_t x, const uint16_t y, const uint16_t z)</div><div class="ttdoc">Bouge plateforme relativement à sa position actuelle.</div><div class="ttdef"><b>Definition</b> <a href="Plateforme_8cpp_source.xhtml#l00006">Plateforme.cpp:6</a></div></div>
-<div class="ttc" id="aclassPlateforme_xhtml_a92764326284638f62319d8592b285755"><div class="ttname"><a href="classPlateforme.xhtml#a92764326284638f62319d8592b285755">Plateforme::position</a></div><div class="ttdeci">Vector3D&lt; uint16_t &gt; position</div><div class="ttdef"><b>Definition</b> <a href="Plateforme_8h_source.xhtml#l00017">Plateforme.h:17</a></div></div>
-<div class="ttc" id="aclassPlateforme_xhtml_af80e65c1197de126e9833e6673692de7"><div class="ttname"><a href="classPlateforme.xhtml#af80e65c1197de126e9833e6673692de7">Plateforme::setPositionAbsolute</a></div><div class="ttdeci">void setPositionAbsolute(const uint16_t x, const uint16_t y, const uint16_t z)</div><div class="ttdoc">Bouge la plateforme à la position spécifiée.</div><div class="ttdef"><b>Definition</b> <a href="Plateforme_8cpp_source.xhtml#l00017">Plateforme.cpp:17</a></div></div>
-<div class="ttc" id="aclassSTM_xhtml_a255d5d557c750725297a786f0ca7e5faa3a48a1e5dec74287f03176a63fda6c30"><div class="ttname"><a href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faa3a48a1e5dec74287f03176a63fda6c30">STM::Goto_next_coordinate</a></div><div class="ttdeci">@ Goto_next_coordinate</div><div class="ttdef"><b>Definition</b> <a href="STM_8h_source.xhtml#l00040">STM.h:39</a></div></div>
-<div class="ttc" id="aclassSTM_xhtml_a255d5d557c750725297a786f0ca7e5faa49564889c7f59475a1e1db1306c9afa6"><div class="ttname"><a href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faa49564889c7f59475a1e1db1306c9afa6">STM::Mesure_height</a></div><div class="ttdeci">@ Mesure_height</div><div class="ttdef"><b>Definition</b> <a href="STM_8h_source.xhtml#l00037">STM.h:37</a></div></div>
-<div class="ttc" id="aclassSTM_xhtml_a255d5d557c750725297a786f0ca7e5faa5416085d154e61b542bb310f631017b8"><div class="ttname"><a href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faa5416085d154e61b542bb310f631017b8">STM::Initialize</a></div><div class="ttdeci">@ Initialize</div><div class="ttdef"><b>Definition</b> <a href="STM_8h_source.xhtml#l00034">STM.h:34</a></div></div>
-<div class="ttc" id="aclassSTM_xhtml_a255d5d557c750725297a786f0ca7e5faa920ca1330603c0f1126c5c6566dac6af"><div class="ttname"><a href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faa920ca1330603c0f1126c5c6566dac6af">STM::Save_pixel</a></div><div class="ttdeci">@ Save_pixel</div><div class="ttdef"><b>Definition</b> <a href="STM_8h_source.xhtml#l00038">STM.h:38</a></div></div>
-<div class="ttc" id="aclassSTM_xhtml_a255d5d557c750725297a786f0ca7e5faaa96fe29cf0cbfe28778568f678386a1d"><div class="ttname"><a href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faaa96fe29cf0cbfe28778568f678386a1d">STM::Find_sample</a></div><div class="ttdeci">@ Find_sample</div><div class="ttdef"><b>Definition</b> <a href="STM_8h_source.xhtml#l00035">STM.h:35</a></div></div>
-<div class="ttc" id="aclassSTM_xhtml_a255d5d557c750725297a786f0ca7e5faaab6c3328134f68d1f2eeb6256edba2dd"><div class="ttname"><a href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faaab6c3328134f68d1f2eeb6256edba2dd">STM::Lower_motor</a></div><div class="ttdeci">@ Lower_motor</div><div class="ttdef"><b>Definition</b> <a href="STM_8h_source.xhtml#l00036">STM.h:36</a></div></div>
-<div class="ttc" id="aclassSTM_xhtml_a3973744a192fb0dd28ddc59ee4f08cca"><div class="ttname"><a href="classSTM.xhtml#a3973744a192fb0dd28ddc59ee4f08cca">STM::state</a></div><div class="ttdeci">StateMachineStates state</div><div class="ttdef"><b>Definition</b> <a href="STM_8h_source.xhtml#l00045">STM.h:45</a></div></div>
-<div class="ttc" id="aclassSTM_xhtml_a57cd7a5bb5498268e91b4904d7122242"><div class="ttname"><a href="classSTM.xhtml#a57cd7a5bb5498268e91b4904d7122242">STM::start</a></div><div class="ttdeci">void start()</div><div class="ttdoc">Démarre la machine à état qui gère le microscope.</div><div class="ttdef"><b>Definition</b> <a href="STM_8cpp_source.xhtml#l00009">STM.cpp:9</a></div></div>
-<div class="ttc" id="aclassSTM_xhtml_aa97d4289fec938b469102250ca145851"><div class="ttname"><a href="classSTM.xhtml#aa97d4289fec938b469102250ca145851">STM::STM</a></div><div class="ttdeci">STM(const uint8_t deviceAddr, const std::string devicePath, std::array&lt; uint8_t, 4 &gt; pins)</div><div class="ttdef"><b>Definition</b> <a href="STM_8cpp_source.xhtml#l00003">STM.cpp:3</a></div></div>
-<div class="ttc" id="aclassStepMotor_xhtml"><div class="ttname"><a href="classStepMotor.xhtml">StepMotor</a></div><div class="ttdoc">Classe qui gère les mouvements du step moteur.</div><div class="ttdef"><b>Definition</b> <a href="StepMotor_8h_source.xhtml#l00012">StepMotor.h:12</a></div></div>
-<div class="ttc" id="aclassStepMotor_xhtml_a3ddf152feee728aff63f39d7a22ee9e9"><div class="ttname"><a href="classStepMotor.xhtml#a3ddf152feee728aff63f39d7a22ee9e9">StepMotor::setPositionRelative</a></div><div class="ttdeci">void setPositionRelative(const int32_t pos)</div><div class="ttdoc">Mets la position de la plateforme relativement à sa position actuelle.</div><div class="ttdef"><b>Definition</b> <a href="StepMotor_8cpp_source.xhtml#l00010">StepMotor.cpp:10</a></div></div>
+<a href="STM_8cpp.xhtml">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="STM_8h.xhtml">STM.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="classSTM.xhtml#aeec95799680a6bc005cb670092d76f59">    3</a></span>&#160;<a class="code" href="classSTM.xhtml#aeec95799680a6bc005cb670092d76f59">STM::STM</a>(<span class="keyword">const</span> uint8_t deviceAddr, <span class="keyword">const</span> std::string devicePath,</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;         std::array&lt;uint8_t, 4&gt; pins, <span class="keyword">const</span> uint32_t resolutionX,</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;         <span class="keyword">const</span> uint32_t resolutionY, <span class="keyword">const</span> uint32_t scale)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    : <a class="code" href="classAiguille.xhtml">Aiguille</a>(deviceAddr), <a class="code" href="classPlateforme.xhtml">Plateforme</a>(devicePath), <a class="code" href="classStepMotor.xhtml">StepMotor</a>(0, pins),</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;      resolutionX(resolutionX), resolutionY(resolutionY), scale(scale) {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <a class="code" href="classSTM.xhtml#a3973744a192fb0dd28ddc59ee4f08cca">state</a> = <a class="code" href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faa5416085d154e61b542bb310f631017b8">Initialize</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <a class="code" href="classSTM.xhtml#a13fbeac92ed7c84e5b8546d154dde87e">voltageAiguille</a> = 0;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classSTM.xhtml#a57cd7a5bb5498268e91b4904d7122242">   12</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSTM.xhtml#a57cd7a5bb5498268e91b4904d7122242">STM::start</a>() {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  int16_t <a class="code" href="classSTM.xhtml#a13fbeac92ed7c84e5b8546d154dde87e">voltageAiguille</a> = 0;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;État : &quot;</span> &lt;&lt; std::to_string(<a class="code" href="classSTM.xhtml#a3973744a192fb0dd28ddc59ee4f08cca">state</a>) &lt;&lt; std::endl &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">switch</span> (<a class="code" href="classSTM.xhtml#a3973744a192fb0dd28ddc59ee4f08cca">state</a>) {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faa5416085d154e61b542bb310f631017b8">Initialize</a>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;      <a class="code" href="classStepMotor.xhtml#a3ddf152feee728aff63f39d7a22ee9e9">StepMotor::setPositionRelative</a>(-40);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      <a class="code" href="classSTM.xhtml#a3973744a192fb0dd28ddc59ee4f08cca">state</a> = <a class="code" href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faaa96fe29cf0cbfe28778568f678386a1d">Find_sample</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faaa96fe29cf0cbfe28778568f678386a1d">Find_sample</a>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      <a class="code" href="classPlateforme.xhtml#a2cad8a09db18e0a349d65d00d8043ded">Plateforme::setPositionRelative</a>(0, 0, 1);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="classPlateforme.xhtml#a92764326284638f62319d8592b285755">Plateforme::position</a>.z &gt;= UINT16_MAX / 2) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="classSTM.xhtml#a3973744a192fb0dd28ddc59ee4f08cca">state</a> = <a class="code" href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faaab6c3328134f68d1f2eeb6256edba2dd">Lower_motor</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="classAiguille.xhtml#a79524fc4fee83ab6116cbd31ea74abee">Aiguille::readVoltage</a>() &gt;= AIGUILLE_THRESHOLD_VOLTAGE) {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="classSTM.xhtml#a3973744a192fb0dd28ddc59ee4f08cca">state</a> = <a class="code" href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faa49564889c7f59475a1e1db1306c9afa6">Mesure_height</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faaab6c3328134f68d1f2eeb6256edba2dd">Lower_motor</a>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      <a class="code" href="classPlateforme.xhtml#af80e65c1197de126e9833e6673692de7">Plateforme::setPositionAbsolute</a>(0, 0, 0);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      <a class="code" href="Utils_8h.xhtml#a4ff75b6d8acb96f8ae024087ad9f7922">delay_ms</a>(2); <span class="comment">// Laisser le temps à la plateforme de descendre</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      <a class="code" href="classStepMotor.xhtml#a3ddf152feee728aff63f39d7a22ee9e9">StepMotor::setPositionRelative</a>(1);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      <a class="code" href="classSTM.xhtml#a3973744a192fb0dd28ddc59ee4f08cca">state</a> = <a class="code" href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faaa96fe29cf0cbfe28778568f678386a1d">Find_sample</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faa49564889c7f59475a1e1db1306c9afa6">Mesure_height</a>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      <a class="code" href="classSTM.xhtml#a13fbeac92ed7c84e5b8546d154dde87e">voltageAiguille</a> = <a class="code" href="classAiguille.xhtml#a79524fc4fee83ab6116cbd31ea74abee">Aiguille::readVoltage</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <span class="keywordflow">if</span> (abs(<a class="code" href="classSTM.xhtml#a13fbeac92ed7c84e5b8546d154dde87e">voltageAiguille</a> - AIGUILLE_CONSTANT_CURRENT_VOLTAGE) &lt; 300) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="classSTM.xhtml#a3973744a192fb0dd28ddc59ee4f08cca">state</a> = <a class="code" href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faa920ca1330603c0f1126c5c6566dac6af">Save_pixel</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="classSTM.xhtml#a13fbeac92ed7c84e5b8546d154dde87e">voltageAiguille</a> &lt;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                 AIGUILLE_CONSTANT_CURRENT_VOLTAGE) { <span class="comment">// Le matériel est trop</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                                                      <span class="comment">// loin</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="classPlateforme.xhtml#a2cad8a09db18e0a349d65d00d8043ded">Plateforme::setPositionRelative</a>(0, 0, 1);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      } <span class="keywordflow">else</span> { <span class="comment">// Le matériel est trop proche</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="classPlateforme.xhtml#a2cad8a09db18e0a349d65d00d8043ded">Plateforme::setPositionRelative</a>(0, 0, -1);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faa920ca1330603c0f1126c5c6566dac6af">Save_pixel</a>:</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <a class="code" href="classSTM.xhtml#a16b36c5002b8209f5725f58f84e68196">image</a>.<a class="code" href="classImage.xhtml#a36f32d9e3a9e5c3a85379cf49ac40d5e">setPixel</a>(<a class="code" href="classPlateforme.xhtml#a92764326284638f62319d8592b285755">Plateforme::position</a>.x, <a class="code" href="classPlateforme.xhtml#a92764326284638f62319d8592b285755">Plateforme::position</a>.y,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                     <a class="code" href="classPlateforme.xhtml#a92764326284638f62319d8592b285755">Plateforme::position</a>.z);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      <a class="code" href="classSTM.xhtml#a3973744a192fb0dd28ddc59ee4f08cca">state</a> = <a class="code" href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faa3a48a1e5dec74287f03176a63fda6c30">Goto_next_coordinate</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faa3a48a1e5dec74287f03176a63fda6c30">Goto_next_coordinate</a>:</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="comment">// @todo Code pour aller à la prochaine coordonnée</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keywordtype">void</span> STM::acquirePixelAtConstantHeight() {}</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">void</span> STM::acquirePixelAtConstantCurrent() {}</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keywordtype">void</span> STM::goToNextPosition() {}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keywordtype">void</span> STM::fixImage() {}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordtype">void</span> STM::exportImage(<span class="keyword">const</span> std::string filename) {}</div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassAiguille_xhtml_a79524fc4fee83ab6116cbd31ea74abee"><div class="ttname"><a href="classAiguille.xhtml#a79524fc4fee83ab6116cbd31ea74abee">Aiguille::readVoltage</a></div><div class="ttdeci">int16_t readVoltage()</div><div class="ttdoc">Lit une valeur correspondant au courant sur l'aiguille.</div><div class="ttdef"><b>Definition:</b> <a href="Aiguille_8cpp_source.xhtml#l00005">Aiguille.cpp:5</a></div></div>
+<div class="ttc" id="aclassAiguille_xhtml"><div class="ttname"><a href="classAiguille.xhtml">Aiguille</a></div><div class="ttdoc">Classe qui gère l'aiguille.</div><div class="ttdef"><b>Definition:</b> <a href="Aiguille_8h_source.xhtml#l00010">Aiguille.h:10</a></div></div>
+<div class="ttc" id="aclassPlateforme_xhtml_a92764326284638f62319d8592b285755"><div class="ttname"><a href="classPlateforme.xhtml#a92764326284638f62319d8592b285755">Plateforme::position</a></div><div class="ttdeci">Vector3D&lt; uint16_t &gt; position</div><div class="ttdef"><b>Definition:</b> <a href="Plateforme_8h_source.xhtml#l00017">Plateforme.h:17</a></div></div>
+<div class="ttc" id="aclassSTM_xhtml_a255d5d557c750725297a786f0ca7e5faa3a48a1e5dec74287f03176a63fda6c30"><div class="ttname"><a href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faa3a48a1e5dec74287f03176a63fda6c30">STM::Goto_next_coordinate</a></div><div class="ttdeci">@ Goto_next_coordinate</div><div class="ttdef"><b>Definition:</b> <a href="STM_8h_source.xhtml#l00046">STM.h:46</a></div></div>
+<div class="ttc" id="aclassImage_xhtml_a36f32d9e3a9e5c3a85379cf49ac40d5e"><div class="ttname"><a href="classImage.xhtml#a36f32d9e3a9e5c3a85379cf49ac40d5e">Image::setPixel</a></div><div class="ttdeci">void setPixel(const uint32_t XCoordinate, const uint32_t YCoordinate, const float value)</div><div class="ttdoc">Insère un pixel dans la matrice data.</div><div class="ttdef"><b>Definition:</b> <a href="Image_8cpp_source.xhtml#l00018">Image.cpp:18</a></div></div>
+<div class="ttc" id="aUtils_8h_xhtml_a4ff75b6d8acb96f8ae024087ad9f7922"><div class="ttname"><a href="Utils_8h.xhtml#a4ff75b6d8acb96f8ae024087ad9f7922">delay_ms</a></div><div class="ttdeci">void delay_ms(const uint32_t time)</div><div class="ttdef"><b>Definition:</b> <a href="Utils_8cpp_source.xhtml#l00025">Utils.cpp:25</a></div></div>
+<div class="ttc" id="aclassPlateforme_xhtml_af80e65c1197de126e9833e6673692de7"><div class="ttname"><a href="classPlateforme.xhtml#af80e65c1197de126e9833e6673692de7">Plateforme::setPositionAbsolute</a></div><div class="ttdeci">void setPositionAbsolute(const uint16_t x, const uint16_t y, const uint16_t z)</div><div class="ttdoc">Bouge la plateforme à la position spécifiée.</div><div class="ttdef"><b>Definition:</b> <a href="Plateforme_8cpp_source.xhtml#l00017">Plateforme.cpp:17</a></div></div>
+<div class="ttc" id="aclassStepMotor_xhtml"><div class="ttname"><a href="classStepMotor.xhtml">StepMotor</a></div><div class="ttdoc">Classe qui gère les mouvements du step moteur.</div><div class="ttdef"><b>Definition:</b> <a href="StepMotor_8h_source.xhtml#l00012">StepMotor.h:12</a></div></div>
+<div class="ttc" id="aclassSTM_xhtml_a16b36c5002b8209f5725f58f84e68196"><div class="ttname"><a href="classSTM.xhtml#a16b36c5002b8209f5725f58f84e68196">STM::image</a></div><div class="ttdeci">Image image</div><div class="ttdef"><b>Definition:</b> <a href="STM_8h_source.xhtml#l00022">STM.h:22</a></div></div>
+<div class="ttc" id="aclassPlateforme_xhtml"><div class="ttname"><a href="classPlateforme.xhtml">Plateforme</a></div><div class="ttdoc">Class qui représente la plateforme et permet de la bouger physiquement.</div><div class="ttdef"><b>Definition:</b> <a href="Plateforme_8h_source.xhtml#l00015">Plateforme.h:15</a></div></div>
+<div class="ttc" id="aclassSTM_xhtml_a255d5d557c750725297a786f0ca7e5faa5416085d154e61b542bb310f631017b8"><div class="ttname"><a href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faa5416085d154e61b542bb310f631017b8">STM::Initialize</a></div><div class="ttdeci">@ Initialize</div><div class="ttdef"><b>Definition:</b> <a href="STM_8h_source.xhtml#l00041">STM.h:41</a></div></div>
+<div class="ttc" id="aSTM_8h_xhtml"><div class="ttname"><a href="STM_8h.xhtml">STM.h</a></div></div>
+<div class="ttc" id="aclassSTM_xhtml_a3973744a192fb0dd28ddc59ee4f08cca"><div class="ttname"><a href="classSTM.xhtml#a3973744a192fb0dd28ddc59ee4f08cca">STM::state</a></div><div class="ttdeci">StateMachineStates state</div><div class="ttdef"><b>Definition:</b> <a href="STM_8h_source.xhtml#l00052">STM.h:52</a></div></div>
+<div class="ttc" id="aclassSTM_xhtml_a255d5d557c750725297a786f0ca7e5faaa96fe29cf0cbfe28778568f678386a1d"><div class="ttname"><a href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faaa96fe29cf0cbfe28778568f678386a1d">STM::Find_sample</a></div><div class="ttdeci">@ Find_sample</div><div class="ttdef"><b>Definition:</b> <a href="STM_8h_source.xhtml#l00042">STM.h:42</a></div></div>
+<div class="ttc" id="aclassSTM_xhtml_a255d5d557c750725297a786f0ca7e5faaab6c3328134f68d1f2eeb6256edba2dd"><div class="ttname"><a href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faaab6c3328134f68d1f2eeb6256edba2dd">STM::Lower_motor</a></div><div class="ttdeci">@ Lower_motor</div><div class="ttdef"><b>Definition:</b> <a href="STM_8h_source.xhtml#l00043">STM.h:43</a></div></div>
+<div class="ttc" id="aclassSTM_xhtml_aeec95799680a6bc005cb670092d76f59"><div class="ttname"><a href="classSTM.xhtml#aeec95799680a6bc005cb670092d76f59">STM::STM</a></div><div class="ttdeci">STM(const uint8_t deviceAddr, const std::string devicePath, std::array&lt; uint8_t, 4 &gt; pins, const uint32_t resolutionX, const uint32_t resolutionY, const uint32_t scale)</div><div class="ttdef"><b>Definition:</b> <a href="STM_8cpp_source.xhtml#l00003">STM.cpp:3</a></div></div>
+<div class="ttc" id="aclassSTM_xhtml_a255d5d557c750725297a786f0ca7e5faa49564889c7f59475a1e1db1306c9afa6"><div class="ttname"><a href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faa49564889c7f59475a1e1db1306c9afa6">STM::Mesure_height</a></div><div class="ttdeci">@ Mesure_height</div><div class="ttdef"><b>Definition:</b> <a href="STM_8h_source.xhtml#l00044">STM.h:44</a></div></div>
+<div class="ttc" id="aclassPlateforme_xhtml_a2cad8a09db18e0a349d65d00d8043ded"><div class="ttname"><a href="classPlateforme.xhtml#a2cad8a09db18e0a349d65d00d8043ded">Plateforme::setPositionRelative</a></div><div class="ttdeci">void setPositionRelative(const uint16_t x, const uint16_t y, const uint16_t z)</div><div class="ttdoc">Bouge plateforme relativement à sa position actuelle.</div><div class="ttdef"><b>Definition:</b> <a href="Plateforme_8cpp_source.xhtml#l00006">Plateforme.cpp:6</a></div></div>
+<div class="ttc" id="aclassSTM_xhtml_a57cd7a5bb5498268e91b4904d7122242"><div class="ttname"><a href="classSTM.xhtml#a57cd7a5bb5498268e91b4904d7122242">STM::start</a></div><div class="ttdeci">void start()</div><div class="ttdoc">Démarre la machine à état qui gère le microscope.</div><div class="ttdef"><b>Definition:</b> <a href="STM_8cpp_source.xhtml#l00012">STM.cpp:12</a></div></div>
+<div class="ttc" id="aclassSTM_xhtml_a13fbeac92ed7c84e5b8546d154dde87e"><div class="ttname"><a href="classSTM.xhtml#a13fbeac92ed7c84e5b8546d154dde87e">STM::voltageAiguille</a></div><div class="ttdeci">int16_t voltageAiguille</div><div class="ttdef"><b>Definition:</b> <a href="STM_8h_source.xhtml#l00023">STM.h:23</a></div></div>
+<div class="ttc" id="aclassSTM_xhtml_a255d5d557c750725297a786f0ca7e5faa920ca1330603c0f1126c5c6566dac6af"><div class="ttname"><a href="classSTM.xhtml#a255d5d557c750725297a786f0ca7e5faa920ca1330603c0f1126c5c6566dac6af">STM::Save_pixel</a></div><div class="ttdeci">@ Save_pixel</div><div class="ttdef"><b>Definition:</b> <a href="STM_8h_source.xhtml#l00045">STM.h:45</a></div></div>
+<div class="ttc" id="aclassStepMotor_xhtml_a3ddf152feee728aff63f39d7a22ee9e9"><div class="ttname"><a href="classStepMotor.xhtml#a3ddf152feee728aff63f39d7a22ee9e9">StepMotor::setPositionRelative</a></div><div class="ttdeci">void setPositionRelative(const int32_t pos)</div><div class="ttdoc">Mets la position de la plateforme relativement à sa position actuelle.</div><div class="ttdef"><b>Definition:</b> <a href="StepMotor_8cpp_source.xhtml#l00010">StepMotor.cpp:10</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
 </small></address>
 </body>
 </html>

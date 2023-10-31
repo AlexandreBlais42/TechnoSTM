@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['state_0',['state',['../classSTM.xhtml#a3973744a192fb0dd28ddc59ee4f08cca',1,'STM']]]
+  ['opt_214',['opt',['../classSocketServer.xhtml#a48fc4e08c695d220ffe3d153ced39830',1,'SocketServer']]]
 ];
