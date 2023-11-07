@@ -12,7 +12,11 @@ STM::STM(const uint8_t deviceAddr, const std::string devicePath,
 void STM::start() {
   int16_t voltageAiguille = 0;
   while (true) {
-    std::cout << "État : " << std::to_string(state) << std::endl << std::endl;
+    /*  @todo Implémenter select() pour pouvoir recevoir des données d'un socket de manière non bloquante
+     */ 
+    //select(nfds, readfdset, nullptr, nullptr, timeout);
+
+    DEBUG << "État : " << std::to_string(state) << std::endl << std::endl;
     switch (state) {
     case Initialize:
       StepMotor::setPositionRelative(-40);
