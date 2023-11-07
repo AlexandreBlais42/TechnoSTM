@@ -2,6 +2,7 @@
 
 StepMotor::StepMotor(const int32_t position, const std::array<uint8_t, 4> pins)
     : position(position), pins(pins), pinIndex(0) {
+  GPIO::begin();
   for (const uint8_t pin : pins) {
     _pinMode(pin, OUTPUT);
   }
