@@ -50,7 +50,7 @@ public:
   void writeData(const T &data) {
 #ifdef __arm__
     T invertedData = invertBytes<T>(data);
-    if (!write(fileDescriptor, (char *)&invertedData, sizeof(T))) {
+    if (!write(fileDescriptor, reinterpret_cast<char *>(&invertedData), sizeof(T))) {
       std::cout << "Une erreur est survenue lors de l'écriture dans la "
                    "communication I2C";
     }
@@ -66,7 +66,7 @@ public:
   T readData() {
 #ifdef __arm__
     T data;
-    read(fileDescriptor, (char *)&data, sizeof(T));
+    read(fileDescriptor, reinterpret_cast<char *>(&data), sizeof(T));
     data = invertBytes<T>(data);
     return data;
 #else

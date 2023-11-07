@@ -2,6 +2,7 @@
 #define AIGUILLE_H
 
 #include <cstdint>
+#include <iostream>
 
 #include "ADS1115.h"
 
