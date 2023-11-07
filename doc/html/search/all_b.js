@@ -1,12 +1,9 @@
 var searchData=
 [
-  ['pinindex_45',['pinIndex',['../classStepMotor.xhtml#af369f89f8986e38528ff5ee0824d3d97',1,'StepMotor']]],
-  ['pinmode_5ft_46',['pinMode_t',['../GPIO_8h.xhtml#ace9769c8acaf8eaf1b4312a5706f6d04',1,'pinMode_t():&#160;GPIO.h'],['../GPIO_8h.xhtml#af727a2747a2292b82b017c024854a0c2',1,'pinMode_t():&#160;GPIO.h']]],
-  ['pins_47',['pins',['../classStepMotor.xhtml#a97f1d907c33e6298a06c7431991739f9',1,'StepMotor']]],
-  ['plateforme_48',['Plateforme',['../classPlateforme.xhtml',1,'Plateforme'],['../classPlateforme.xhtml#a135704fcb674444622c09a78040111f2',1,'Plateforme::Plateforme()']]],
-  ['plateforme_2ecpp_49',['Plateforme.cpp',['../Plateforme_8cpp.xhtml',1,'']]],
-  ['plateforme_2eh_50',['Plateforme.h',['../Plateforme_8h.xhtml',1,'']]],
-  ['port_51',['port',['../classSocketServer.xhtml#ac2c1efc91942a24b1a831789ac5d24d4',1,'SocketServer']]],
-  ['position_52',['position',['../classPlateforme.xhtml#a92764326284638f62319d8592b285755',1,'Plateforme::position()'],['../classStepMotor.xhtml#a5d3b6e20ec55fad44836fef89b07a086',1,'StepMotor::position()']]],
-  ['pwm_5foutput_53',['PWM_OUTPUT',['../GPIO_8h.xhtml#ace9769c8acaf8eaf1b4312a5706f6d04aa5c69c68b8d879b189ee80f22e5b3ace',1,'GPIO.h']]]
+  ['operator_2b_40',['operator+',['../Vector3D_8h.xhtml#a4155e98441c8cb114333f0ff1e6c5b3c',1,'Vector3D.h']]],
+  ['operator_2b_3d_41',['operator+=',['../classVector3D.xhtml#a4a849acd4e9c0984137cc92ac38f449f',1,'Vector3D']]],
+  ['operator_2d_42',['operator-',['../Vector3D_8h.xhtml#af9093e7750cb72e26d0b5c2775b09811',1,'Vector3D.h']]],
+  ['operator_2d_3d_43',['operator-=',['../classVector3D.xhtml#a49e949a58eb95ea8aaca119a65f3db06',1,'Vector3D']]],
+  ['opt_44',['opt',['../classSocketServer.xhtml#a48fc4e08c695d220ffe3d153ced39830',1,'SocketServer']]],
+  ['output_45',['OUTPUT',['../GPIO_8h.xhtml#ace9769c8acaf8eaf1b4312a5706f6d04a2ab08d3e103968f5f4f26b66a52e99d6',1,'GPIO.h']]]
 ];

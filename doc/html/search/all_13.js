@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['y_111',['y',['../classVector3D.xhtml#a1953bc3e5f343dcc592c57fa700ad5df',1,'Vector3D']]],
-  ['yoffset_112',['YOffset',['../classImage.xhtml#a771a64c2ddc55629e5e1661a8e6aba03',1,'Image']]],
-  ['yreal_113',['YReal',['../classImage.xhtml#a1047db81e58797b1533c5127da517f3c',1,'Image']]],
-  ['yres_114',['YRes',['../classImage.xhtml#a2b366bf76ce2f81bbf173500018b119e',1,'Image']]]
+  ['x_106',['x',['../classVector3D.xhtml#a8649bbba44f375d9e797ec676864624f',1,'Vector3D']]],
+  ['xoffset_107',['XOffset',['../classImage.xhtml#a386a93d747e349038b92ae3360a02b45',1,'Image']]],
+  ['xreal_108',['XReal',['../classImage.xhtml#a5d87d29be2dd8330b611c359511ee54f',1,'Image']]],
+  ['xres_109',['XRes',['../classImage.xhtml#a1e3776d5daff3ec1f86c2c8ce689ae19',1,'Image']]],
+  ['xyunits_110',['XYUnits',['../classImage.xhtml#a9861b77f198ba81fd4e847cf703c31e7',1,'Image']]]
 ];

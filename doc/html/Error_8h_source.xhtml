@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TechnoSTM: Liste des membres</title>
+<title>TechnoSTM:  Fichier source de src/include/Error.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -60,22 +60,27 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.xhtml">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.xhtml">include</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">SocketServer Liste des membres</div>  </div>
+<div class="title">Error.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Liste complète des membres de <a class="el" href="classSocketServer.xhtml">SocketServer</a>, y compris les membres hérités :</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classSocketServer.xhtml#a69c0b81a1eb96e0262a836efb89288e9">address</a></td><td class="entry"><a class="el" href="classSocketServer.xhtml">SocketServer</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classSocketServer.xhtml#a656bb7a9a505d3fbc0475c2a034a5d3d">begin</a>(const uint16_t port)</td><td class="entry"><a class="el" href="classSocketServer.xhtml">SocketServer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classSocketServer.xhtml#a795005f32cc5e76b06ec3e5eaf4be114">fd</a></td><td class="entry"><a class="el" href="classSocketServer.xhtml">SocketServer</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classSocketServer.xhtml#a48fc4e08c695d220ffe3d153ced39830">opt</a></td><td class="entry"><a class="el" href="classSocketServer.xhtml">SocketServer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classSocketServer.xhtml#ac2c1efc91942a24b1a831789ac5d24d4">port</a></td><td class="entry"><a class="el" href="classSocketServer.xhtml">SocketServer</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classSocketServer.xhtml#a262ba93dc8ad71b260fb75124b3453ee">SocketServer</a>()</td><td class="entry"><a class="el" href="classSocketServer.xhtml">SocketServer</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<a href="Error_8h.xhtml">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef ERROR_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define ERROR_H</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;cstring&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define COUTERROR std::cout &lt;&lt; &quot;\033[31m[ERROR] &quot; &lt;&lt; __PRETTY_FUNCTION__ &lt;&lt; &quot; près de la ligne &quot; &lt;&lt; __LINE__ &lt;&lt; &quot;\033[0m:&quot; &lt;&lt; std::endl</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define COUTERRNO std::cout &lt;&lt; &quot;\033[31merrno: &quot; &lt;&lt; strerror(errno) &lt;&lt; &quot;\033[0m&quot; &lt;&lt; std::endl</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#endif // ERROR_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Généré par &#160;<a href="http://www.doxygen.org/index.html">

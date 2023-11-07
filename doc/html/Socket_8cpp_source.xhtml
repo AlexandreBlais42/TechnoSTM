@@ -78,29 +78,36 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classSocketServer.xhtml#a656bb7a9a505d3fbc0475c2a034a5d3d">    6</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSocketServer.xhtml#a656bb7a9a505d3fbc0475c2a034a5d3d">SocketServer::begin</a>(<span class="keyword">const</span> uint16_t port){</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  this-&gt;port = <a class="code" href="classSocketServer.xhtml#ac2c1efc91942a24b1a831789ac5d24d4">port</a>;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordflow">if</span> ((<a class="code" href="classSocketServer.xhtml#a795005f32cc5e76b06ec3e5eaf4be114">fd</a> = socket(AF_INET, SOCK_STREAM, 0)) &lt; 0){</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Erreurs lors de l&#39;appel de socket()&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    exit(1);</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  }</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordflow">if</span> (setsockopt(<a class="code" href="classSocketServer.xhtml#a795005f32cc5e76b06ec3e5eaf4be114">fd</a>, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &amp;<a class="code" href="classSocketServer.xhtml#a48fc4e08c695d220ffe3d153ced39830">opt</a>, <span class="keyword">sizeof</span>(<a class="code" href="classSocketServer.xhtml#a48fc4e08c695d220ffe3d153ced39830">opt</a>))){</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Erreur lors de l&#39;appel de setsockopt()&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  }</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <a class="code" href="classSocketServer.xhtml#a69c0b81a1eb96e0262a836efb89288e9">address</a>.sin_family = AF_INET;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <a class="code" href="classSocketServer.xhtml#a69c0b81a1eb96e0262a836efb89288e9">address</a>.sin_addr.s_addr = INADDR_ANY;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <a class="code" href="classSocketServer.xhtml#a69c0b81a1eb96e0262a836efb89288e9">address</a>.sin_port = htons(<a class="code" href="classSocketServer.xhtml#ac2c1efc91942a24b1a831789ac5d24d4">port</a>);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordflow">if</span> (bind(<a class="code" href="classSocketServer.xhtml#a795005f32cc5e76b06ec3e5eaf4be114">fd</a>, (<span class="keyword">struct</span> sockaddr *) &amp;<a class="code" href="classSocketServer.xhtml#a69c0b81a1eb96e0262a836efb89288e9">address</a>, <span class="keyword">sizeof</span>(<a class="code" href="classSocketServer.xhtml#a69c0b81a1eb96e0262a836efb89288e9">address</a>)) &lt; 0){</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Erreur lors de l&#39;appel de bind()&quot;</span>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    COUTERROR;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    COUTERRNO;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    exit(1);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  }</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordflow">if</span> (setsockopt(<a class="code" href="classSocketServer.xhtml#a795005f32cc5e76b06ec3e5eaf4be114">fd</a>, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &amp;<a class="code" href="classSocketServer.xhtml#a48fc4e08c695d220ffe3d153ced39830">opt</a>, <span class="keyword">sizeof</span>(<a class="code" href="classSocketServer.xhtml#a48fc4e08c695d220ffe3d153ced39830">opt</a>))){</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Erreur lors de l&#39;appel de setsockopt()&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  }</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <a class="code" href="classSocketServer.xhtml#a69c0b81a1eb96e0262a836efb89288e9">address</a>.sin_family = AF_INET;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <a class="code" href="classSocketServer.xhtml#a69c0b81a1eb96e0262a836efb89288e9">address</a>.sin_addr.s_addr = INADDR_ANY;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <a class="code" href="classSocketServer.xhtml#a69c0b81a1eb96e0262a836efb89288e9">address</a>.sin_port = htons(<a class="code" href="classSocketServer.xhtml#ac2c1efc91942a24b1a831789ac5d24d4">port</a>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordflow">if</span> (bind(<a class="code" href="classSocketServer.xhtml#a795005f32cc5e76b06ec3e5eaf4be114">fd</a>, (<span class="keyword">struct</span> sockaddr *) &amp;<a class="code" href="classSocketServer.xhtml#a69c0b81a1eb96e0262a836efb89288e9">address</a>, <span class="keyword">sizeof</span>(<a class="code" href="classSocketServer.xhtml#a69c0b81a1eb96e0262a836efb89288e9">address</a>)) &lt; 0){</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    COUTERROR;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    COUTERRNO;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordflow">if</span>(listen(<a class="code" href="classSocketServer.xhtml#a795005f32cc5e76b06ec3e5eaf4be114">fd</a>, 1) &lt; 0){ <span class="comment">// N&#39;autorise qu&#39;une seule connection en backlog</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    COUTERROR;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    COUTERRNO;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassSocketServer_xhtml_a795005f32cc5e76b06ec3e5eaf4be114"><div class="ttname"><a href="classSocketServer.xhtml#a795005f32cc5e76b06ec3e5eaf4be114">SocketServer::fd</a></div><div class="ttdeci">int fd</div><div class="ttdef"><b>Definition:</b> <a href="Socket_8h_source.xhtml#l00013">Socket.h:13</a></div></div>
-<div class="ttc" id="aclassSocketServer_xhtml_a69c0b81a1eb96e0262a836efb89288e9"><div class="ttname"><a href="classSocketServer.xhtml#a69c0b81a1eb96e0262a836efb89288e9">SocketServer::address</a></div><div class="ttdeci">struct sockaddr_in address</div><div class="ttdef"><b>Definition:</b> <a href="Socket_8h_source.xhtml#l00014">Socket.h:14</a></div></div>
-<div class="ttc" id="aclassSocketServer_xhtml_ac2c1efc91942a24b1a831789ac5d24d4"><div class="ttname"><a href="classSocketServer.xhtml#ac2c1efc91942a24b1a831789ac5d24d4">SocketServer::port</a></div><div class="ttdeci">uint16_t port</div><div class="ttdef"><b>Definition:</b> <a href="Socket_8h_source.xhtml#l00012">Socket.h:12</a></div></div>
+<div class="ttc" id="aclassSocketServer_xhtml_a795005f32cc5e76b06ec3e5eaf4be114"><div class="ttname"><a href="classSocketServer.xhtml#a795005f32cc5e76b06ec3e5eaf4be114">SocketServer::fd</a></div><div class="ttdeci">int fd</div><div class="ttdef"><b>Definition:</b> <a href="Socket_8h_source.xhtml#l00018">Socket.h:18</a></div></div>
+<div class="ttc" id="aclassSocketServer_xhtml_a69c0b81a1eb96e0262a836efb89288e9"><div class="ttname"><a href="classSocketServer.xhtml#a69c0b81a1eb96e0262a836efb89288e9">SocketServer::address</a></div><div class="ttdeci">struct sockaddr_in address</div><div class="ttdef"><b>Definition:</b> <a href="Socket_8h_source.xhtml#l00019">Socket.h:19</a></div></div>
+<div class="ttc" id="aclassSocketServer_xhtml_ac2c1efc91942a24b1a831789ac5d24d4"><div class="ttname"><a href="classSocketServer.xhtml#ac2c1efc91942a24b1a831789ac5d24d4">SocketServer::port</a></div><div class="ttdeci">uint16_t port</div><div class="ttdef"><b>Definition:</b> <a href="Socket_8h_source.xhtml#l00017">Socket.h:17</a></div></div>
 <div class="ttc" id="aclassSocketServer_xhtml_a656bb7a9a505d3fbc0475c2a034a5d3d"><div class="ttname"><a href="classSocketServer.xhtml#a656bb7a9a505d3fbc0475c2a034a5d3d">SocketServer::begin</a></div><div class="ttdeci">void begin(const uint16_t port)</div><div class="ttdef"><b>Definition:</b> <a href="Socket_8cpp_source.xhtml#l00006">Socket.cpp:6</a></div></div>
 <div class="ttc" id="aSocket_8h_xhtml"><div class="ttname"><a href="Socket_8h.xhtml">Socket.h</a></div></div>
-<div class="ttc" id="aclassSocketServer_xhtml_a48fc4e08c695d220ffe3d153ced39830"><div class="ttname"><a href="classSocketServer.xhtml#a48fc4e08c695d220ffe3d153ced39830">SocketServer::opt</a></div><div class="ttdeci">int opt</div><div class="ttdef"><b>Definition:</b> <a href="Socket_8h_source.xhtml#l00015">Socket.h:15</a></div></div>
+<div class="ttc" id="aclassSocketServer_xhtml_a48fc4e08c695d220ffe3d153ced39830"><div class="ttname"><a href="classSocketServer.xhtml#a48fc4e08c695d220ffe3d153ced39830">SocketServer::opt</a></div><div class="ttdeci">int opt</div><div class="ttdef"><b>Definition:</b> <a href="Socket_8h_source.xhtml#l00020">Socket.h:20</a></div></div>
 <div class="ttc" id="aclassSocketServer_xhtml_a262ba93dc8ad71b260fb75124b3453ee"><div class="ttname"><a href="classSocketServer.xhtml#a262ba93dc8ad71b260fb75124b3453ee">SocketServer::SocketServer</a></div><div class="ttdeci">SocketServer()</div><div class="ttdef"><b>Definition:</b> <a href="Socket_8cpp_source.xhtml#l00004">Socket.cpp:4</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['read_54',['read',['../classADS1115.xhtml#afa5cf7d1699ceb7f34270b0260c5bc5a',1,'ADS1115::read()'],['../classSerial.xhtml#af10648b801138712457976e00462c77a',1,'Serial::read()']]],
-  ['readdata_55',['readData',['../classI2C.xhtml#a45af5e21a1a2856d0a22f533ce125e69',1,'I2C']]],
-  ['readreg16_56',['readReg16',['../classI2C.xhtml#aaf3b3907acf403d5d2a4fac65313bd1b',1,'I2C']]],
-  ['readreg8_57',['readReg8',['../classI2C.xhtml#adb3720e4ef4a115433a2b7600e722228',1,'I2C']]],
-  ['readvoltage_58',['readVoltage',['../classAiguille.xhtml#a79524fc4fee83ab6116cbd31ea74abee',1,'Aiguille']]],
-  ['resolutionx_59',['resolutionX',['../classSTM.xhtml#a632cc75746f1481a1e485b32cd87ece2',1,'STM']]],
-  ['resolutiony_60',['resolutionY',['../classSTM.xhtml#ab6c411d29b8c2b99946c125bbddfbdcc',1,'STM']]]
+  ['pinindex_46',['pinIndex',['../classStepMotor.xhtml#af369f89f8986e38528ff5ee0824d3d97',1,'StepMotor']]],
+  ['pinmode_5ft_47',['pinMode_t',['../GPIO_8h.xhtml#ace9769c8acaf8eaf1b4312a5706f6d04',1,'pinMode_t():&#160;GPIO.h'],['../GPIO_8h.xhtml#af727a2747a2292b82b017c024854a0c2',1,'pinMode_t():&#160;GPIO.h']]],
+  ['pins_48',['pins',['../classStepMotor.xhtml#a97f1d907c33e6298a06c7431991739f9',1,'StepMotor']]],
+  ['plateforme_49',['Plateforme',['../classPlateforme.xhtml',1,'Plateforme'],['../classPlateforme.xhtml#a135704fcb674444622c09a78040111f2',1,'Plateforme::Plateforme()']]],
+  ['plateforme_2ecpp_50',['Plateforme.cpp',['../Plateforme_8cpp.xhtml',1,'']]],
+  ['plateforme_2eh_51',['Plateforme.h',['../Plateforme_8h.xhtml',1,'']]],
+  ['port_52',['port',['../classSocketServer.xhtml#ac2c1efc91942a24b1a831789ac5d24d4',1,'SocketServer']]],
+  ['position_53',['position',['../classPlateforme.xhtml#a92764326284638f62319d8592b285755',1,'Plateforme::position()'],['../classStepMotor.xhtml#a5d3b6e20ec55fad44836fef89b07a086',1,'StepMotor::position()']]],
+  ['pwm_5foutput_54',['PWM_OUTPUT',['../GPIO_8h.xhtml#ace9769c8acaf8eaf1b4312a5706f6d04aa5c69c68b8d879b189ee80f22e5b3ace',1,'GPIO.h']]]
 ];
