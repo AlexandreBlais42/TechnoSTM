@@ -16,19 +16,23 @@ void STM::start() {
      */ 
     //select(nfds, readfdset, nullptr, nullptr, timeout);
 
-    DEBUG << "État : " << std::to_string(state) << std::endl << std::endl;
     switch (state) {
     case Initialize:
+      DEBUG << "État : " << "Initialize" << std::endl;
       StepMotor::setPositionRelative(-40);
+      Plateforme::setPositionAbsolute(0, 0, 0);
       state = Find_sample;
+      DEBUG << "État : " << "Find_sample" << std::endl;
       break;
 
     case Find_sample:
       Plateforme::setPositionRelative(0, 0, 1);
       if (Plateforme::position.z >= UINT16_MAX / 2) {
         state = Lower_motor;
+        DEBUG << "État : " << "Lower_motor" << std::endl;
       } else if (Aiguille::readVoltage() >= AIGUILLE_THRESHOLD_VOLTAGE) {
         state = Mesure_height;
+        DEBUG << "État : " << "Mesure_height" << std::endl;
       }
       break;
 
@@ -37,12 +41,14 @@ void STM::start() {
       delay_ms(2); // Laisser le temps à la plateforme de descendre
       StepMotor::setPositionRelative(1);
       state = Find_sample;
+      DEBUG << "État : " << "Find_sample" << std::endl;
       break;
 
     case Mesure_height:
       voltageAiguille = Aiguille::readVoltage();
       if (abs(voltageAiguille - AIGUILLE_CONSTANT_CURRENT_VOLTAGE) < 300) {
         state = Save_pixel;
+      DEBUG << "État : " << "Save_pixel" << std::endl;
       } else if (voltageAiguille <
                  AIGUILLE_CONSTANT_CURRENT_VOLTAGE) { // Le matériel est trop
                                                       // loin
@@ -56,6 +62,7 @@ void STM::start() {
       image.setPixel(Plateforme::position.x, Plateforme::position.y,
                      Plateforme::position.z);
       state = Goto_next_coordinate;
+      DEBUG << "État : " << "Goto_next_coordinate" << std::endl;
       break;
 
     case Goto_next_coordinate:
