@@ -12,7 +12,7 @@ int main(int argc, char *argv[]) {
 
   // Test getBytes
   std::cout << "Test getBytes" << std::endl;
-  std::vector<uint8_t> bytes = getBytes<uint32_t>(0x0011);
+  std::vector<uint8_t> bytes = getBytes<uint32_t>(0x00000101);
   assert(bytes[0] == 1);
   assert(bytes[1] == 1);
   assert(bytes[2] == 0);
