@@ -6,7 +6,8 @@ Serial::Serial(const std::string devicePath, const uint32_t baudrate) {
 
 void Serial::begin(const std::string devicePath, const uint32_t baudrate) {
 #ifdef __arm__
-  if (fileDescriptor = serialOpen(devicePath.c_str(), baudrate) == -1) {
+  fileDescriptor = serialOpen(devicePath.c_str(), baudrate);
+  if (fileDescriptor == -1){
     std::cout << "Erreur lors de l'initialisation de la connection sérielle"
               << std::endl;
     exit(1);
@@ -31,6 +32,7 @@ std::vector<char> Serial::read(const uint32_t amount) const {
   for (uint32_t i = 0; i < amount; i++) {
     toReturn.push_back(serialGetchar(fileDescriptor));
   }
+  return toReturn;
 #else
   DEBUG << "Serial::read : " << amount << std::endl;
   return std::vector<char>(amount, 0);
