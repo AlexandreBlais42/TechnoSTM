@@ -16,7 +16,7 @@ void StepMotor::setPositionRelative(const int32_t pos) {
     direction *= -1;
   }
 
-  for (uint16_t _ = 0; _ < abs(pos); _++) {
+  for (uint32_t _ = 0; _ < abs(pos); _++) {
     setPin(pins[pinIndex], false);
     pinIndex += direction;
     pinIndex %= 4;
