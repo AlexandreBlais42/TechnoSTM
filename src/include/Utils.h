@@ -39,13 +39,13 @@ template <typename T> T invertBytes(T data) {
 }
 
 template <typename T> std::vector<uint8_t> getBytes(T data) {
-  uint8_t *bytes = reinterpret_cast<uint8_t *>(&data); 
+  uint8_t *bytes = reinterpret_cast<uint8_t *>(&data);
   std::vector<uint8_t> toReturn(0);
   toReturn.reserve(sizeof(data));
   toReturn.insert(toReturn.begin(), bytes, bytes + sizeof(data));
   return toReturn;
 }
 
-void writeStringToVector(const std::string s, std::vector<uint8_t> v);
+void writeStringToVector(const std::string &s, std::vector<uint8_t> &v);
 
 #endif // UTILS_H

@@ -2,8 +2,8 @@
 #include <iostream>
 #include <queue>
 
-#include "STM.h"
 #include "Error.h"
+#include "STM.h"
 
 int main(int argc, char *argv[]) {
   std::array<uint8_t, 4> pinsStepMotor = {25, 8, 7, 1};

@@ -29,8 +29,8 @@ void delay_ms(const uint32_t time) {
   sleep_for(milliseconds(time));
 }
 
-void writeStringToVector(const std::string s, std::vector<uint8_t> v){
-  for (const char &byte : s){
+void writeStringToVector(const std::string &s, std::vector<uint8_t> &v) {
+  for (const char &byte : s) {
     v.push_back(byte);
-  } 
+  }
 }

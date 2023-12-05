@@ -1,13 +1,15 @@
 #ifndef STM_H
 #define STM_H
 
+#include <cmath>
 #include <cstdint>
+#include <fstream>
 #include <iostream>
 
 #include "Aiguille.h"
+#include "Image.h"
 #include "Plateforme.h"
 #include "StepMotor.h"
-#include "Image.h"
 
 // @todo Trouver la valeur de lecture d'aiguille à laquelle arrêter
 #define AIGUILLE_THRESHOLD_VOLTAGE                                             \
@@ -17,12 +19,12 @@
 
 /** @brief Classe qui gère les fonctions du microscope
  */
-class STM : private Aiguille, private Plateforme, private StepMotor{
+class STM : private Aiguille, private Plateforme, private StepMotor {
 public:
   Image image;
   int16_t voltageAiguille;
   uint32_t resolutionX;
-  uint32_t resolutionY; 
+  uint32_t resolutionY;
   uint32_t scale; // La taille d'un pas
 
   /** @brief États de la machine à états du microscope
@@ -47,7 +49,8 @@ public:
   } StateMachineStates;
 
   STM(const uint8_t deviceAddr, const std::string devicePath,
-      std::array<uint8_t, 4> pins, const uint32_t resolutionX, const uint32_t resolutionY, const uint32_t scale);
+      std::array<uint8_t, 4> pins, const uint32_t resolutionX,
+      const uint32_t resolutionY, const uint32_t scale);
 
   StateMachineStates state;
 
@@ -67,17 +70,9 @@ private:
   void acquirePixelAtConstantCurrent();
 
   /** @brief Va à la prochaine coordonnée pour la prochaine mesure
+   *  @return Faux si c'est la fin du parcours, sinon vrai
    */
-  void goToNextPosition();
-
-  /** @brief Enlève la composante exponentielle de l'image dû au fait que le
-   * courant de tunneling dépend de la distance de manière non linéaire? (au
-   * carré ou exponentielle ?)
-   * @todo Trouver fonction qui décrit le courant de tunneling en fonction de la
-   * distance
-   * @note On va surement utiliser Gwyddion pour le traitement d'image, à voir.
-   */
-  void fixImage();
+  bool goToNextPosition();
 
   /** @brief Sauvegarde l'image dans un fichier
    */
