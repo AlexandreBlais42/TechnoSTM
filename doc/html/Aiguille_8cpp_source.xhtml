@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>TechnoSTM:  Fichier source de src/Aiguille.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,8 +19,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">TechnoSTM
    </div>
    <div id="projectbrief">Un microscope atomique à effet tunnel</div>
@@ -30,22 +30,28 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.17 -->
+<!-- Généré par Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.xhtml');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','Recherche');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,9 +61,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -66,26 +79,32 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle">
-<div class="title">Aiguille.cpp</div>  </div>
+  <div class="headertitle"><div class="title">Aiguille.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="Aiguille_8cpp.xhtml">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Aiguille_8h.xhtml">Aiguille.h</a>&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="classAiguille.xhtml#ae43d7692e2277b64c7d73828ae589ec6">    3</a></span>&#160;<a class="code" href="classAiguille.xhtml#ae43d7692e2277b64c7d73828ae589ec6">Aiguille::Aiguille</a>(<span class="keyword">const</span> uint8_t deviceAddr) : <a class="code" href="classADS1115.xhtml">ADS1115</a>(deviceAddr) {}</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classAiguille.xhtml#a79524fc4fee83ab6116cbd31ea74abee">    5</a></span>&#160;int16_t <a class="code" href="classAiguille.xhtml#a79524fc4fee83ab6116cbd31ea74abee">Aiguille::readVoltage</a>() { <span class="keywordflow">return</span> <a class="code" href="classADS1115.xhtml#afa5cf7d1699ceb7f34270b0260c5bc5a">read</a>(); }</div>
-</div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassAiguille_xhtml_a79524fc4fee83ab6116cbd31ea74abee"><div class="ttname"><a href="classAiguille.xhtml#a79524fc4fee83ab6116cbd31ea74abee">Aiguille::readVoltage</a></div><div class="ttdeci">int16_t readVoltage()</div><div class="ttdoc">Lit une valeur correspondant au courant sur l'aiguille.</div><div class="ttdef"><b>Definition:</b> <a href="Aiguille_8cpp_source.xhtml#l00005">Aiguille.cpp:5</a></div></div>
+<a href="Aiguille_8cpp.xhtml">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="Aiguille_8h.xhtml">Aiguille.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classAiguille.xhtml#ae43d7692e2277b64c7d73828ae589ec6">    3</a></span><a class="code hl_function" href="classAiguille.xhtml#ae43d7692e2277b64c7d73828ae589ec6">Aiguille::Aiguille</a>(<span class="keyword">const</span> uint8_t deviceAddr) : <a class="code hl_class" href="classADS1115.xhtml">ADS1115</a>(deviceAddr) {}</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifdef __arm__</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classAiguille.xhtml#a79524fc4fee83ab6116cbd31ea74abee">    6</a></span>int16_t <a class="code hl_function" href="classAiguille.xhtml#a79524fc4fee83ab6116cbd31ea74abee">Aiguille::readVoltage</a>() { <span class="keywordflow">return</span> <a class="code hl_function" href="classADS1115.xhtml#afa5cf7d1699ceb7f34270b0260c5bc5a">read</a>(); }</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>int16_t <a class="code hl_function" href="classAiguille.xhtml#a79524fc4fee83ab6116cbd31ea74abee">Aiguille::readVoltage</a>(){</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  <a class="code hl_function" href="classI2C.xhtml#afcef607b4a2c5f5b4e9d04875a8f110f">int16_t</a> <a class="code hl_function" href="classI2C.xhtml#afcef607b4a2c5f5b4e9d04875a8f110f">toReturn</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  std::cin &gt;&gt; <a class="code hl_function" href="classI2C.xhtml#afcef607b4a2c5f5b4e9d04875a8f110f">toReturn</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classI2C.xhtml#afcef607b4a2c5f5b4e9d04875a8f110f">toReturn</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>}</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#endif </span><span class="comment">// __arm__</span></div>
 <div class="ttc" id="aAiguille_8h_xhtml"><div class="ttname"><a href="Aiguille_8h.xhtml">Aiguille.h</a></div></div>
-<div class="ttc" id="aclassADS1115_xhtml"><div class="ttname"><a href="classADS1115.xhtml">ADS1115</a></div><div class="ttdoc">Gère l'interfaçage avec l'ADC externe en I2C.</div><div class="ttdef"><b>Definition:</b> <a href="ADS1115_8h_source.xhtml#l00034">ADS1115.h:34</a></div></div>
-<div class="ttc" id="aclassADS1115_xhtml_afa5cf7d1699ceb7f34270b0260c5bc5a"><div class="ttname"><a href="classADS1115.xhtml#afa5cf7d1699ceb7f34270b0260c5bc5a">ADS1115::read</a></div><div class="ttdeci">int16_t read()</div><div class="ttdoc">Lis une valeur sur un channel de l'ADC.</div><div class="ttdef"><b>Definition:</b> <a href="ADS1115_8cpp_source.xhtml#l00061">ADS1115.cpp:61</a></div></div>
-<div class="ttc" id="aclassAiguille_xhtml_ae43d7692e2277b64c7d73828ae589ec6"><div class="ttname"><a href="classAiguille.xhtml#ae43d7692e2277b64c7d73828ae589ec6">Aiguille::Aiguille</a></div><div class="ttdeci">Aiguille(const uint8_t deviceAddr)</div><div class="ttdoc">Constructeur de la classe aiguille.</div><div class="ttdef"><b>Definition:</b> <a href="Aiguille_8cpp_source.xhtml#l00003">Aiguille.cpp:3</a></div></div>
+<div class="ttc" id="aclassADS1115_xhtml"><div class="ttname"><a href="classADS1115.xhtml">ADS1115</a></div><div class="ttdoc">Gère l'interfaçage avec l'ADC externe en I2C.</div><div class="ttdef"><b>Definition</b> <a href="ADS1115_8h_source.xhtml#l00034">ADS1115.h:34</a></div></div>
+<div class="ttc" id="aclassADS1115_xhtml_afa5cf7d1699ceb7f34270b0260c5bc5a"><div class="ttname"><a href="classADS1115.xhtml#afa5cf7d1699ceb7f34270b0260c5bc5a">ADS1115::read</a></div><div class="ttdeci">int16_t read()</div><div class="ttdoc">Lis une valeur sur un channel de l'ADC.</div><div class="ttdef"><b>Definition</b> <a href="ADS1115_8cpp_source.xhtml#l00061">ADS1115.cpp:61</a></div></div>
+<div class="ttc" id="aclassAiguille_xhtml_a79524fc4fee83ab6116cbd31ea74abee"><div class="ttname"><a href="classAiguille.xhtml#a79524fc4fee83ab6116cbd31ea74abee">Aiguille::readVoltage</a></div><div class="ttdeci">int16_t readVoltage()</div><div class="ttdoc">Lit une valeur correspondant au courant sur l'aiguille.</div><div class="ttdef"><b>Definition</b> <a href="Aiguille_8cpp_source.xhtml#l00006">Aiguille.cpp:6</a></div></div>
+<div class="ttc" id="aclassAiguille_xhtml_ae43d7692e2277b64c7d73828ae589ec6"><div class="ttname"><a href="classAiguille.xhtml#ae43d7692e2277b64c7d73828ae589ec6">Aiguille::Aiguille</a></div><div class="ttdeci">Aiguille(const uint8_t deviceAddr)</div><div class="ttdoc">Constructeur de la classe aiguille.</div><div class="ttdef"><b>Definition</b> <a href="Aiguille_8cpp_source.xhtml#l00003">Aiguille.cpp:3</a></div></div>
+<div class="ttc" id="aclassI2C_xhtml_afcef607b4a2c5f5b4e9d04875a8f110f"><div class="ttname"><a href="classI2C.xhtml#afcef607b4a2c5f5b4e9d04875a8f110f">I2C::writeData</a></div><div class="ttdeci">void writeData(const T &amp;data)</div><div class="ttdoc">Écrits une donnée sur la communication I2C.</div><div class="ttdef"><b>Definition</b> <a href="I2C_8h_source.xhtml#l00050">I2C.h:50</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré par &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>TechnoSTM:  Fichier source de src/GPIO.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,8 +19,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">TechnoSTM
    </div>
    <div id="projectbrief">Un microscope atomique à effet tunnel</div>
@@ -30,22 +30,28 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.17 -->
+<!-- Généré par Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.xhtml');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','Recherche');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -55,9 +61,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -66,50 +79,53 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle">
-<div class="title">GPIO.cpp</div>  </div>
+  <div class="headertitle"><div class="title">GPIO.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="GPIO_8cpp.xhtml">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="GPIO_8h.xhtml">GPIO.h</a>&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="classGPIO.xhtml#ab443a641cef81b1a9ec0211c5aa9c1ac">    3</a></span>&#160;<a class="code" href="classGPIO.xhtml#ab443a641cef81b1a9ec0211c5aa9c1ac">GPIO::GPIO</a>() {}</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classGPIO.xhtml#aedcffa9a0d757ac829775e818f236633">    5</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classGPIO.xhtml#aedcffa9a0d757ac829775e818f236633">GPIO::begin</a>() {</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifdef __arm__</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  wiringPiSetupGpio();</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#endif // __arm__</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classGPIO.xhtml#a31bfbf66af9272166a61a2c203cd80e5">   11</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classGPIO.xhtml#a31bfbf66af9272166a61a2c203cd80e5">GPIO::_pinMode</a>(<span class="keyword">const</span> uint8_t pinNumber, <span class="keyword">const</span> uint8_t mode) {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  assert(pinNumber &lt;= 27);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifdef __arm__</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  pinMode(pinNumber, mode);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  DEBUG &lt;&lt; <span class="stringliteral">&quot;GPIO::setPin appellé avec pinNumber = &quot;</span> &lt;&lt; std::to_string(pinNumber)</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        &lt;&lt; <span class="stringliteral">&quot; mode = &quot;</span> &lt;&lt; (mode ? <span class="stringliteral">&quot;output&quot;</span> : <span class="stringliteral">&quot;Input&quot;</span>) &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#endif // __arm__</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classGPIO.xhtml#a60ac204e399c56d031c0cd4d95acddf8">   21</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classGPIO.xhtml#a60ac204e399c56d031c0cd4d95acddf8">GPIO::setPin</a>(<span class="keyword">const</span> uint8_t pinNumber, <span class="keyword">const</span> <span class="keywordtype">bool</span> state) {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  assert(pinNumber &lt;= 27);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#ifdef __arm__</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  digitalWrite(pinNumber, state);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  DEBUG &lt;&lt; <span class="stringliteral">&quot;GPIO::setPin appellé avec pinNumber = &quot;</span> &lt;&lt; std::to_string(pinNumber)</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        &lt;&lt; <span class="stringliteral">&quot; state = &quot;</span> &lt;&lt; state &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif // __arm__</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
-</div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassGPIO_xhtml_a60ac204e399c56d031c0cd4d95acddf8"><div class="ttname"><a href="classGPIO.xhtml#a60ac204e399c56d031c0cd4d95acddf8">GPIO::setPin</a></div><div class="ttdeci">static void setPin(const uint8_t pinNumber, const bool state)</div><div class="ttdoc">Set une pin du GPIO du raspberry pi à state.</div><div class="ttdef"><b>Definition:</b> <a href="GPIO_8cpp_source.xhtml#l00021">GPIO.cpp:21</a></div></div>
-<div class="ttc" id="aclassGPIO_xhtml_aedcffa9a0d757ac829775e818f236633"><div class="ttname"><a href="classGPIO.xhtml#aedcffa9a0d757ac829775e818f236633">GPIO::begin</a></div><div class="ttdeci">static void begin()</div><div class="ttdef"><b>Definition:</b> <a href="GPIO_8cpp_source.xhtml#l00005">GPIO.cpp:5</a></div></div>
+<a href="GPIO_8cpp.xhtml">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="GPIO_8h.xhtml">GPIO.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classGPIO.xhtml#ab443a641cef81b1a9ec0211c5aa9c1ac">    3</a></span><a class="code hl_function" href="classGPIO.xhtml#ab443a641cef81b1a9ec0211c5aa9c1ac">GPIO::GPIO</a>() {}</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="foldopen" id="foldopen00005" data-start="{" data-end="}">
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classGPIO.xhtml#aedcffa9a0d757ac829775e818f236633">    5</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classGPIO.xhtml#aedcffa9a0d757ac829775e818f236633">GPIO::begin</a>() {</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifdef __arm__</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>  wiringPiSetupGpio();</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#endif </span><span class="comment">// __arm__</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>}</div>
+</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="}">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classGPIO.xhtml#a31bfbf66af9272166a61a2c203cd80e5">   11</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classGPIO.xhtml#a31bfbf66af9272166a61a2c203cd80e5">GPIO::_pinMode</a>(<span class="keyword">const</span> uint8_t pinNumber, <span class="keyword">const</span> uint8_t mode) {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  assert(pinNumber &lt;= 27);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#ifdef __arm__</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  pinMode(pinNumber, mode);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  DEBUG &lt;&lt; <span class="stringliteral">&quot;GPIO::setPin appellé avec pinNumber = &quot;</span> &lt;&lt; std::to_string(pinNumber)</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        &lt;&lt; <span class="stringliteral">&quot; mode = &quot;</span> &lt;&lt; (mode ? <span class="stringliteral">&quot;output&quot;</span> : <span class="stringliteral">&quot;Input&quot;</span>) &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#endif </span><span class="comment">// __arm__</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>}</div>
+</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="}">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classGPIO.xhtml#a60ac204e399c56d031c0cd4d95acddf8">   21</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classGPIO.xhtml#a60ac204e399c56d031c0cd4d95acddf8">GPIO::setPin</a>(<span class="keyword">const</span> uint8_t pinNumber, <span class="keyword">const</span> <span class="keywordtype">bool</span> state) {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  assert(pinNumber &lt;= 27);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifdef __arm__</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  digitalWrite(pinNumber, state);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  DEBUG &lt;&lt; <span class="stringliteral">&quot;GPIO::setPin appellé avec pinNumber = &quot;</span> &lt;&lt; std::to_string(pinNumber)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        &lt;&lt; <span class="stringliteral">&quot; state = &quot;</span> &lt;&lt; state &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#endif </span><span class="comment">// __arm__</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>}</div>
+</div>
 <div class="ttc" id="aGPIO_8h_xhtml"><div class="ttname"><a href="GPIO_8h.xhtml">GPIO.h</a></div></div>
-<div class="ttc" id="aclassGPIO_xhtml_ab443a641cef81b1a9ec0211c5aa9c1ac"><div class="ttname"><a href="classGPIO.xhtml#ab443a641cef81b1a9ec0211c5aa9c1ac">GPIO::GPIO</a></div><div class="ttdeci">GPIO()</div><div class="ttdef"><b>Definition:</b> <a href="GPIO_8cpp_source.xhtml#l00003">GPIO.cpp:3</a></div></div>
-<div class="ttc" id="aclassGPIO_xhtml_a31bfbf66af9272166a61a2c203cd80e5"><div class="ttname"><a href="classGPIO.xhtml#a31bfbf66af9272166a61a2c203cd80e5">GPIO::_pinMode</a></div><div class="ttdeci">static void _pinMode(const uint8_t pinNumber, const uint8_t mode)</div><div class="ttdoc">Mets une pin au mode spécifié</div><div class="ttdef"><b>Definition:</b> <a href="GPIO_8cpp_source.xhtml#l00011">GPIO.cpp:11</a></div></div>
+<div class="ttc" id="aclassGPIO_xhtml_a31bfbf66af9272166a61a2c203cd80e5"><div class="ttname"><a href="classGPIO.xhtml#a31bfbf66af9272166a61a2c203cd80e5">GPIO::_pinMode</a></div><div class="ttdeci">static void _pinMode(const uint8_t pinNumber, const uint8_t mode)</div><div class="ttdoc">Mets une pin au mode spécifié</div><div class="ttdef"><b>Definition</b> <a href="GPIO_8cpp_source.xhtml#l00011">GPIO.cpp:11</a></div></div>
+<div class="ttc" id="aclassGPIO_xhtml_a60ac204e399c56d031c0cd4d95acddf8"><div class="ttname"><a href="classGPIO.xhtml#a60ac204e399c56d031c0cd4d95acddf8">GPIO::setPin</a></div><div class="ttdeci">static void setPin(const uint8_t pinNumber, const bool state)</div><div class="ttdoc">Set une pin du GPIO du raspberry pi à state.</div><div class="ttdef"><b>Definition</b> <a href="GPIO_8cpp_source.xhtml#l00021">GPIO.cpp:21</a></div></div>
+<div class="ttc" id="aclassGPIO_xhtml_ab443a641cef81b1a9ec0211c5aa9c1ac"><div class="ttname"><a href="classGPIO.xhtml#ab443a641cef81b1a9ec0211c5aa9c1ac">GPIO::GPIO</a></div><div class="ttdeci">GPIO()</div><div class="ttdef"><b>Definition</b> <a href="GPIO_8cpp_source.xhtml#l00003">GPIO.cpp:3</a></div></div>
+<div class="ttc" id="aclassGPIO_xhtml_aedcffa9a0d757ac829775e818f236633"><div class="ttname"><a href="classGPIO.xhtml#aedcffa9a0d757ac829775e818f236633">GPIO::begin</a></div><div class="ttdeci">static void begin()</div><div class="ttdef"><b>Definition</b> <a href="GPIO_8cpp_source.xhtml#l00005">GPIO.cpp:5</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré par &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

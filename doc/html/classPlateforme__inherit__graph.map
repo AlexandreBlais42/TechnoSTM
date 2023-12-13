@@ -1,5 +1,7 @@
 <map id="Plateforme" name="Plateforme">
-<area shape="rect" id="node1" title="Class qui représente la plateforme et permet de la bouger physiquement." alt="" coords="5,175,181,325"/>
-<area shape="rect" id="node3" href="$classSTM.xhtml" title="Classe qui gère les fonctions du microscope." alt="" coords="26,373,161,539"/>
-<area shape="rect" id="node2" href="$classSerial.xhtml" title="Classe qui permet de communiquer sériellement entre autre pour communiquer avec le DAC 16bits AnalogD..." alt="" coords="31,5,155,127"/>
+<area shape="rect" id="Node000001" title="Class qui représente la plateforme et permet de la bouger physiquement." alt="" coords="5,187,153,363"/>
+<area shape="rect" id="Node000003" href="$classSTM.xhtml" title="Classe qui gère les fonctions du microscope." alt="" coords="25,411,133,608"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="82,377,82,411,77,411,77,377"/>
+<area shape="rect" id="Node000002" href="$classSerial.xhtml" title="Classe qui permet de communiquer sériellement entre autre pour communiquer avec le DAC 16bits AnalogD..." alt="" coords="29,5,129,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,154,82,187,77,187,77,154"/>
 </map>
