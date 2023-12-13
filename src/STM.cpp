@@ -13,7 +13,6 @@ STM::STM(const uint8_t deviceAddr, const std::string devicePath,
 void STM::start() {
   int16_t voltageAiguille = 0;
   bool done = false;
-  uint16_t towrite = 0;
   while (done == false) {
     /*  @todo Implémenter select() pour pouvoir recevoir des données d'un socket
      * de manière non bloquante
@@ -54,30 +53,23 @@ void STM::start() {
       break;
 
     case Mesure_height:
-      // Test d'image
-      state = Save_pixel;
+      voltageAiguille = Aiguille::readVoltage();
+      if (abs(voltageAiguille - AIGUILLE_CONSTANT_CURRENT_VOLTAGE) < 300) {
+        state = Save_pixel;
+        DEBUG << "État : "
+              << "Save_pixel" << std::endl;
+      } else if (voltageAiguille <
+                 AIGUILLE_CONSTANT_CURRENT_VOLTAGE) { // Le matériel est trop
+                                                      // loin
+        Plateforme::setPositionRelative(0, 0, 1);
+      } else { // Le matériel est trop proche
+        Plateforme::setPositionRelative(0, 0, -1);
+      }
       break;
-      //
-      // voltageAiguille = Aiguille::readVoltage();
-      // if (abs(voltageAiguille - AIGUILLE_CONSTANT_CURRENT_VOLTAGE) < 300) {
-      //   state = Save_pixel;
-      //   DEBUG << "État : "
-      //         << "Save_pixel" << std::endl;
-      // } else if (voltageAiguille <
-      //            AIGUILLE_CONSTANT_CURRENT_VOLTAGE) { // Le matériel est trop
-      //                                                 // loin
-      //   Plateforme::setPositionRelative(0, 0, 1);
-      // } else { // Le matériel est trop proche
-      //   Plateforme::setPositionRelative(0, 0, -1);
-      // }
-      // break;
 
     case Save_pixel:
-      towrite = 1000 + 500 * (sin((float)Plateforme::position.x / 10) +
-                              sin((float)Plateforme::position.y / 30));
-      image.setPixel(Plateforme::position.x, Plateforme::position.y, towrite);
-      // image.setPixel(Plateforme::position.x, Plateforme::position.y,
-      //                Plateforme::position.z);
+      image.setPixel(Plateforme::position.x, Plateforme::position.y,
+                     Plateforme::position.z);
       state = Goto_next_coordinate;
       DEBUG << "État : "
             << "Goto_next_coordinate" << std::endl;

@@ -14,6 +14,8 @@ compile_flags.txt
 .cache/
 .cache/*
 
+*.gfs
+
 *.d
 *.slo
 *.lo

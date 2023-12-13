@@ -26,7 +26,7 @@ void Plateforme::setPositionAbsolute(const Vector3D<uint16_t> &coordinates) {
 }
 
 void Plateforme::moveToPosition() const {
-  Serial::write("A" + getHexString(position.x));
-  Serial::write("B" + getHexString(position.y));
-  Serial::write("C" + getHexString(position.z));
+  Serial::write("A" + getHexString(position.x) + "\n");
+  Serial::write("B" + getHexString(position.y) + "\n");
+  Serial::write("C" + getHexString(position.z) + "\n");
 }
