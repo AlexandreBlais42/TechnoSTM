@@ -1,7 +1,9 @@
 #include "Plateforme.h"
 
 Plateforme::Plateforme(const std::string devicePath)
-    : Serial(devicePath, 115200) {}
+    : Serial(devicePath, 115200) {
+  Serial::write("D" + "00FF" + "\n"); // Environ 50mV pour le voltage de biais
+}
 
 void Plateforme::setPositionRelative(const uint16_t x, const uint16_t y,
                                      const uint16_t z) {
